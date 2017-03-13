@@ -1,0 +1,48 @@
+# List of my projects.
+
+- name: Practo Health App
+  extra_classes: tall
+  description: |
+
+    Practo lets you search and find the best doctor you need from across India and Singapore.
+
+    You can directly book appointments in seconds, from wherever you are with this app. Practo lists 100,000+ verified doctor profiles, so you can choose the doctor best suited for your problem instantly from your phone.
+
+    Practo has been installed over a million times on Google Play.
+
+  actions:
+  - caption: Install app
+    url: https://play.google.com/store/apps/details?id=com.practo.fabric
+
+  pages:
+
+  - image: muzei_detail1.png
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: nexus5_light
+
+###################################################################################################
+
+- name: Practo Tab
+  extra_classes: tall
+  description: |
+
+    Practo Tab is a practice management tool on the go. This is a standalone tablet. It has appointment booking, patient management, EMR, invoices, billing, treaments, procedures, Patient registration, clinical notes, prescriptions.
+
+  actions:
+  - caption: View website
+    url: https://www.practo.com/for-doctors/tab
+
+###################################################################################################
+
+- name: Practo Consult
+  extra_classes: tall
+  description: |
+
+    Practo Consult helps doctors connect with millions of patients and answer their questions from anywhere.
+
+  actions:
+  - caption: Install app
+    url: https://play.google.com/store/apps/details?id=com.practo.fabric
+  - caption: View website
+    url: https://www.practo.com/consult

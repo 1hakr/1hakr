@@ -1,0 +1,62 @@
+# List of my projects.
+
+- name: AnExplorer File Manager
+  extra_classes: tall
+  description: |
+
+    Something which was missing from android was deault file manager till kitkat and i have always wished a simple , easy-to-use existed. So I ideated AnExplorer designed, developed, launched, and open-sourced it
+
+    With AnExplorer you can
+
+    * First File Manager for Android TV and to support RTL languages
+    * Manager File and Folders on Internal storage / External Storage / USB Storage
+    * Free RAM on the device. File Manager helps you to backup your apps (apk) of Tools and Games
+
+    AnExplorer has been installed over a 100K times on Google Play.
+
+  actions:
+  - caption: Install app
+    url: https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer
+  - caption: View code
+    url: https://github.com/1hakr/anexplorer
+
+  pages:
+  - image: anexplorer_phone1.png
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: nexus5
+  - image: anexplorer_tablet1.png
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+  - image: anexplorer_tv1.png
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+
+###################################################################################################
+
+- name: Shifoo Your food Expert
+  extra_classes: tall
+  description: |
+
+    Shifoo is your food expert which helps improve in-restaurant experience by providing smart menu and recommended food anywhere in Bangalore.
+
+    * Best and Recommended food with indicative images of food items
+    * For health conscious people provide the ingredients and the calorie content in it
+    * Search and Find food by name and ingredient in every restaurant
+    * Help users explore all the dishes of a restaurant
+    * Filter food items based on your preferences like Veg and Non-Veg items
+    * Favorite, Liked and best food from other users in your locality
+
+  actions:
+  - caption: Install app
+    url: https://play.google.com/store/apps/details?id=com.shifoo
+
+  pages:
+  - image: shifoo_detail1.png
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: nexus5_light
+  - image: shifoo_detail2.png
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: nexus5_light

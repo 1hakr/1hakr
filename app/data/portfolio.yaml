@@ -1,0 +1,19 @@
+# List of my portfolio projects.
+
+- name: Material Icons
+
+  description: |
+    I’ve created a number of product icons following the [material design guidelines](https://www.google.com/design/spec/style/icons.html), for a number of purposes, including AnExplorer and Shifoo.
+
+    The gallery showcases a sampling of the icons I’ve worked on.
+
+  pages:
+
+  - color: '#C6DAFC'
+    image: material_icon_anexplorer.png
+    caption: App icon for [AnExplorer](https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer).
+
+  - color: '#C6DAFC'
+    image: material_icon_shifoo.png
+    caption: App icon for [Shifoo](https://play.google.com/store/apps/details?id=com.shifoo).
+    extra_classes: no-fullscreen

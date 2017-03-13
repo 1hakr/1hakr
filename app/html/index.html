@@ -1,0 +1,33 @@
+{% extends '_base.html' %}
+
+{% block css %}
+<link rel="stylesheet" href="/styles/landing.css">
+{% endblock %}
+
+{% block js %}
+<script src="/scripts/landing.js"></script>
+{% endblock %}
+
+{% block page-body %}
+  <div class="top"></div>
+  <div class="content-container">
+    <div class="content">
+      <div class="avatar"></div>
+
+      <p>Hi, I’m <b>Ha</b>ri <b>Kr</b>ishna.</p>
+      <p>I’m a thinker at <a href="https://www.practo.com/">Practo</a> in Bengaluru, India.</p>
+      <p>I made <a href="https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer">AnExplorer</a> and <a href="https://github.com/DWorkS/VolleyPlus">VolleyPlus</a>. See more of my work in <a href="/apps">apps</a>, <a href="/libraries">libraries</a> and <a href="/portfolio">portfolio</a>.</p>
+
+      <!-- icons thanks to https://github.com/shalinguyen/socialicious -->
+      <div class="icons">
+        <a rel="me" target="_blank" href="https://twitter.com/1hakr" title="Twitter" class="twitter"></a>
+        <a rel="me" target="_blank" href="https://plus.google.com/+HariKrishnaDulipudi/posts" title="Google+" class="googleplus"></a>
+        <a rel="me" target="_blank" href="https://www.linkedin.com/in/1hakr" title="LinkedIn" class="linkedin"></a>
+        <a rel="me" target="_blank" href="https://github.com/1hakr" title="GitHub" class="github"></a>
+        <a rel="me" target="_blank" href="/media/resume-mar-2017.pdf" title="Résumé" class="resume"></a>
+        <a rel="me" href="" title="Email" class="email obfuscated" data-email="hakr dworks in"></a>
+      </div>
+    </div>
+  </div>
+  <div class="bottom"></div>
+{% endblock %}

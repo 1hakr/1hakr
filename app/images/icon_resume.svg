@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.1 (35376) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_resume</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon_resume" fill="#FFFFFF">
+            <path d="M61.1111111,77.7777778 L22.2222222,77.7777778 L22.2222222,66.6666667 L61.1111111,66.6666667 L61.1111111,77.7777778 Z M77.7777778,55.5555556 L22.2222222,55.5555556 L22.2222222,44.4444444 L77.7777778,44.4444444 L77.7777778,55.5555556 Z M77.7777778,33.3333333 L22.2222222,33.3333333 L22.2222222,22.2222222 L77.7777778,22.2222222 L77.7777778,33.3333333 Z M88.8888889,0 L11.1111111,0 C4.94444444,0 0,4.94444444 0,11.1111111 L0,88.8888889 C0,95 5,100 11.1111111,100 L88.8888889,100 C95,100 100,95 100,88.8888889 L100,11.1111111 C100,4.94444444 95,0 88.8888889,0 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg>
