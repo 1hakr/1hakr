@@ -10,6 +10,10 @@
   pages:
 
   - color: '#C6DAFC'
+    image: material_icon_acrypto.png
+    caption: App icon for [ACrypto](https://play.google.com/store/apps/details?id=dev.dworks.apps.acrypto).
+
+  - color: '#C6DAFC'
     image: material_icon_anexplorer.png
     caption: App icon for [AnExplorer](https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer).
 

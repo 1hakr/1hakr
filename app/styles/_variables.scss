@@ -1,6 +1,6 @@
 @import '_material_colors';
 
-$colorPrimary: material-color('brown', '700');
+$colorPrimary: material-color('teal', '500');
 $colorPrimaryDark: darken($colorPrimary, 3%);
 $textColor: rgba(black, 0.87);
 $textColorSub: rgba(black, 0.54);

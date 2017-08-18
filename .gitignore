@@ -5,3 +5,4 @@ dist
 _sandbox
 .DS_Store
 node_modules
+firebase-debug.log
