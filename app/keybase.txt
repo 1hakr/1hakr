@@ -1,54 +1,55 @@
 ==================================================================
-https://keybase.io/romannurik
+https://keybase.io/1hakr
 --------------------------------------------------------------------
 
 I hereby claim:
 
-  * I am an admin of http://roman.nurik.net
-  * I am romannurik (https://keybase.io/romannurik) on keybase.
-  * I have a public key ASDvVPuHkMAeImrSzwRNize1X9I-Lqev-73EEY49Zd-DCQo
+  * I am an admin of https://1hakr.com
+  * I am 1hakr (https://keybase.io/1hakr) on keybase.
+  * I have a public key ASD6reZN-xvnHJwouZXFDVWeVRsVumZXPVaBpeygIu7Kzwo
 
 To do so, I am signing this object:
 
 {
-    "body": {
-        "key": {
-            "eldest_kid": "0101591e41a705ab1c51f6c7d61ba76086f7da93574a57ffc2a23669963f1cd091c60a",
-            "host": "keybase.io",
-            "kid": "0120ef54fb8790c01e226ad2cf044d8b37b55fd23e2ea7affbbdc4118e3d65df83090a",
-            "uid": "c77f1df66dbcf5162eba94f17930f319",
-            "username": "romannurik"
-        },
-        "service": {
-            "hostname": "roman.nurik.net",
-            "protocol": "http:"
-        },
-        "type": "web_service_binding",
-        "version": 1
+  "body": {
+    "key": {
+      "eldest_kid": "0120faade64dfb1be71c9c28b995c50d559e551b15ba66573d5681a5eca022eecacf0a",
+      "host": "keybase.io",
+      "kid": "0120faade64dfb1be71c9c28b995c50d559e551b15ba66573d5681a5eca022eecacf0a",
+      "uid": "92e2585d5fcc9d5e742d883677a72219",
+      "username": "1hakr"
     },
-    "client": {
-        "name": "keybase.io go client",
-        "version": "1.0.17"
-    },
-    "ctime": 1472267846,
-    "expire_in": 504576000,
     "merkle_root": {
-        "ctime": 1472267802,
-        "hash": "5f1b98b236dee107046c5d3f6d39908e399ed5a9675a4239cb056273c23c8964b6d9dff84b9c2f96294cfdad9cd96617d0a45092a8f7ceaa07f1d011cdc41021",
-        "seqno": 604620
+      "ctime": 1503039199,
+      "hash": "eac5ad633542c799f89642aa55f08e7e1ca68e3e85d2ddc09ba236c6462c2079c4d2c80c75d890aa87555534323feb477d3a7728eb13817fa68ab310102384b9",
+      "hash_meta": "94f7aa11cc6fa2457016f62cd20c32f150ca97db5a4d003fce810a4cfb133097",
+      "seqno": 1333344
     },
-    "prev": "4473b2d1b73cdfe5acd64798f01016488e79205eebf88210f09909064e8bc38a",
-    "seqno": 9,
-    "tag": "signature"
+    "service": {
+      "hostname": "1hakr.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "client": {
+    "name": "keybase.io go client",
+    "version": "1.0.27"
+  },
+  "ctime": 1503039236,
+  "expire_in": 504576000,
+  "prev": "5818558c39219c11101f1150ba7e49f003e664a9d56b2e0475025561ef680421",
+  "seqno": 11,
+  "tag": "signature"
 }
 
 which yields the signature:
 
-hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg71T7h5DAHiJq0s8ETYs3tV/SPi6nr/u9xBGOPWXfgwkKp3BheWxvYWTFAvh7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTAxNTkxZTQxYTcwNWFiMWM1MWY2YzdkNjFiYTc2MDg2ZjdkYTkzNTc0YTU3ZmZjMmEyMzY2OTk2M2YxY2QwOTFjNjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZWY1NGZiODc5MGMwMWUyMjZhZDJjZjA0NGQ4YjM3YjU1ZmQyM2UyZWE3YWZmYmJkYzQxMThlM2Q2NWRmODMwOTBhIiwidWlkIjoiYzc3ZjFkZjY2ZGJjZjUxNjJlYmE5NGYxNzkzMGYzMTkiLCJ1c2VybmFtZSI6InJvbWFubnVyaWsifSwic2VydmljZSI6eyJob3N0bmFtZSI6InJvbWFuLm51cmlrLm5ldCIsInByb3RvY29sIjoiaHR0cDoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMTcifSwiY3RpbWUiOjE0NzIyNjc4NDYsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJtZXJrbGVfcm9vdCI6eyJjdGltZSI6MTQ3MjI2NzgwMiwiaGFzaCI6IjVmMWI5OGIyMzZkZWUxMDcwNDZjNWQzZjZkMzk5MDhlMzk5ZWQ1YTk2NzVhNDIzOWNiMDU2MjczYzIzYzg5NjRiNmQ5ZGZmODRiOWMyZjk2Mjk0Y2ZkYWQ5Y2Q5NjYxN2QwYTQ1MDkyYThmN2NlYWEwN2YxZDAxMWNkYzQxMDIxIiwic2Vxbm8iOjYwNDYyMH0sInByZXYiOiI0NDczYjJkMWI3M2NkZmU1YWNkNjQ3OThmMDEwMTY0ODhlNzkyMDVlZWJmODgyMTBmMDk5MDkwNjRlOGJjMzhhIiwic2Vxbm8iOjksInRhZyI6InNpZ25hdHVyZSJ9o3NpZ8RA8zi81p0XTAtMonmdrYA6pCp40vIov1GQrz4WNEIftF/BrqDgdTedLVaj0F5hTp6g26QD2HKmJSXyJp+NTpf0CqhzaWdfdHlwZSCkaGFzaIKkdHlwZQildmFsdWXEIJy/9kLwsz6zHj67KM9/ETV3uI+523TvjKTaStejukD9o3RhZ80CAqd2ZXJzaW9uAQ==
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEg+q3mTfsb5xycKLmVxQ1VnlUbFbpmVz1WgaXsoCLuys8Kp3BheWxvYWTFAz97ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwZmFhZGU2NGRmYjFiZTcxYzljMjhiOTk1YzUwZDU1OWU1NTFiMTViYTY2NTczZDU2ODFhNWVjYTAyMmVlY2FjZjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwZmFhZGU2NGRmYjFiZTcxYzljMjhiOTk1YzUwZDU1OWU1NTFiMTViYTY2NTczZDU2ODFhNWVjYTAyMmVlY2FjZjBhIiwidWlkIjoiOTJlMjU4NWQ1ZmNjOWQ1ZTc0MmQ4ODM2NzdhNzIyMTkiLCJ1c2VybmFtZSI6IjFoYWtyIn0sIm1lcmtsZV9yb290Ijp7ImN0aW1lIjoxNTAzMDM5MTk5LCJoYXNoIjoiZWFjNWFkNjMzNTQyYzc5OWY4OTY0MmFhNTVmMDhlN2UxY2E2OGUzZTg1ZDJkZGMwOWJhMjM2YzY0NjJjMjA3OWM0ZDJjODBjNzVkODkwYWE4NzU1NTUzNDMyM2ZlYjQ3N2QzYTc3MjhlYjEzODE3ZmE2OGFiMzEwMTAyMzg0YjkiLCJoYXNoX21ldGEiOiI5NGY3YWExMWNjNmZhMjQ1NzAxNmY2MmNkMjBjMzJmMTUwY2E5N2RiNWE0ZDAwM2ZjZTgxMGE0Y2ZiMTMzMDk3Iiwic2Vxbm8iOjEzMzMzNDR9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiMWhha3IuY29tIiwicHJvdG9jb2wiOiJodHRwczoifSwidHlwZSI6IndlYl9zZXJ2aWNlX2JpbmRpbmciLCJ2ZXJzaW9uIjoxfSwiY2xpZW50Ijp7Im5hbWUiOiJrZXliYXNlLmlvIGdvIGNsaWVudCIsInZlcnNpb24iOiIxLjAuMjcifSwiY3RpbWUiOjE1MDMwMzkyMzYsImV4cGlyZV9pbiI6NTA0NTc2MDAwLCJwcmV2IjoiNTgxODU1OGMzOTIxOWMxMTEwMWYxMTUwYmE3ZTQ5ZjAwM2U2NjRhOWQ1NmIyZTA0NzUwMjU1NjFlZjY4MDQyMSIsInNlcW5vIjoxMSwidGFnIjoic2lnbmF0dXJlIn2jc2lnxECTMO/TABxFJtpZ4jcPMmNgC01VH6WVCsgcWUm6Tz3HNoJ4OCR56uCrOhxrea+w/jMHPV+1YH7Rv5r+FoY5Ag0AqHNpZ190eXBlIKRoYXNogqR0eXBlCKV2YWx1ZcQgUmAA+h6qzRjuBIv8fkMIkUsmrWdZeCrF+Uk27u//eG+jdGFnzQICp3ZlcnNpb24B
 
 And finally, I am proving ownership of this host by posting or
 appending to this document.
 
-View my publicly-auditable identity here: https://keybase.io/romannurik
+View my publicly-auditable identity here: https://keybase.io/1hakr
 
 ==================================================================
