@@ -1,5 +1,20 @@
 {% extends '_base.html' %}
-
+{% block js %}
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Person",
+  "name": "Hari Krishna Dulipudi",
+  "jobTitle": "Digital Nomad",
+  "affiliation": "DWorkS",
+  "additionalName": "HaKr",
+  "url": "http://www.example.com",
+  "email": "hakr@dworks.in",
+  "image": "https://1hakr.com/images/avatar.png",
+  "brand": "DWorkS"
+}
+</script>
+{% endblock %}
 {% block css %}
 <link rel="stylesheet" href="/styles/landing.css">
 {% endblock %}
