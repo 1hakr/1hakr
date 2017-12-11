@@ -19,23 +19,21 @@
 
 'use strict';
 
-// Include Node packages
-var del = require('del');
-var fs = require('fs');
-var runSequence = require('run-sequence');
-var browserSync = require('browser-sync');
 var browserify = require('browserify');
-var source = require('vinyl-source-stream');
+var browserSync = require('browser-sync');
 var buffer = require('vinyl-buffer');
-var reload = browserSync.reload;
-var path = require('path');
-var merge = require('merge-stream');
-var requireDir = require('require-dir');
-
-// Include Gulp and plugins
-var gulp = require('gulp');
-var $ = require('gulp-load-plugins')();
+var del = require('del');
 var exclude = require('gulp-ignore').exclude;
+var fs = require('fs');
+var gulp = require('gulp');
+var merge = require('merge-stream');
+var path = require('path');
+var reload = browserSync.reload;
+var requireDir = require('require-dir');
+var runSequence = require('run-sequence');
+var source = require('vinyl-source-stream');
+
+var $ = require('gulp-load-plugins')();
 
 // Include local packages
 var localPlugins = {};
@@ -70,7 +68,7 @@ gulp.task('js', function() {
             .pipe(source(file))
             .pipe(buffer())
             .pipe(gulp.dest('.tmp/scripts'))
-            .pipe($.uglify({preserveComments: 'some'}))
+            .pipe($.uglify())
             .pipe(gulp.dest('dist/scripts')));
       }
     });
@@ -97,11 +95,11 @@ gulp.task('media', function () {
     .pipe($.size({title: 'media'}));
 
   var stream2 = gulp.src('app/images/**/*')
-    .pipe($.cache($.imagemin({
+    .pipe($.imagemin({
       progressive: true,
       interlaced: true,
       svgoPlugins: [{removeTitle: true}],
-    })))
+    }))
     .pipe(gulp.dest('dist/images'))
     .pipe($.size({title: 'images'}));
 
