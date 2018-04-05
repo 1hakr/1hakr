@@ -1,4 +1,49 @@
 # List of my projects.
+- name: ACrypto Cryptocurrency Tracker
+  extra_classes: tall
+  description: |
+
+    Acrypto is a Bitcoin & Cryptocurrency portfolio tracker app using which you can track the latest prices,
+    find arbitrage opportunities, maintain portfolio, get alerts, track balance, compare prices in different
+    exchanges from more than 1300 coins including bitcoin, ethereum, and other altcoins exchanges and markets
+    in top 20 currencies around the world
+
+    * Maintain Cryptocurrency Portfolio
+    * Balance Tracker
+    * Arbitrage Price Tracker
+    * Altcoin Price Alerts
+    * Watchlist of cryptocurrency
+    * Cryptoworld News
+    * Advanced Charts
+    * Widgets for Homescreen
+
+  actions:
+  - caption: Get App
+    url: https://acrypto.io
+
+  pages:
+  - image: acrypto_phone1.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: nexus5
+  - image: acrypto_phone2.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: nexus5
+  - image: acrypto_phone3.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: nexus5
+  - image: acrypto_phone4.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: nexus5
+  - image: acrypto_phone5.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: nexus5
+
+###################################################################################################
 
 - name: AnExplorer File Manager
   extra_classes: tall
@@ -15,8 +60,8 @@
     AnExplorer has been installed over a 100K times on Google Play.
 
   actions:
-  - caption: Install app
-    url: https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer
+  - caption: Get App
+    url: https://anexplorer.co
   - caption: View code
     url: https://github.com/1hakr/anexplorer
 
@@ -48,7 +93,7 @@
     * Favorite, Liked and best food from other users in your locality
 
   actions:
-  - caption: Install app
+  - caption: Get app
     url: https://play.google.com/store/apps/details?id=com.shifoo
 
   pages:
