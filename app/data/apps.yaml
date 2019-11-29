@@ -1,5 +1,52 @@
 # List of my projects.
-- name: ACrypto Cryptocurrency Tracker
+- name: Visa List
+  extra_classes: tall
+  description: |
+
+    VisaList helps anyone who wants to travel to different countries, with the visa requirements to 
+    begin with along with the important things required. You can find Visa free, Visa on arrival and 
+    other requirement to travel to more than 200 different destination countries across the world. 
+    You can also know each required documents, embassies nearby, currency required, languages spoken 
+    and much more. This makes life easy and puts the research people usually do all in one place.
+
+    * Maintain Cryptocurrency Portfolio
+    * Balance Tracker
+    * Arbitrage Price Tracker
+    * Altcoin Price Alerts
+    * Watchlist of cryptocurrency
+    * Cryptoworld News
+    * Advanced Charts
+    * Widgets for Homescreen
+
+  actions:
+  - caption: View Website
+    url: https://visalist.io
+
+  pages:
+  - image: visalist_screen1.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+  - image: visalist_screen2.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+  - image: visalist_screen3.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+  - image: visalist_screen4.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+  - image: visalist_screen5.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+
+###################################################################################################
+
+- name: ACrypto
   extra_classes: tall
   description: |
 
@@ -45,7 +92,7 @@
 
 ###################################################################################################
 
-- name: AnExplorer File Manager
+- name: AnExplorer
   extra_classes: tall
   description: |
 
@@ -79,7 +126,7 @@
 
 ###################################################################################################
 
-- name: Shifoo Your food Expert
+- name: Shifoo
   extra_classes: tall
   description: |
 
@@ -91,10 +138,6 @@
     * Help users explore all the dishes of a restaurant
     * Filter food items based on your preferences like Veg and Non-Veg items
     * Favorite, Liked and best food from other users in your locality
-
-  actions:
-  - caption: Get app
-    url: https://play.google.com/store/apps/details?id=com.shifoo
 
   pages:
   - image: shifoo_detail1.png

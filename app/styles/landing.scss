@@ -119,11 +119,12 @@ body {
   }
 
   p {
-    width: 406px;
+    width: 450px;
     text-align: center;
     margin: 16px auto;
+    align-self: center;
     @include mobile {
-      width: 256px;
+      width: 280px;
       margin: 8px;
     }
   }
@@ -189,7 +190,7 @@ body {
     }
   }
 
-  $links: twitter dribbble github medium googleplus email resume linkedin;
+  $links: twitter dribbble github medium googleplus email resume linkedin telegram;
   @each $link in $links {
     .#{$link}::after { background-image: url(../images/icon_#{$link}.svg); }
   }
