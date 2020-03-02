@@ -3,15 +3,17 @@
     <span itemscope itemtype="http://schema.org/Organization">
       <meta itemprop="name" content="DWorkS">
       <link itemprop="url" href="https://dworks.io/">
-      <link itemprop="logo" src="https://dworks.io/images/logo.png">
+      <span itemprop="logo" itemscope itemtype="https://www.schema.org/ImageObject">
+        <link itemprop="url" href="https://dworks.io/logo.png">
+      </span>
       <link itemprop="sameAs" href="https://facebook.com/1hakr">
       <link itemprop="sameAs" href="https://twitter.com/1hakr">
       <link itemprop="sameAs" href="https://instagram.com/1hakr">
     </span>
     <div itemscope itemtype="http://schema.org/WebSite">
-      <meta itemprop="name" content="Dev Mentor">
-      <meta itemprop="alternateName" content="Get help from developer experts across the world">
-      <meta itemprop="url" content="https://devmento.co/">
+      <meta itemprop="name" content="1HaKr">
+      <meta itemprop="alternateName" content="The personal website of Hari Krishna Dulipudi, an Indie Maker">
+      <meta itemprop="url" content="https://1hakr.com/">
     </div>
     <Header :colored="isColored" :items="$store.state.headerItems" :title="toolbarTile" />
     <v-content>

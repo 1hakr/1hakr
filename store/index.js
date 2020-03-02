@@ -28,7 +28,7 @@ export const state = () => ({
     { img: '/share/reddit.svg', title: 'Reddit' },
     { img: '/share/gmail.svg', title: 'Email' }
   ],
-  currentTitle: 'HaKr',
+  currentTitle: '1HaKr',
   appName: '1HaKr',
   appDomain: '1hakr.com',
   user: {},

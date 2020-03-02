@@ -1,12 +1,12 @@
-const themeColor = '#4e3724'
+const themeColor = '#009688'
 const name = 'Hari Krishna Dulipudi'
-const appName = 'HaKr'
+const appName = '1HaKr'
 
 module.exports = {
   mode: 'universal',
   head: {
-    title: name,
-    titleTemplate: '%s - ' + appName,
+    title: appName,
+    titleTemplate: '%s - ' + name,
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width,minimum-scale=1,user-scalable=0,viewport-fit=cover' },
@@ -16,7 +16,7 @@ module.exports = {
     ],
     link: [
       { hid: 'apple-touch-icon', rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-      { rel: 'mask-icon', color: '#2C2C2C', href: '/safari-pinned-tab.svg' },
+      { rel: 'mask-icon', color: '#009688', href: '/safari-pinned-tab.svg' },
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'shortcut icon', href: '/favicon.ico' }
     ]

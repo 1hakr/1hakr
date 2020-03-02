@@ -91,7 +91,7 @@ export default {
     sheet: false,
     home: '/',
     deferredPrompt: null,
-    shareText: 'I found this very useful website to get live coding help from expert developers'
+    shareText: 'I found this website of an Indie Hacker'
   }),
   computed: {
     toolbarColor() {
