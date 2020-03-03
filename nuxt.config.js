@@ -42,6 +42,8 @@ module.exports = {
     }]
   ],
   vuetify: {
+    treeShake: true,
+    defaultAssets: false,
     customVariables: ['~/assets/variables.scss'],
     optionsPath: './vuetify.options.js'
   },
@@ -67,18 +69,18 @@ module.exports = {
       urls: ['https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/4.7.95/css/materialdesignicons.min.css']
     }
   },
-  // purgeCSS: {
-  //   mode: 'postcss',
-  //   paths: [
-  //     'components/**/*.vue',
-  //     'layouts/**/*.vue',
-  //     'pages/**/*.vue',
-  //     'plugins/**/*.js',
-  //     './node_modules/vuetify/dist/vuetify.js'
-  //   ],
-  //   whitelist: ['html', 'body', 'nuxt-link-exact-active', 'nuxt-progress', 'wf-active'],
-  //   whitelistPatterns: [/^v-/, /wf.*/, /nuxt.*/]
-  // },
+  purgeCSS: {
+    mode: 'postcss',
+    paths: [
+      'components/**/*.vue',
+      'layouts/**/*.vue',
+      'pages/**/*.vue',
+      'plugins/**/*.js',
+      './node_modules/vuetify/dist/vuetify.js'
+    ],
+    whitelist: ['html', 'body', 'nuxt-link-exact-active', 'nuxt-progress', 'wf-active'],
+    whitelistPatterns: [/^v-/, /wf.*/, /nuxt.*/]
+  },
   render: {
     http2: {
       push: true,
