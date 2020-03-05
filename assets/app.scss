@@ -717,4 +717,18 @@ video {
   }
 }
 
+.minheight {
+  min-height: 90vh !important;
+}
+
+.overlay-index {
+  z-index: 13000 !important;
+}
+
+@media only screen and (max-width: 960px) {
+  .minheight {
+    min-height: 90vh !important;
+  }
+}
+
 /* purgecss end ignore */
