@@ -10,8 +10,10 @@ export default {
       }
     }
   },
-  mounted() {
+  created() {
     this.setDarkMode(this.darkTheme)
+  },
+  mounted() {
     this.setAutoTheme()
   },
   methods: {

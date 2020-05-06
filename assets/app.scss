@@ -37,6 +37,9 @@
 .wrapper-width {
   width: 100%;
 }
+.wrapper-height {
+  height: 100%;
+}
 .center {
   margin: auto;
   // width: 100%;
@@ -74,6 +77,7 @@ $avatarSizeSmall: 96px;
 $avatarBorder: 4px;
 $avatarBorderSmall: $avatarBorder;
 $mainPadding: 24px;
+$topPadding: 150px;
 
 .main-link {
   border-bottom: 3px solid #ffeb3b;
@@ -99,10 +103,12 @@ $mainPadding: 24px;
 .avatar {
   width: $avatarSize;
   height: $avatarSize;
+  margin-top: -150px !important;
 
   @include mobile {
     width: $avatarSizeSmall;
     height: $avatarSizeSmall;
+    margin-top: 130px !important;
   }
 
   background: url('/images/avatar.png');
@@ -119,8 +125,6 @@ $mainPadding: 24px;
 }
 
 .content-container {
-  position: relative;
-  width: 100%;
   background-color: $colorPrimary;
   display: flex;
   justify-content: center;
@@ -134,21 +138,18 @@ $mainPadding: 24px;
     background-color: #fff;
     width: 100%;
 
-    height: $avatarSize / 2 + $avatarBorder + $mainPadding;
+    height: $avatarSize / 2 + $avatarBorder + $topPadding;
 
     @include mobile {
-      height: $avatarSizeSmall / 2 + $avatarBorderSmall + $mainPadding;
+      height: $avatarSizeSmall / 2 + $avatarBorderSmall + $topPadding;
     }
   }
 }
 .content-home {
-  position: relative;
   width: 100%;
-  background-color: $colorPrimaryDark;
   display: flex;
   justify-content: center;
   flex: 0 0 auto;
-  max-height: 200px;
 }
 
 .theme--light .content-container {
@@ -164,27 +165,17 @@ $mainPadding: 24px;
   }
 }
 
-.theme--light .content-home {
-  background-color: $colorPrimary;
-}
-.theme--dark .content-home {
-  background-color: $colorPrimaryDark;
-}
-
 .content {
   position: relative;
   padding: $mainPadding;
   color: rgba(#fff, 0.8);
-  width: 500px;
+  max-width: 500px;
   display: flex;
   flex-direction: column;
 
   font-size: 24px;
 
   line-height: 32px;
-  @include mobile {
-    width: 350px;
-  }
 
   a {
     display: inline-block;
