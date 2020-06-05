@@ -1,3 +1,4 @@
+import { setCookie } from '~/plugins/utils'
 export const state = () => ({
   headerItems: [
     { text: 'Home', icon: 'mdi-home', to: '/' },
@@ -48,6 +49,7 @@ export const mutations = {
   },
   SET_DARK_THEME (state, payload) {
     state.darkTheme = payload
+    setCookie(this, 'theme', state.darkTheme)
   }
 }
 

@@ -5,11 +5,12 @@
       <p>Hello, I’m 👨🏼‍🎤 HaKr</p>
       <p>
         Building microstartups @ 😈 <a href="https://dworks.io?referrer=1hakr">DWorkS</a>
-        and currently building ✈️ <a href="https://visalist.io?referrer=1hakr">Visa List</a>
+        and currently building 🖥️ <a href="https://simpleops.io?referrer=1hakr">Simple Ops</a>
       </p>
       <p>Running 🇦🇺 <a href="https://t.me/aussiemakers">Aussie Makers</a> community</p>
       <p>
-        I also made 💱 <a href="https://acrypto.io?referrer=1hakr">ACrypto</a>,
+        I made ✈️ <a href="https://visalist.io?referrer=1hakr">Visa List</a>,
+        💱 <a href="https://acrypto.io?referrer=1hakr">ACrypto</a>,
         📁 <a href="https://anexplorer.co?referrer=1hakr">AnExplorer</a> and
         see more of my work
         <nuxt-link to="/apps">

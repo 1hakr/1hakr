@@ -11,10 +11,12 @@ export default {
     }
   },
   created() {
+    const theme = this.$cookies.get('theme')
+    this.darkTheme = theme !== undefined ? theme : false
     this.setDarkMode(this.darkTheme)
   },
   mounted() {
-    this.setAutoTheme()
+    // this.setAutoTheme()
   },
   methods: {
     setAutoTheme() {

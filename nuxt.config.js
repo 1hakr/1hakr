@@ -33,13 +33,15 @@ module.exports = {
     '@nuxtjs/pwa',
     '@nuxtjs/dotenv',
     'nuxt-webfontloader',
-    '@nuxtjs/vuetify'
+    '@nuxtjs/vuetify',
+    '@nuxtjs/sitemap'
   ],
   modules: [
     ['@nuxtjs/google-analytics', {
       id: process.env.ANALYTICS_ID,
       debug: { sendHitTask: process.env.ANALYTICS_ENABLED }
-    }]
+    }],
+    'cookie-universal-nuxt'
   ],
   vuetify: {
     treeShake: true,
@@ -80,6 +82,10 @@ module.exports = {
     ],
     whitelist: ['html', 'body', 'nuxt-link-exact-active', 'nuxt-progress', 'wf-active'],
     whitelistPatterns: [/^v-/, /wf.*/, /nuxt.*/]
+  },
+  sitemap: {
+    hostname: 'https://1hakr.com',
+    gzip: true
   },
   render: {
     http2: {

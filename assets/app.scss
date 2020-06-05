@@ -108,7 +108,7 @@ $topPadding: 150px;
   @include mobile {
     width: $avatarSizeSmall;
     height: $avatarSizeSmall;
-    margin-top: 130px !important;
+    margin-top: -65px !important;
   }
 
   background: url('/images/avatar.png');
@@ -141,7 +141,7 @@ $topPadding: 150px;
     height: $avatarSize / 2 + $avatarBorder + $topPadding;
 
     @include mobile {
-      height: $avatarSizeSmall / 2 + $avatarBorderSmall + $topPadding;
+      height: $avatarSizeSmall / 2 + $avatarBorderSmall;
     }
   }
 }
