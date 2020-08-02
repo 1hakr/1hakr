@@ -5665,6 +5665,11 @@ nuxt-purgecss@^1.0.0:
     purgecss "^2.0.5"
     purgecss-webpack-plugin "^2.0.5"
 
+nuxt-stripe-module@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/nuxt-stripe-module/-/nuxt-stripe-module-2.1.0.tgz#62e2140f39874ad9ad618a4e435e74e9a90868e7"
+  integrity sha512-I1FNSgKfvI97vUhD/NL8nCTg29qqRDbYZZ7yWIAS+TB4zf2cdzWY1YtZrKUGeKtR3UIl3ZDI5un8yFshFWFZJA==
+
 nuxt-webfontloader@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/nuxt-webfontloader/-/nuxt-webfontloader-1.1.0.tgz#68b47ffbeaee4c41969f42f57a86946e0c36715c"

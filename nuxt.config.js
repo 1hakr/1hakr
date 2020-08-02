@@ -1,9 +1,13 @@
 const themeColor = '#009688'
 const name = 'Hari Krishna Dulipudi'
 const appName = '1HaKr'
-
+const isProd = process.env.NODE_ENV === 'production'
+const stripeKey = isProd ? 'pk_live_mb9W784ENBOgLl2LAHbRaPzC00cpxZMLK6' : 'pk_test_F3lp6SlCvBMBrtrUkia2ygTp00pgGllyml'
 module.exports = {
   mode: 'universal',
+  env: {
+    isDev: !isProd
+  },
   head: {
     title: appName,
     titleTemplate: '%s - ' + name,
@@ -40,6 +44,9 @@ module.exports = {
     ['@nuxtjs/google-analytics', {
       id: process.env.ANALYTICS_ID,
       debug: { sendHitTask: process.env.ANALYTICS_ENABLED }
+    }],
+    ['nuxt-stripe-module', {
+      publishableKey: stripeKey
     }],
     'cookie-universal-nuxt'
   ],
