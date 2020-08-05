@@ -138,10 +138,10 @@ $topPadding: 150px;
     background-color: #fff;
     width: 100%;
 
-    height: $avatarSize / 2 + $avatarBorder + $topPadding;
+    height: 16px + $topPadding;
 
     @include mobile {
-      height: $avatarSizeSmall / 2 + $avatarBorderSmall;
+      height: 16px;
     }
   }
 }

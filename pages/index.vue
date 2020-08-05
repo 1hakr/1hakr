@@ -61,7 +61,7 @@ export default {
   },
   mounted() {
     const query = this.$route.query
-    if (!this.isEmpty(query)) {
+    if (!this.isEmpty(query) && query.result) {
       if (query.result === this.success) {
         this.message = 'You will get details through a mail'
       } else {
