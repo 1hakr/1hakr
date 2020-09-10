@@ -24,9 +24,20 @@
         </nuxt-link>
       </p>
       <v-layout row wrap align-center justify-center mt-4 my-2>
-        <v-flex shrink>
-          <v-btn color="#ffeb3b" :loading="progress" large @click="openCheckout()">
-            Book 1-1 consultation
+        <v-flex shrink ma-1>
+          <v-btn color="#ffeb3b" large @click="openMentorship()">
+            <v-icon left>
+              mdi-school
+            </v-icon>
+            Apply for mentorship
+          </v-btn>
+        </v-flex>
+        <v-flex shrink ma-1>
+          <v-btn :loading="progress" large @click="openCheckout()">
+            <v-icon left>
+              mdi-calendar
+            </v-icon>
+            Book a call
           </v-btn>
         </v-flex>
       </v-layout>
@@ -72,6 +83,9 @@ export default {
   methods: {
     isEmpty (obj) {
       return !obj || Object.keys(obj).length === 0
+    },
+    openMentorship() {
+      window.open('https://mentorcruise.com/mentor/HariDulipudi/', '_blank').focus()
     },
     async openCheckout() {
       this.progress = true
