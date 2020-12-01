@@ -1,5 +1,5 @@
 <template>
-  <v-content :dark="$store.state.darkTheme">
+  <v-main :dark="$store.state.darkTheme">
     <v-container pa-2 full-height>
       <v-layout pt-5 column justify-content-start align-center align-content-center>
         <v-flex pb-5>
@@ -30,13 +30,13 @@
         </v-flex>
       </v-layout>
     </v-container>
-  </v-content>
+  </v-main>
 </template>
 
 <script>
 export default {
-  props: ['error'],
   layout: 'plain',
+  props: ['error'],
   fetch({ app, store }) {
     store.commit('SET_CURRENT_TITLE', '')
   },

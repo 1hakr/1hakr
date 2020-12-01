@@ -6,7 +6,7 @@
     <div class="edge-clicker next" style="width: 32px;" />
     <v-sheet class="mx-auto" color="transparent" max-width="1400">
       <v-slide-group v-model="onboarding" class="py-4" center-active :show-arrows="false">
-        <v-slide-item v-for="page in items" :key="page.image" v-slot:default="{ active, toggle }">
+        <v-slide-item v-for="page in items" :key="page.image" v-slot="{ active, toggle }">
           <v-card :color="active ? '#c2d6f2' : '#c2d6f2'" class="mx-2 ma-auto" :max-width="cardWidth" @click="toggle">
             <div class="page image">
               <div tabindex="0" class="media loader-parent" style="color:#3c6caf">
@@ -35,7 +35,7 @@
           <v-icon>mdi-chevron-left</v-icon>
         </v-btn>
         <v-item-group v-model="onboarding" class="text-center" mandatory>
-          <v-item v-for="n in length" :key="`btn-${n}`" v-slot:default="{ active, toggle }">
+          <v-item v-for="n in length" :key="`btn-${n}`" v-slot="{ active, toggle }">
             <v-btn :input-value="active" icon @click="toggle">
               <v-icon>mdi-record</v-icon>
             </v-btn>
@@ -56,7 +56,7 @@
         </v-toolbar>
         <v-layout align-center justify-center fill-height class="minheight">
           <v-img :src="imageUrl" contain max-height="80vh" class="transparent">
-            <template v-slot:placeholder>
+            <template #placeholder>
               <v-layout fill-height align-center justify-center ma-0>
                 <v-progress-circular indeterminate color="teritiary" size="36" />
               </v-layout>

@@ -43,15 +43,15 @@ export default {
   components: {
     Carousel
   },
-  fetch({
-    store
-  }) {
-    store.commit('SET_CURRENT_TITLE', 'Apps')
-  },
   data() {
     return {
       content
     }
+  },
+  fetch({
+    store
+  }) {
+    store.commit('SET_CURRENT_TITLE', 'Apps')
   },
   mounted() {
 

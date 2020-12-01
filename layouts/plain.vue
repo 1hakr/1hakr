@@ -1,9 +1,9 @@
 <template>
   <v-app id="inspire" :dark="darkTheme">
     <Header :colored="true" :items="this.$store.state.headerItems" :title="toolbarTile" />
-    <v-content class="plain">
+    <v-main class="plain">
       <nuxt />
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 

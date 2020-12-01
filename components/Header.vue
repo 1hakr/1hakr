@@ -23,10 +23,10 @@
           </div>
         </v-flex>
       </v-list>
-      <template v-slot:append>
+      <template #append>
         <v-flex shrink>
           <v-switch v-model="darkTheme" inset class="pl-3" color="teritiary" pl-3>
-            <template v-slot:label>
+            <template #label>
               <span>
                 &nbsp; &nbsp; {{ `${darkTheme ? `🌒 Dark` : `☀️ Light `} Mode` }}
               </span>

@@ -16,9 +16,9 @@
       <meta itemprop="url" content="https://1hakr.com/">
     </div>
     <Header :colored="isColored" :items="$store.state.headerItems" :title="toolbarTile" />
-    <v-content>
+    <v-main>
       <nuxt />
-    </v-content>
+    </v-main>
     <Footer v-if="showFooter" :colored="isColored" />
   </v-app>
 </template>
@@ -38,6 +38,19 @@ export default {
       sidebar: false,
       colored: false
     }
+  },
+  head () {
+    const formattedTitle = '1HaKr'
+    const description = ''
+    const head = {
+      title: formattedTitle,
+      meta: [
+        { hid: 'description', name: 'description', content: description }
+      ],
+      link: [{ rel: 'canonical', href: this.getFullUrl(this.$route.path) }],
+      script: [{ src: '/pwacompat.js', async: true }]
+    }
+    return head
   },
   computed: {
     toolbarTile () {
@@ -62,19 +75,6 @@ export default {
       const barehost = host.replace('www.', '')
       return `https://${barehost}${path}`
     }
-  },
-  head () {
-    const formattedTitle = '1HaKr'
-    const description = ''
-    const head = {
-      title: formattedTitle,
-      meta: [
-        { hid: 'description', name: 'description', content: description }
-      ],
-      link: [{ rel: 'canonical', href: this.getFullUrl(this.$route.path) }],
-      script: [{ src: '/pwacompat.js', async: true }]
-    }
-    return head
   }
 }
 

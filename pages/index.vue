@@ -25,7 +25,7 @@
       </p>
       <v-layout row wrap align-center justify-center mt-4 my-2>
         <v-flex shrink ma-1>
-          <v-btn color="#ffeb3b" large @click="openMentorship()">
+          <v-btn light color="#ffeb3b" large @click="openMentorship()">
             <v-icon left>
               mdi-school
             </v-icon>

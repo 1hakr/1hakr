@@ -4,7 +4,7 @@ const appName = '1HaKr'
 const isProd = process.env.NODE_ENV === 'production'
 const stripeKey = isProd ? 'pk_live_mb9W784ENBOgLl2LAHbRaPzC00cpxZMLK6' : 'pk_test_F3lp6SlCvBMBrtrUkia2ygTp00pgGllyml'
 module.exports = {
-  mode: 'universal',
+  target: 'static',
   env: {
     isDev: !isProd
   },
