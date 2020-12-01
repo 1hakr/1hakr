@@ -13,7 +13,6 @@ export const state = () => ({
     { title: 'Linkedin', icon: 'mdi-linkedin', to: 'https://www.linkedin.com/in/1hakr' },
     { title: 'Medium', icon: 'mdi-medium', to: 'https://medium.com/@1HaKr' },
     { title: 'Resume', icon: 'mdi-file-document-box', to: '/media/resume.pdf' },
-    { title: 'Email', icon: 'mdi-email', to: 'mailto:hello@dworks.io' },
     { title: 'DWorkS', icon: 'mdi-dev-to', to: 'https://dworks.io/?referrer=1hakr' }
   ],
   footerItems: [
