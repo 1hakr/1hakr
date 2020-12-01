@@ -74,13 +74,19 @@ export default {
     const query = this.$route.query
     if (!this.isEmpty(query) && query.result) {
       if (query.result === this.success) {
-        this.message = 'You will get details through a mail'
+        this.message = 'Thanks, You will be now redirected to choose a time'
+        this.showBooking()
       } else {
         this.message = 'Your booking failed'
       }
     }
   },
   methods: {
+    showBooking() {
+      setTimeout(() => {
+        window.open('https://calendly.com/1hakr', '_blank').focus()
+      }, 2000)
+    },
     isEmpty (obj) {
       return !obj || Object.keys(obj).length === 0
     },
