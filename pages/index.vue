@@ -107,7 +107,7 @@ export default {
       let result = null
       let message = ''
       try {
-        result = await this.$stripe.import().redirectToCheckout(checkoutOptions)
+        result = await this.$stripe.redirectToCheckout(checkoutOptions)
         if (result.error) {
           message = result.error.message
         }
