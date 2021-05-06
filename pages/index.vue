@@ -3,13 +3,12 @@
     <div class="content">
       <div class="avatar" />
       <p>Hello, I’m 👨🏼‍🎤 HaKr</p>
+      <p>Product Guy @ <a href="https://finder.com?referrer=1hakr">Finder</a></p>
       <p>
-        Building microstartups @ 😈 <a href="https://dworks.io?referrer=1hakr">DWorkS</a>
-        and currently building 🖥️ <a href="https://simpleops.io?referrer=1hakr">Simple Ops</a>
+        Building microstartups @ <a href="https://dworks.io?referrer=1hakr">DWorkS</a> and running <a href="https://t.me/aussiemakers">Aussie Makers</a> community
       </p>
-      <p>Running 🇦🇺 <a href="https://t.me/aussiemakers">Aussie Makers</a> community</p>
       <p>
-        I made ✈️ <a href="https://visalist.io?referrer=1hakr">Visa List</a>,
+        I made ✈️ <a href="https://visalist.io?referrer=1hakr">Visa List</a>, 🖥️ <a href="https://simpleops.io?referrer=1hakr">Simple Ops</a>,
         💱 <a href="https://acrypto.io?referrer=1hakr">ACrypto</a>,
         📁 <a href="https://anexplorer.co?referrer=1hakr">AnExplorer</a> and
         see more of my work

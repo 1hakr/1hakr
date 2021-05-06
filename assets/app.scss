@@ -183,8 +183,9 @@ $topPadding: 150px;
     font-weight: 700;
     color: #fff !important;
     text-decoration: none;
-    border-bottom: 4px solid #ffeb3b;
     z-index: 0;
+    padding-left: 5px;
+    padding-right: 5px;
 
     &::before {
       position: absolute;
@@ -204,6 +205,11 @@ $topPadding: 150px;
     &:active::before {
       opacity: 1;
       visibility: visible;
+    }
+
+    &:hover {
+      color: #ffeb3b !important;
+      background-color: #ece2838f;
     }
   }
 
