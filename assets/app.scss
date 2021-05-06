@@ -184,8 +184,9 @@ $topPadding: 150px;
     color: #fff !important;
     text-decoration: none;
     z-index: 0;
-    padding-left: 5px;
-    padding-right: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 5px;
 
     &::before {
       position: absolute;
