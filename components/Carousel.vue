@@ -22,9 +22,7 @@
               </div>
               <div v-if="page.caption" class="caption">
                 {{ page.caption }}
-                <nuxt-link :to="page.link">
-                  {{ page.link_text }}
-                </nuxt-link>
+                <a :href="page.link" target="_blank">{{ page.link_text }}</a>
               </div>
             </div>
           </v-card>
