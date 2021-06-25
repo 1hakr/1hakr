@@ -2,7 +2,7 @@
   <v-footer dark :color="toolbarColor" class="ma-0" height="auto">
     <v-layout ma-2 column>
       <v-layout justify-center row wrap>
-        <v-btn v-for="item in this.$store.state.footerItems" :key="item.title" color="white" pa-0 :title="item.title"
+        <v-btn v-for="item in $store.state.footerItems" :key="item.title" color="white" pa-0 :title="item.title"
                :target="item.to.startsWith('https') ? `_blank` : ``" text small rounded :to="item.to">
           {{ item.title }}
         </v-btn>
@@ -11,7 +11,7 @@
         <div class="mx-5 my-2 justify-center">
           <div>
             &copy; {{ new Date().getFullYear() }} -
-            <strong>{{ this.$store.state.appName }}</strong>
+            <strong>{{ $store.state.appName }}</strong>
           </div>
         </div>
       </v-layout>

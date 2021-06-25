@@ -1,6 +1,6 @@
 <template>
   <v-app id="inspire" :dark="darkTheme">
-    <Header :colored="true" :items="this.$store.state.headerItems" :title="toolbarTile" />
+    <Header :colored="true" :items="$store.state.headerItems" :title="toolbarTile" />
     <v-main class="plain">
       <nuxt />
     </v-main>

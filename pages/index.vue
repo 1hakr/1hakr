@@ -45,7 +45,7 @@
       </div>
     </div>
     <v-layout class="content-home" justify-center row wrap>
-      <div v-for="item in this.$store.state.contactItems" :key="item.title" shrink>
+      <div v-for="item in $store.state.contactItems" :key="item.title" shrink>
         <v-btn fab text color="white" pa-0 :title="item.title" :target="item.to.startsWith('https') ? `_blank` : ``"
                :large="iconBig" :small="!iconBig" :href="item.to" :class="{ 'ma-1' : !iconBig }">
           <v-icon :large="iconBig">

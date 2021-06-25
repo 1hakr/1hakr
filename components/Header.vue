@@ -54,7 +54,7 @@
       <v-bottom-sheet v-model="sheet" class="bottom-index">
         <v-list>
           <v-subheader>Share</v-subheader>
-          <v-list-item v-for="tile in this.$store.state.shareItems" :key="tile.title" @click="shareUrl(tile.title)">
+          <v-list-item v-for="tile in $store.state.shareItems" :key="tile.title" @click="shareUrl(tile.title)">
             <v-list-item-avatar>
               <v-avatar size="32px" tile>
                 <img :src="`${tile.img}`" :alt="tile.title">
