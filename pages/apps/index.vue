@@ -38,11 +38,7 @@
 
 <script>
 import content from '~/static/data/apps.yaml'
-import Carousel from '~/components/Carousel.vue'
 export default {
-  components: {
-    Carousel
-  },
   data() {
     return {
       content

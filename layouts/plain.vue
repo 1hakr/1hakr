@@ -1,6 +1,5 @@
 <template>
   <v-app id="inspire" :dark="darkTheme">
-    <Header :colored="true" :items="$store.state.headerItems" :title="toolbarTile" />
     <v-main class="plain">
       <nuxt />
     </v-main>
@@ -8,15 +7,11 @@
 </template>
 
 <script>
-import Header from '~/components/Header.vue'
 import themeMixin from '~/plugins/themeMixin'
 export default {
-  components: {
-    Header
-  },
   mixins: [themeMixin],
   data: () => ({
-    title: 'Visa List'
+    title: 'Hari'
   }),
   computed: {
     toolbarTile () {
