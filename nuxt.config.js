@@ -26,6 +26,7 @@ module.exports = {
     ]
   },
   loading: { color: '#FFFFFF' },
+  components: true,
   css: [
     '~/assets/app'
   ],

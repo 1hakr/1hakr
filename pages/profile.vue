@@ -6,106 +6,15 @@
           <div _ngcontent-hlh-c1="" class="container custom-container">
             <div id="profile-basic" _ngcontent-hlh-c1="" class="row pt-4 vpanimation ng-tns-c1-0 ng-star-inserted">
               <div _ngcontent-hlh-c1="" class="col-lg-3 col-sm-3 col-md-3 pr-md-0">
-                <photo _ngcontent-hlh-c1="" class="ng-tns-c1-0" _nghost-hlh-c3="">
-                  <div _ngcontent-hlh-c3="" appnorightclick="">
-                    <div id="carouselExampleIndicators" _ngcontent-hlh-c3="" class="carousel slide ng-star-inserted"
-                         data-interval="false" data-ride="carousel">
-                      <div _ngcontent-hlh-c3="" class="position-relative">
-                        <div _ngcontent-hlh-c3="" class="carousel-inner">
-                          <div _ngcontent-hlh-c3="" class="carousel-item ng-star-inserted">
-                            <div _ngcontent-hlh-c3="" class="vpbg">
-                              <div _ngcontent-hlh-c3="">
-                                <img _ngcontent-hlh-c3="" class="vpimg d-block" draggable="false" style="margin-left: auto;margin-right: auto;"
-                                     src="https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_DvdiG_8269_TL_VP.webp">
-                                <!---->
-                              </div>
-                            </div>
-                          </div>
-                          <div _ngcontent-hlh-c3="" class="carousel-item ng-star-inserted active">
-                            <div _ngcontent-hlh-c3="" class="vpbg">
-                              <div _ngcontent-hlh-c3="">
-                                <img _ngcontent-hlh-c3="" class="vpimg d-block" draggable="false" style="margin-left: auto;margin-right: auto;"
-                                     src="https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_BNdq_25841_TL_VP.webp">
-                                <!---->
-                              </div>
-                            </div>
-                          </div>
-                          <div _ngcontent-hlh-c3="" class="carousel-item ng-star-inserted">
-                            <div _ngcontent-hlh-c3="" class="vpbg">
-                              <div _ngcontent-hlh-c3="">
-                                <img _ngcontent-hlh-c3="" class="vpimg d-block" draggable="false"
-                                     src="https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_yieGD_68031_TL_VP.webp">
-                                <!---->
-                              </div>
-                            </div>
-                          </div>
-                          <div _ngcontent-hlh-c3="" class="carousel-item ng-star-inserted">
-                            <div _ngcontent-hlh-c3="" class="vpbg">
-                              <div _ngcontent-hlh-c3="">
-                                <img _ngcontent-hlh-c3="" class="vpimg d-block" draggable="false"
-                                     src="https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_aQivH_14870_TL_VP.webp">
-                                <!---->
-                              </div>
-                            </div>
-                          </div>
-                          <div _ngcontent-hlh-c3="" class="carousel-item ng-star-inserted">
-                            <div _ngcontent-hlh-c3="" class="vpbg">
-                              <div _ngcontent-hlh-c3="">
-                                <img _ngcontent-hlh-c3="" class="vpimg d-block" draggable="false"
-                                     src="https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_qnFDO_27840_TL_VP.webp">
-                                <!---->
-                              </div>
-                            </div>
-                          </div>
-                          <div _ngcontent-hlh-c3="" class="carousel-item ng-star-inserted">
-                            <div _ngcontent-hlh-c3="" class="vpbg">
-                              <div _ngcontent-hlh-c3="">
-                                <img _ngcontent-hlh-c3="" class="vpimg d-block" draggable="false"
-                                     src="https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_xJOfH_7583_TL_VP.webp">
-                                <!---->
-                              </div>
-                            </div>
-                          </div>
-                          <div _ngcontent-hlh-c3="" class="carousel-item ng-star-inserted">
-                            <div _ngcontent-hlh-c3="" class="vpbg">
-                              <div _ngcontent-hlh-c3="">
-                                <img _ngcontent-hlh-c3="" class="vpimg d-block" draggable="false"
-                                     src="https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_PEoaZ_52687_TL_VP.webp">
-                                <!---->
-                              </div>
-                            </div>
-                          </div>
-                          <div _ngcontent-hlh-c3="" class="carousel-item ng-star-inserted">
-                            <div _ngcontent-hlh-c3="" class="vpbg">
-                              <div _ngcontent-hlh-c3="">
-                                <img _ngcontent-hlh-c3="" class="vpimg d-block" draggable="false"
-                                     src="https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_hCkwn_56213_TL_VP.webp">
-                                <!---->
-                              </div>
-                            </div>
-                          </div>
-                          <div _ngcontent-hlh-c3="" class="carousel-item ng-star-inserted">
-                            <div _ngcontent-hlh-c3="" class="vpbg">
-                              <div _ngcontent-hlh-c3="">
-                                <img _ngcontent-hlh-c3="" class="vpimg d-block" draggable="false"
-                                     src="https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_rqAOI_59360_TL_VP.webp">
-                                <!---->
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                        <!---->
-                      </div>
-                      <!---->
-                      <!---->
-                    </div>
-                  </div>
-                  <!---->
-                  <!---->
-                </photo>
-                <!---->
+                <v-carousel show-arrows-on-hover height="300" cycle hide-delimiters :interval="5000">
+                  <v-carousel-item v-for="(item, i) in items" :key="i" eager>
+                    <v-card color="primary" flat height="100%" class="rounded-xl">
+                      <v-img :src="item.src" style="margin-left: auto;margin-right: auto;" height="100%" eager />
+                    </v-card>
+                  </v-carousel-item>
+                </v-carousel>
               </div>
-              <div _ngcontent-hlh-c1="" class="col-lg-9 col-md-9 col-sm-9 xs-mt-20">
+              <div _ngcontent-hlh-c1="" class="col-lg-8 col-md-8 col-sm-8 xs-mt-20 mt-1 mt-lg-8">
                 <div _ngcontent-hlh-c1="" class="col-lg-12 col-md-12 col-sm-12 col-12 pr-sm-0">
                   <div _ngcontent-hlh-c1="" class="row">
                     <div _ngcontent-hlh-c1="" style="margin-left: 20px; ">
@@ -114,7 +23,7 @@
                     </div>
                   </div>
                 </div>
-                <div _ngcontent-hlh-c1="" class="perofile-personal-infos font-weight-bold">
+                <div _ngcontent-hlh-c1="" class="perofile-personal-infos font-weight-bold mt-1 mt-lg-6">
                   <div _ngcontent-hlh-c1="" class="col-lg-12 col-md-12 col-sm-12 pr-sm-0 ">
                     <div _ngcontent-hlh-c1="" class="row vplist">
                       <div _ngcontent-hlh-c1="" class="col-lg-12 col-md-12 col-sm-12 pa-0">
@@ -494,7 +403,7 @@
                     <div _ngcontent-hlh-c1="" class="col-lg-11 col-md-11 col-sm-11 prof-edit d-inline-flex">
                       <div _ngcontent-hlh-c1="" class="ng-tns-c1-0">
                         <span _ngcontent-hlh-c1="" class="ng-tns-c1-0">
-                          Looking for someone who is well educated, smart, mature and modern.
+                          Someone who is well educated, smart, mature and modern. <br>
                           Someone who is social and has lived overseas and understands the lifestyle.
                         </span>
                       </div>
@@ -514,6 +423,21 @@
 <script>
 export default {
   layout: 'plain',
+  data () {
+    return {
+      items: [
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_BNdq_25841_TL_VP.webp' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_DvdiG_8269_TL_VP.webp' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_yieGD_68031_TL_VP.webp' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_aQivH_14870_TL_VP.webp' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_qnFDO_27840_TL_VP.webp' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_xJOfH_7583_TL_VP.webp' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_PEoaZ_52687_TL_VP.webp' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_hCkwn_56213_TL_VP.webp' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_rqAOI_59360_TL_VP.webp' }
+      ]
+    }
+  },
   fetch({ store }) {
     store.commit('SET_CURRENT_TITLE', 'Profile')
   },

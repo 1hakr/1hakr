@@ -56,7 +56,7 @@ export default {
         { name: 'twitter:site', content: '@1HaKr' },
         { name: 'twitter:description', content: description },
         { name: 'twitter:site', content: this.getFullUrl(this.$route.path) },
-        { name: 'twitter:image', content: this.getFullUrl('/media/feature_graphic.jpg') },
+        { name: 'twitter:image', content: this.getFullUrl('/media/feature_graphic.jpg') }
       ],
       link: [{ rel: 'canonical', href: this.getFullUrl(this.$route.path) }],
       script: [{ src: '/pwacompat.js', async: true }]
