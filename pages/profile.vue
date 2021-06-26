@@ -108,7 +108,7 @@
               <div _ngcontent-hlh-c1="" class="col-lg-9 col-md-9 col-sm-9 xs-mt-20">
                 <div _ngcontent-hlh-c1="" class="col-lg-12 col-md-12 col-sm-12 col-12 pr-sm-0">
                   <div _ngcontent-hlh-c1="" class="row">
-                    <div _ngcontent-hlh-c1="" style="margin-left: 20px;margin-top: 20px;">
+                    <div _ngcontent-hlh-c1="" style="margin-left: 20px; ">
                       <!----><span id="VP_LAB_Name" _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted text-h3">Hari Krishna
                         Dulipudi</span>
                     </div>
@@ -117,8 +117,8 @@
                 <div _ngcontent-hlh-c1="" class="perofile-personal-infos font-weight-bold">
                   <div _ngcontent-hlh-c1="" class="col-lg-12 col-md-12 col-sm-12 pr-sm-0 ">
                     <div _ngcontent-hlh-c1="" class="row vplist">
-                      <div _ngcontent-hlh-c1="" class="col-lg-12 col-md-12 col-sm-12">
-                        <ul _ngcontent-hlh-c1="" class="ng-tns-c1-0">
+                      <div _ngcontent-hlh-c1="" class="col-lg-12 col-md-12 col-sm-12 pa-0">
+                        <ul _ngcontent-hlh-c1="" class="ng-tns-c1-0 mb-0">
                           <!---->
                           <li id="VP_PI_LAB_Age" _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
                             33 years, 5'10"
@@ -152,7 +152,7 @@
                           </li>
                           <!---->
                           <li id="VP_PI_LAB_AnnualIncome" _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
-                            Earns AUD 280,000 annually
+                            Earns AU$ 280,000 annually
                           </li>
                         </ul>
                       </div>
@@ -168,7 +168,7 @@
             </div>
           </div>
         </v-card>
-        <v-card :width="1200" :min-height="500" class="pa-2 pa-sm-6 my-6 rounded-xl">
+        <v-card :width="1200" :min-height="500" class="pa-2 pa-sm-6 my-6 mt-0 rounded-xl">
           <div _ngcontent-hlh-c1="" class="container custom-container pt-5">
             <div _ngcontent-hlh-c1="" class="row">
               <div _ngcontent-hlh-c1="" class="col-lg-12 col-md-9 col-sm-9 pr-md-0 pr-sm-0">
@@ -253,7 +253,7 @@
                           <div _ngcontent-hlh-c1=""
                                class="col-lg-12 col-md-12 col-sm-12 d-inline-flex sm-call-icon ng-tns-c1-0 ng-star-inserted">
                             <span _ngcontent-hlh-c1="" class="ng-tns-c1-0">Mobile No: &nbsp;</span><span
-                              _ngcontent-hlh-c1="" class="ng-tns-c1-0">+61 481 007 447</span>
+                              _ngcontent-hlh-c1="" class="ng-tns-c1-0"><a href="tel:+61481007447">+61 481 007 447</a></span>
                           </div>
                         </div>
                         <div _ngcontent-hlh-c1="" class="row pt-2">
@@ -346,7 +346,7 @@
                           <!---->
                           <li _ngcontent-hlh-c1="" class="rupee-icon ng-tns-c1-0 ng-star-inserted" style="float: none;">
                             <div _ngcontent-hlh-c1="" class="right-vp-ap-info">
-                              AUD 280,000 annually
+                              AU$ 280,000 annually
                             </div>
                           </li>
                           <!---->
@@ -513,6 +513,7 @@
 
 <script>
 export default {
+  layout: 'plain',
   fetch({ store }) {
     store.commit('SET_CURRENT_TITLE', 'Profile')
   },
@@ -527,12 +528,23 @@ export default {
         { property: 'og:title', hid: 'og:title', content: formattedTitle },
         { property: 'og:site_name', hid: 'og:site_name', content: formattedTitle },
         { property: 'og:description', hid: 'og:description', content: description },
+        { property: 'og:url', content: this.getFullUrl(this.$route.path) },
+        { property: 'og:image', content: this.getFullUrl('/media/feature_graphic.jpg') },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:title', content: formattedTitle },
         { name: 'twitter:site', content: '@1HaKr' },
         { name: 'twitter:description', content: description },
+        { name: 'twitter:site', content: this.getFullUrl(this.$route.path) },
+        { name: 'twitter:image', content: this.getFullUrl('/media/feature_graphic.jpg') },
         { name: 'robots', hid: 'robots', content: 'noindex,noarchive,nofollow' }
       ]
+    }
+  },
+  methods: {
+    getFullUrl (path) {
+      const host = process.server ? this.$store.state.appDomain : window.location.host
+      const barehost = host.replace('www.', '')
+      return `https://${barehost}${path}`
     }
   }
 }

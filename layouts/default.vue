@@ -40,12 +40,23 @@ export default {
     }
   },
   head () {
-    const formattedTitle = '1HaKr'
-    const description = ''
+    const formattedTitle = 'Hari Krishna Dulipudi'
+    const description = 'Personal profile'
     const head = {
       title: formattedTitle,
       meta: [
-        { hid: 'description', name: 'description', content: description }
+        { name: 'description', hid: 'description', content: description },
+        { property: 'og:title', hid: 'og:title', content: formattedTitle },
+        { property: 'og:site_name', hid: 'og:site_name', content: formattedTitle },
+        { property: 'og:description', hid: 'og:description', content: description },
+        { property: 'og:url', content: this.getFullUrl(this.$route.path) },
+        { property: 'og:image', content: this.getFullUrl('/media/feature_graphic.jpg') },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: formattedTitle },
+        { name: 'twitter:site', content: '@1HaKr' },
+        { name: 'twitter:description', content: description },
+        { name: 'twitter:site', content: this.getFullUrl(this.$route.path) },
+        { name: 'twitter:image', content: this.getFullUrl('/media/feature_graphic.jpg') },
       ],
       link: [{ rel: 'canonical', href: this.getFullUrl(this.$route.path) }],
       script: [{ src: '/pwacompat.js', async: true }]
