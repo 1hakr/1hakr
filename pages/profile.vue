@@ -308,13 +308,13 @@
                 <div id="vp-equality-det" _ngcontent-hlh-c1="" class="bx-shdw padd-6 mt-4 pb-4 position-relative clr-black1 ng-tns-c1-0 ng-star-inserted btm-bdr-line">
                   <!----><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
                     <!----><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
-                      <!----><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
-                        <!---->
-                        <div _ngcontent-hlh-c1="" class="big-txt1 fw-black pb-2 ng-tns-c1-0 ng-star-inserted"> Hobbies
-                          &amp; Interests </div>
-                      <!---->
-                      <!---->
-                      </span></span><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
+                             <!----><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
+                               <!---->
+                               <div _ngcontent-hlh-c1="" class="big-txt1 fw-black pb-2 ng-tns-c1-0 ng-star-inserted"> Hobbies
+                                 &amp; Interests </div>
+                               <!---->
+                               <!---->
+                             </span></span><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
                       <!----><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
                         <!---->
                         <!---->
@@ -360,21 +360,8 @@
                             </div>
                           </div>
                         </div>
-                      </span></span><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
-                      <!----><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
-                        <!---->
-                        <!---->
-                        <!---->
-                        <div _ngcontent-hlh-c1="" class="row pt-2 ng-tns-c1-0 ng-star-inserted" style="/* display: none; */">
-                          <div _ngcontent-hlh-c1="" class="ng-tns-c1-0 col-lg-12 col-md-12 col-sm-12 d-inline-flex lifestyle-img-7">
-                            <div _ngcontent-hlh-c1="" class="ng-tns-c1-0">
-                              <div _ngcontent-hlh-c1="" class="small-txt2"> Preferred Dress Style</div>
-                              <!---->
-                              <div _ngcontent-hlh-c1="" class="medium-txt1 ng-tns-c1-0 ng-star-inserted">Casual Wear</div>
-                            </div>
-                          </div>
-                        </div>
-                      </span></span><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
+                      </span></span>
+                    <span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
                       <!----><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted" /></span><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
                       <!----><span _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
                         <!---->
