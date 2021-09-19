@@ -7,11 +7,11 @@ export const state = () => ({
     { text: 'Portfolio', icon: 'mdi-palette', to: '/portfolio' }
   ],
   contactItems: [
-    { title: 'Telegram', icon: 'mdi-telegram', to: 'http://t.me/OneHaKr' },
-    { title: 'Github', icon: 'mdi-github-circle', to: 'https://github.com/1hakr' },
     { title: 'Twitter', icon: 'mdi-twitter', to: 'https://twitter.com/1hakr' },
     { title: 'Linkedin', icon: 'mdi-linkedin', to: 'https://www.linkedin.com/in/1hakr' },
     { title: 'Medium', icon: 'mdi-medium', to: 'https://medium.com/@1HaKr' },
+    { title: 'Github', icon: 'mdi-github-circle', to: 'https://github.com/1hakr' },
+    { title: 'Telegram', icon: 'mdi-telegram', to: 'http://t.me/OneHaKr' },
     { title: 'Resume', icon: 'mdi-file-document-box', to: '/media/resume.pdf' },
     { title: 'DWorkS', icon: 'mdi-dev-to', to: 'https://dworks.io/?referrer=1hakr' }
   ],

@@ -1,6 +1,6 @@
 <template>
   <v-footer dark :color="toolbarColor" class="ma-0" height="auto">
-    <v-layout ma-2 column>
+    <v-layout column class="ma-2 mt-6">
       <v-layout justify-center row wrap>
         <v-btn v-for="item in $store.state.footerItems" :key="item.title" color="white" pa-0 :title="item.title"
                :target="item.to.startsWith('https') ? `_blank` : ``" text small rounded :to="item.to">

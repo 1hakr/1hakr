@@ -3,7 +3,7 @@
   extra_classes: tall
   description: |
 
-    VisaList helps anyone who wants to travel to different countries, with the visa requirements to 
+    Visa List helps anyone who wants to travel to different countries, with the visa requirements to 
     begin with along with the important things required. You can find Visa free, Visa on arrival and 
     other requirement to travel to more than 200 different destination countries across the world. 
     You can also know each required documents, embassies nearby, currency required, languages spoken 
@@ -41,6 +41,53 @@
     color2: '#3c6caf'
     device_frame: chromebook
   - image: visalist_screen5.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+
+###################################################################################################
+
+- name: Simple Ops
+  extra_classes: tall
+  description: |
+
+    Simple Ops tries to simplify web performance monitoring to begin with. It also monitors the uptime, 
+    downtime, speed. You can track these from different parts of the world which gives a good picture of 
+    how your website is performing. When your website does go down, you get alerts in 7 different channels, 
+    so you can immediately fix the issue and get your website up.
+
+  points:
+    - text: Performance Monitoring
+    - text: Web vitals monitoring
+    - text: API & Server monitoring
+    - text: Website health and uptime monitoring
+    - text: Chrome UX metrics
+    - text: SSL monitoring
+    - text: Global monitoring in 5 locations
+    - text: Alerts in 7 different channels
+
+  actions:
+  - caption: View Website
+    url: https://simpleops.io
+
+  pages:
+  - image: simpleops_screen1.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+  - image: simpleops_screen2.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+  - image: simpleops_screen3.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+  - image: simpleops_screen4.jpg
+    color: '#c2d6f2'
+    color2: '#3c6caf'
+    device_frame: chromebook
+  - image: simpleops_screen5.jpg
     color: '#c2d6f2'
     color2: '#3c6caf'
     device_frame: chromebook

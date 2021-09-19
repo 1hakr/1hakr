@@ -10,12 +10,6 @@
   pages:
 
   - color: '#C6DAFC'
-    image: material_icon_acrypto.png
-    caption: App icon for 
-    link_text: ACrypto
-    link: https://play.google.com/store/apps/details?id=dev.dworks.apps.acrypto
-
-  - color: '#C6DAFC'
     image: material_icon_visalist.png
     caption: Icon for 
     link_text: Visa List
@@ -34,8 +28,20 @@
     link: https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer
 
   - color: '#C6DAFC'
+    image: material_icon_acrypto.png
+    caption: App icon for 
+    link_text: ACrypto
+    link: https://play.google.com/store/apps/details?id=dev.dworks.apps.acrypto
+
+  - color: '#C6DAFC'
     image: material_icon_shifoo.png
     caption: App icon for
     link_text: Shifoo
     link: /
     extra_classes: no-fullscreen
+
+  - color: '#C6DAFC'
+    image: material_icon_nocodeapi.png
+    caption: Icon for 
+    link_text: NoCode API
+    link: https://nocodeapi.com
