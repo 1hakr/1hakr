@@ -30,7 +30,7 @@
                         <ul _ngcontent-hlh-c1="" class="ng-tns-c1-0 mb-0">
                           <!---->
                           <li id="VP_PI_LAB_Age" _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
-                            33 years, 5'10"
+                            34 years, 5'10"
                           </li>
                           <!---->
                           <li _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
@@ -61,7 +61,7 @@
                           </li>
                           <!---->
                           <li id="VP_PI_LAB_AnnualIncome" _ngcontent-hlh-c1="" class="ng-tns-c1-0 ng-star-inserted">
-                            Earns AU$ 280,000 annually
+                            Earns AU$ 250,000 annually
                           </li>
                         </ul>
                       </div>
@@ -255,7 +255,7 @@
                           <!---->
                           <li _ngcontent-hlh-c1="" class="rupee-icon ng-tns-c1-0 ng-star-inserted" style="float: none;">
                             <div _ngcontent-hlh-c1="" class="right-vp-ap-info">
-                              AU$ 280,000 annually
+                              AU$ 250,000 annually
                             </div>
                           </li>
                           <!---->
