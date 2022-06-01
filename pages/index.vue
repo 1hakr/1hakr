@@ -98,10 +98,10 @@ export default {
       return !obj || Object.keys(obj).length === 0
     },
     openMentorship() {
-      window.open('https://mentorcruise.com/mentor/HariDulipudi/apply/?plan=c47a8fc8ea', '_blank').focus()
+      window.open('https://mentorcruise.com/mentor/HariDulipudi/apply/', '_blank').focus()
     },
     openConsultation() {
-      window.open('https://mentorcruise.com/sessions/expert-consultation/book/570/', '_blank').focus()
+      window.open('https://mentorcruise.com/sessions/expert-consultation/info/570/', '_blank').focus()
     },
     async openCheckout() {
       this.progress = true
