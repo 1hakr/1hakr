@@ -1408,11 +1408,6 @@
   resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.15.tgz#6a9d143f7f4f49db2d782f9e1c8839a29b43ae23"
   integrity sha512-15spi3V28QdevleWBNXE4pIls3nFZmBbUGrW9IVPwiQczuSb9n76TCB4bsk8TSel+I1OkHEdPhu5QKMfY6rQHA==
 
-"@stripe/stripe-js@^1.11.0":
-  version "1.15.1"
-  resolved "https://registry.yarnpkg.com/@stripe/stripe-js/-/stripe-js-1.15.1.tgz#a3809ecc5aa8a03bd261a2f970d11cfdcbf11c4f"
-  integrity sha512-yJiDGutlwu25iajCy51VRJeoH3UMs+s5qVIDGfmPUuFpZ+F6AJ9g9EFrsBNvHxAGBahQFMLlBdzlCVydhGp6tg==
-
 "@types/cookie@^0.3.3":
   version "0.3.3"
   resolved "https://registry.yarnpkg.com/@types/cookie/-/cookie-0.3.3.tgz#85bc74ba782fb7aa3a514d11767832b0e3bc6803"
@@ -2572,9 +2567,9 @@ caniuse-api@^3.0.0:
     lodash.uniq "^4.5.0"
 
 caniuse-lite@^1.0.0, caniuse-lite@^1.0.30000981, caniuse-lite@^1.0.30001109, caniuse-lite@^1.0.30001219, caniuse-lite@^1.0.30001228:
-  version "1.0.30001239"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001239.tgz#66e8669985bb2cb84ccb10f68c25ce6dd3e4d2b8"
-  integrity sha512-cyBkXJDMeI4wthy8xJ2FvDU6+0dtcZSJW3voUF8+e9f1bBeuvyZfc3PNbkOETyhbR+dGCPzn9E7MA3iwzusOhQ==
+  version "1.0.30001344"
+  resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001344.tgz"
+  integrity sha512-0ZFjnlCaXNOAYcV7i+TtdKBp0L/3XEU2MF/x6Du1lrh+SRX4IfzIVL4HNJg5pB2PmFb8rszIGyOvsZnqqRoc2g==
 
 chalk@^1.1.3:
   version "1.1.3"
@@ -6201,13 +6196,6 @@ nuxt-purgecss@^1.0.0:
     glob-all "^3.1.0"
     purgecss "^2.0.5"
     purgecss-webpack-plugin "^2.0.5"
-
-nuxt-stripe-module@^3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/nuxt-stripe-module/-/nuxt-stripe-module-3.2.0.tgz#440d820285fedebb9e89de041825c806cd418c4a"
-  integrity sha512-Ra9Ve0BfUP6OvJ3o/GUfzwMgSPzhYWp7WPK2WE+T4rgXOx1rbjDx8DH3WRMJNPIRNXziLcdez3EeDPQ7LffQDw==
-  dependencies:
-    "@stripe/stripe-js" "^1.11.0"
 
 nuxt-webfontloader@^1.1.0:
   version "1.1.0"

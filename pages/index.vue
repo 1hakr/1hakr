@@ -39,14 +39,6 @@
             Consultation
           </v-btn>
         </v-flex>
-        <v-flex v-if="false" shrink ma-1>
-          <v-btn rounded :loading="progress" large @click="openCheckout()">
-            <v-icon left>
-              mdi-calendar
-            </v-icon>
-            Book a call
-          </v-btn>
-        </v-flex>
       </v-layout>
       <div id="message" class="text-center">
         {{ message }}
@@ -102,32 +94,6 @@ export default {
     },
     openConsultation() {
       window.open('https://mentorcruise.com/sessions/expert-consultation/info/570/', '_blank').focus()
-    },
-    async openCheckout() {
-      this.progress = true
-      const priceId = process.env.isDev ? 'price_1HBdkqCLMgqlslNLXtTSP9Tl' : 'price_1HBdlMCLMgqlslNLYyjj4f4U'
-      const successUrl = process.env.isDev ? 'http://localhost:3000/?result=success' : 'https://1hakr.com/?result=success'
-      const cancelUrl = process.env.isDev ? 'http://localhost:3000/?result=failure' : 'https://1hakr.com/?result=failure'
-      const checkoutOptions = {
-        lineItems: [{ price: priceId, quantity: 1 }],
-        mode: 'payment',
-        successUrl,
-        cancelUrl
-      }
-      let result = null
-      let message = ''
-      try {
-        result = await this.$stripe.redirectToCheckout(checkoutOptions)
-        if (result.error) {
-          message = result.error.message
-        }
-      } catch (error) {
-        message = error.message
-      }
-      this.progress = false
-      if (message) {
-        this.message = message
-      }
     }
   }
 }
