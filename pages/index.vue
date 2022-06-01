@@ -24,15 +24,23 @@
       </p>
       <v-layout row wrap align-center justify-center mt-4 my-2>
         <v-flex shrink ma-1>
-          <v-btn light color="#ffeb3b" large @click="openMentorship()">
+          <v-btn rounded light color="#ffeb3b" large @click="openMentorship()">
             <v-icon left>
               mdi-school
             </v-icon>
-            Apply for mentorship
+            Mentorship
           </v-btn>
         </v-flex>
         <v-flex shrink ma-1>
-          <v-btn :loading="progress" large @click="openCheckout()">
+          <v-btn rounded light large @click="openConsultation()">
+            <v-icon left>
+              mdi-calendar
+            </v-icon>
+            Consultation
+          </v-btn>
+        </v-flex>
+        <v-flex v-if="false" shrink ma-1>
+          <v-btn rounded :loading="progress" large @click="openCheckout()">
             <v-icon left>
               mdi-calendar
             </v-icon>
@@ -90,7 +98,10 @@ export default {
       return !obj || Object.keys(obj).length === 0
     },
     openMentorship() {
-      window.open('https://mentorcruise.com/mentor/HariDulipudi/', '_blank').focus()
+      window.open('https://mentorcruise.com/mentor/HariDulipudi/apply/?plan=c47a8fc8ea', '_blank').focus()
+    },
+    openConsultation() {
+      window.open('https://mentorcruise.com/sessions/expert-consultation/book/570/', '_blank').focus()
     },
     async openCheckout() {
       this.progress = true

@@ -103,7 +103,7 @@ $topPadding: 150px;
 .avatar {
   width: $avatarSize;
   height: $avatarSize;
-  margin-top: -150px !important;
+  margin-top: -270px !important;
 
   @include mobile {
     width: $avatarSizeSmall;
