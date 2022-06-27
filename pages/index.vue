@@ -3,7 +3,6 @@
     <div class="content">
       <div class="avatar" />
       <p>Hello, I’m 👨🏼‍🎤 HaKr</p>
-      <p>Product Guy @ <a href="https://finder.com?referrer=1hakr">Finder</a></p>
       <p>
         Building microstartups @ <a href="https://dworks.io?referrer=1hakr">DWorkS</a> and running <a href="https://t.me/aussiemakers">Aussie Makers</a> community
       </p>
