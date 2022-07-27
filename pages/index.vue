@@ -9,7 +9,7 @@
       <p>
         I made ✈️ <a href="https://visalist.io?referrer=1hakr">Visa List</a>, 🖥️ <a href="https://simpleops.io?referrer=1hakr">Simple Ops</a>,
         💱 <a href="https://acrypto.io?referrer=1hakr">ACrypto</a>,
-        📁 <a href="https://anexplorer.co?referrer=1hakr">AnExplorer</a> and
+        📁 <a href="https://anexplorer.io?referrer=1hakr">AnExplorer</a> and
         see more of my work
         <nuxt-link to="/apps">
           apps
