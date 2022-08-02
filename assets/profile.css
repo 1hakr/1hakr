@@ -89,15 +89,6 @@
   border-radius: 10px
 }
 
-.call-icon {
-  background: url(https://imgs.bharatmatrimony.com/bmimgs/desktop-images/vp-icons.png) -8px -223px no-repeat;
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  bottom: -13px;
-  right: -18px
-}
-
 .block-icon::before,
 .brother-icon::before,
 .caste-icon::before,
@@ -167,7 +158,7 @@
 .verify-icon::before,
 .work-icon::before,
 .zodiac-icon::before {
-  background: url(https://imgs.bharatmatrimony.com/bmimgs/desktop-images/vp-icons.png) no-repeat;
+  background: url(/vp-icons.png) no-repeat;
   content: "";
   position: relative
 }
@@ -628,4 +619,8 @@
   top: 0;
   margin-right: 17px;
   padding-left: 36px
+}
+
+.v-application ul, .v-application ol {
+  padding-left: 0px !important;
 }
