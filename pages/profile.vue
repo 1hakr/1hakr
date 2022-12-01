@@ -111,7 +111,7 @@
                             Non-Vegetarian
                           </li>
                           <li class="flag-icon ng-star-inserted">
-                            Indian citizen, Permanent Resident of Australia
+                            Australian citizen
                           </li>
                         </ul>
                       </div>
@@ -120,7 +120,7 @@
                       <div class="col-lg-5 col-md-5 col-sm-5">
                         <div class="row">
                           <div class="col-lg-12 col-md-12 col-sm-12 d-inline-flex sm-call-icon ng-star-inserted">
-                            <span>Mobile No: &nbsp;</span><span><a href="tel:+61481007447">+61 481 007 447</a></span>
+                            <span>Mobile No: &nbsp;</span><span><a href="tel:+919966542755">+91 9966 542 755</a></span>
                           </div>
                         </div>
                         <div class="row pt-2" />
@@ -312,12 +312,13 @@ export default {
   data () {
     return {
       items: [
-        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_BNdq_25841_TL_VP.webp' },
-        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_DvdiG_8269_TL_VP.webp' },
-        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_yieGD_68031_TL_VP.webp' },
-        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_PEoaZ_52687_TL_VP.webp' },
-        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_hCkwn_56213_TL_VP.webp' },
-        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_rqAOI_59360_TL_VP.webp' }
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_OWXDT_2490_TL_VP.jpg' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_gtjUF_014_TL_VP.jpg' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_RawPh_90785_TL_VP.jpg' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_QNvZk_9825_TL_VP.jpg' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_BNdq_25841_TL_VP.jpg' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_VuawJ_9360_TL_VP.jpg' },
+        { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_odhpK_0436_TL_VP.jpg' }
       ]
     }
   },
