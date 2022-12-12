@@ -18,7 +18,7 @@
     "@nuxtjs/google-analytics": "^2.4.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "cookie-universal-nuxt": "^2.1.5",
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "express-useragent": "^1.0.15",
     "nuxt": "2.15.7",
     "vuetify": "^2.5.5"
