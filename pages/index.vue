@@ -92,7 +92,7 @@ export default {
       window.open('https://mentorcruise.com/mentor/HariDulipudi/apply/', '_blank').focus()
     },
     openConsultation() {
-      window.open('https://mentorcruise.com/sessions/expert-consultation/info/570/', '_blank').focus()
+      window.open('https://mentorcruise.com/sessions/expert-consultation/book/4829/', '_blank').focus()
     }
   }
 }
