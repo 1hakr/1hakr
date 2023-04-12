@@ -82,17 +82,17 @@ export default {
   methods: {
     showBooking() {
       setTimeout(() => {
-        window.open('https://calendly.com/1hakr', '_blank').focus()
+        window.open('https://calendly.com/1hakr?referrer=1hak', '_blank').focus()
       }, 2000)
     },
     isEmpty (obj) {
       return !obj || Object.keys(obj).length === 0
     },
     openMentorship() {
-      window.open('https://mentorcruise.com/mentor/HariDulipudi/apply/', '_blank').focus()
+      window.open('https://mentorcruise.com/mentor/HariDulipudi/apply?referrer=1hak', '_blank').focus()
     },
     openConsultation() {
-      window.open('https://mentorcruise.com/sessions/expert-consultation/book/4829/', '_blank').focus()
+      window.open('https://mentorcruise.com/sessions/expert-consultation/book/4829?referrer=1hak', '_blank').focus()
     }
   }
 }

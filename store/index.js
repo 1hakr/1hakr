@@ -13,7 +13,7 @@ export const state = () => ({
     { title: 'Github', icon: 'mdi-github-circle', to: 'https://github.com/1hakr' },
     { title: 'Telegram', icon: 'mdi-telegram', to: 'http://t.me/OneHaKr' },
     { title: 'Resume', icon: 'mdi-file-document-box', to: '/media/resume.pdf' },
-    { title: 'DWorkS', icon: 'mdi-dev-to', to: 'https://dworks.io/?referrer=1hakr' }
+    { title: 'DWorkS', icon: 'mdi-dev-to', to: 'https://dworks.io?referrer=1hakr' }
   ],
   footerItems: [
     { title: 'Home', to: '/' },
