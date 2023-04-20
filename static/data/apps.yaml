@@ -21,7 +21,7 @@
 
   actions:
   - caption: View Website
-    url: https://visalist.io?referrer=1hak
+    url: https://visalist.io?referrer=1hakr
 
   pages:
   - image: visalist_screen1.jpg
@@ -68,7 +68,7 @@
 
   actions:
   - caption: View Website
-    url: https://simpleops.io?referrer=1hak
+    url: https://simpleops.io?referrer=1hakr
 
   pages:
   - image: simpleops_screen1.jpg
@@ -115,7 +115,7 @@
 
   actions:
   - caption: Get App
-    url: https://acrypto.io?referrer=1hak
+    url: https://acrypto.io?referrer=1hakr
 
   pages:
   - image: acrypto_phone1.jpg
@@ -156,7 +156,7 @@
 
   actions:
   - caption: Get App
-    url: https://anexplorer.io?referrer=1hak
+    url: https://anexplorer.io?referrer=1hakr
   - caption: View code
     url: https://github.com/1hakr/anexplorer
 

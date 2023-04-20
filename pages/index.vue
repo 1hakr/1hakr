@@ -23,19 +23,19 @@
       </p>
       <v-layout row wrap align-center justify-center mt-4 my-2>
         <v-flex shrink ma-1>
-          <v-btn rounded light color="#ffeb3b" large @click="openMentorship()">
+          <v-btn rounded light color="#ffeb3b" large @click="openMeeting()">
+            <v-icon left>
+              mdi-video
+            </v-icon>
+            Video Chat
+          </v-btn>
+        </v-flex>
+        <v-flex shrink ma-1>
+          <v-btn rounded light large @click="openMentorship()">
             <v-icon left>
               mdi-school
             </v-icon>
             Mentorship
-          </v-btn>
-        </v-flex>
-        <v-flex shrink ma-1>
-          <v-btn rounded light large @click="openConsultation()">
-            <v-icon left>
-              mdi-calendar
-            </v-icon>
-            Consultation
           </v-btn>
         </v-flex>
       </v-layout>
@@ -68,31 +68,18 @@ export default {
       return !this.$isMobile
     }
   },
-  mounted() {
-    const query = this.$route.query
-    if (!this.isEmpty(query) && query.result) {
-      if (query.result === this.success) {
-        this.message = 'Thanks, You will be now redirected to choose a time'
-        this.showBooking()
-      } else {
-        this.message = 'Your booking failed'
-      }
-    }
-  },
   methods: {
-    showBooking() {
-      setTimeout(() => {
-        window.open('https://calendly.com/1hakr?referrer=1hak', '_blank').focus()
-      }, 2000)
-    },
     isEmpty (obj) {
       return !obj || Object.keys(obj).length === 0
     },
+    openMeeting() {
+      window.open('https://cal.com/1hakr/meeting?referrer=1hakr', '_blank').focus()
+    },
     openMentorship() {
-      window.open('https://mentorcruise.com/mentor/HariDulipudi/apply?referrer=1hak', '_blank').focus()
+      window.open('https://mentorcruise.com/mentor/HariDulipudi/apply?referrer=1hakr', '_blank').focus()
     },
     openConsultation() {
-      window.open('https://mentorcruise.com/sessions/expert-consultation/book/4829?referrer=1hak', '_blank').focus()
+      window.open('https://mentorcruise.com/sessions/expert-consultation/book/4829?referrer=1hakr', '_blank').focus()
     }
   }
 }

@@ -20,7 +20,7 @@
     "cookie-universal-nuxt": "^2.1.5",
     "express": "^4.16.4",
     "express-useragent": "^1.0.15",
-    "nuxt": "2.15.7",
+    "nuxt": "2.16.2",
     "vuetify": "^2.5.5"
   },
   "devDependencies": {

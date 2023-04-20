@@ -13,13 +13,13 @@
     image: material_icon_visalist.png
     caption: Icon for 
     link_text: Visa List
-    link: https://visalist.io?referrer=1hak
+    link: https://visalist.io?referrer=1hakr
 
   - color: '#C6DAFC'
     image: material_icon_simpleops.png
     caption: Icon for 
     link_text: Simple Ops
-    link: https://simpleops.io?referrer=1hak
+    link: https://simpleops.io?referrer=1hakr
 
   - color: '#C6DAFC'
     image: material_icon_anexplorer.png
@@ -44,4 +44,4 @@
     image: material_icon_nocodeapi.png
     caption: Icon for 
     link_text: NoCode API
-    link: https://nocodeapi.com?referrer=1hak
+    link: https://nocodeapi.com?referrer=1hakr
