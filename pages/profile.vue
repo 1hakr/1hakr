@@ -17,7 +17,7 @@
               <div class="col-lg-8 col-md-8 col-sm-8 xs-mt-20 mt-1 mt-lg-8">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-sm-0">
                   <div class="row">
-                    <div style="margin-left: 20px;">
+                    <div style="margin-left: 10px;">
                       <span id="VP_LAB_Name" class="ng-star-inserted text-h3">Hari Krishna Dulipudi</span>
                     </div>
                   </div>
@@ -30,14 +30,14 @@
                           <li id="Age" class="ng-star-inserted">
                             {{ currentAge }} years, 5'10"
                           </li>
+                          <li id="Starraasi" class="ng-star-inserted">
+                            75 kgs, Athletic
+                          </li>
                           <li class="ng-star-inserted">
                             Mother Tongue is Telugu
                           </li>
                           <li id="Religion" class="ng-star-inserted">
                             Kapu Naidu
-                          </li>
-                          <li id="Starraasi" class="ng-star-inserted">
-                            Star is Punarvasu, Raasi is Midhuna (Gemini)
                           </li>
                           <li id="Country" class="ng-star-inserted">
                             Lives in Australia
@@ -75,26 +75,23 @@
                         <div>
                           <span>
                             He is well educated with good academics throughout his education.<br>
-                            He is well established as a software developer and has his own Microstartups.<br>
-                            He is an Australian permanent resident currently living in Sydney
+                            He is owner of software company which build Microstartups.<br>
+                            He is an Australian Citizen currently living in Sydney
                           </span>
                         </div>
                       </div>
                     </div>
-                    <div class="row vplistmain">
+                    <div class="row vplistmain-pro">
                       <div class="col-lg-12 col-md-12 col-sm-12">
                         <ul>
                           <li class="pers-icon ng-star-inserted">
                             {{ currentAge }} years, 5'10"
                           </li>
                           <li class="person-height-icon ng-star-inserted">
-                            80 kg, Athletic
+                            75 kgs, Athletic
                           </li>
                           <li class="ring-icon1 ng-star-inserted d-none">
                             Never Married
-                          </li>
-                          <li class="location-icon ng-star-inserted">
-                            Lives in New South Wales State, Australia
                           </li>
                           <li class="location-icon ng-star-inserted">
                             <div class="right-vp-ap-info">
@@ -112,6 +109,9 @@
                           </li>
                           <li class="flag-icon ng-star-inserted">
                             Australian citizen
+                          </li>
+                          <li class="location-icon ng-star-inserted">
+                            Lives in New South Wales State, Australia
                           </li>
                         </ul>
                       </div>
@@ -140,16 +140,19 @@
                           <li class="caste-icon ng-star-inserted">
                             Kapu, Kapu
                           </li>
-                          <li class="gothram-icon ng-star-inserted">
-                            Gothram - Janakanolla
+                          <li class="star-icon ng-star-inserted">
+                            Star is Punarvasu
                           </li>
                           <li class="star-icon ng-star-inserted">
-                            Star is Punarvasu, Raasi is Midhuna (Gemini)
+                            Raasi is Midhuna (Gemini)
+                          </li>
+                          <li class="gothram-icon ng-star-inserted">
+                            Gothram - Janakanolla
                           </li>
                           <li class="zodiac-icon ng-star-inserted">
                             Zodiac sign is Leo
                           </li>
-                          <li class="dosh-icon ng-star-inserted">
+                          <li v-if="false" class="dosh-icon ng-star-inserted">
                             No Dosham
                           </li>
                         </ul>
@@ -167,12 +170,7 @@
                         <ul>
                           <li class="employ-icon ng-star-inserted">
                             <div class="right-vp-ap-info">
-                              Owns Microstartups
-                            </div>
-                          </li>
-                          <li class="study-icon ng-star-inserted">
-                            <div class="right-vp-ap-info">
-                              B.Tech. from Gudlavalleru Engineering College
+                              Owns Software Company
                             </div>
                           </li>
                           <li class="work-icon ng-star-inserted">
@@ -185,6 +183,11 @@
                               {{ currentRevenue }}
                             </div>
                           </li>
+                          <li class="study-icon ng-star-inserted">
+                            <div class="right-vp-ap-info">
+                              B.Tech. from Gudlavalleru Engineering College
+                            </div>
+                          </li>
                         </ul>
                       </div>
                     </div>
@@ -192,7 +195,7 @@
                   <div class="big-txt1 fw-black pb-3 ng-star-inserted">
                     About loved ones
                   </div>
-                  <div class="row vplistmain ng-star-inserted btm-bdr-line">
+                  <div class="row vplistmain btm-bdr-line">
                     <div class="col-lg-12 col-md-12 col-sm-12">
                       <ul>
                         <li class="nuc-family-icon ng-star-inserted">

@@ -43,6 +43,14 @@
   vertical-align: top
 }
 
+@media only screen and (max-width: 960px) {
+  .vplistmain ul {
+    columns: 1 !important;
+    -webkit-columns: 1 !important;
+    -moz-columns: 1 !important;
+  }
+}
+
 .vplist ul {
   list-style: none;
   padding-left: 0;
