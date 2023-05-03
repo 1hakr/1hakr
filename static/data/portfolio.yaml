@@ -9,6 +9,12 @@
 
   pages:
 
+  - color: '#FFFFFF'
+    image: material_icon_beansnbites.png
+    caption: Logo for 
+    link_text: Beans n Bites
+    link: https://beansnbites.com.au/?referrer=1hakr
+
   - color: '#C6DAFC'
     image: material_icon_visalist.png
     caption: Icon for 

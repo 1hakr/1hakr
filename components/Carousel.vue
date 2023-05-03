@@ -6,8 +6,8 @@
     <div class="edge-clicker next" style="width: 32px;" />
     <v-sheet class="mx-auto" color="transparent" max-width="1400">
       <v-slide-group v-model="onboarding" class="py-4" center-active :show-arrows="false">
-        <v-slide-item v-for="page in items" :key="page.image" v-slot="{ active, toggle }">
-          <v-card :color="active ? '#c2d6f2' : '#c2d6f2'" class="mx-2 ma-auto" :max-width="cardWidth" @click="toggle">
+        <v-slide-item v-for="page in items" :key="page.image" v-slot="{ toggle }">
+          <v-card :color="backgroundColor" class="mx-2 ma-auto" :max-width="cardWidth" @click="toggle">
             <div class="page image">
               <div tabindex="0" class="media loader-parent" style="color:#3c6caf">
                 <div class="device-frame" :class="`device-${ page.device_frame }`">
@@ -72,6 +72,10 @@ export default {
   props: {
     items: {
       type: Array
+    },
+    backgroundColor:{
+      type: String,
+      default: '#c2d6f2'
     }
   },
   data() {
