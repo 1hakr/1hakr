@@ -1,0 +1,49 @@
+# List of my portfolio projects.
+
+title: Designs
+description: 
+    I’ve created a number of product icons following the material design guidelines, for a number of purposes, including AnExplorer and Shifoo.
+    The gallery showcases a sampling of the icons I’ve worked on.
+designs:
+  - color: '#FFFFFF'
+    image: material_icon_beansnbites.png
+    caption: Logo for 
+    link_text: Beans n Bites
+    link: https://beansnbites.com.au/?referrer=1hakr
+
+  - color: '#C6DAFC'
+    image: material_icon_visalist.png
+    caption: Icon for 
+    link_text: Visa List
+    link: https://visalist.io?referrer=1hakr
+
+  - color: '#C6DAFC'
+    image: material_icon_simpleops.png
+    caption: Icon for 
+    link_text: Simple Ops
+    link: https://simpleops.io?referrer=1hakr
+
+  - color: '#C6DAFC'
+    image: material_icon_anexplorer.png
+    caption: App icon for
+    link_text: AnExplorer
+    link: https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer
+
+  - color: '#C6DAFC'
+    image: material_icon_acrypto.png
+    caption: App icon for 
+    link_text: ACrypto
+    link: https://play.google.com/store/apps/details?id=dev.dworks.apps.acrypto
+
+  - color: '#C6DAFC'
+    image: material_icon_shifoo.png
+    caption: App icon for
+    link_text: Shifoo
+    link: /
+    extra_classes: no-fullscreen
+
+  - color: '#C6DAFC'
+    image: material_icon_nocodeapi.png
+    caption: Icon for 
+    link_text: NoCode API
+    link: https://nocodeapi.com?referrer=1hakr

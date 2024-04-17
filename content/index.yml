@@ -1,0 +1,54 @@
+title: Hari Krishna Dulipudi
+description: Build microstartups and open source projects to make a small difference
+navigation: false
+hero:
+  title: Microstartups & Services
+  description: Building solutions to problems that make a small difference
+  links:
+    - label: Book 1-1 consultation
+      icon: i-heroicons-calendar
+      size: xl
+      color: primary
+      to: https://1hakr.com/?referrer=dworks
+      target: _blank
+      trailing: true
+    - label: Contact US
+      icon: i-heroicons-chat-bubble-bottom-center-text
+      size: xl
+      color: gray
+      to: http://t.me/OneHakr
+      target: _blank
+      trailing: true
+startups:
+  title: Microstartups
+  items:
+    - title: 'Visa List'
+      tag: 'visalist'
+      content: 'Find all the countries you can visit on your passport and know the visa requirements'
+      imgUrl: '/projects/visalist-background.jpg'
+      url: 'https://visalist.io?referrer=dworks'
+    - title: 'Simple Ops'
+      tag: 'simpleops'
+      content: 'Simple websites performance monitoring service'
+      imgUrl: '/projects/simpleops-background.jpg'
+      url: 'https://simpleops.io?referrer=dworks'
+    - title: 'ACrypto'
+      tag: 'acrypto'
+      content: 'Simple cryptocurrency Price, Arbitrage, News, Alerts and Portfolio Tracker'
+      imgUrl: '/projects/acrypto-background.jpg'
+      url: 'https://acrypto.io?referrer=dworks'
+    - title: 'AnExplorer'
+      tag: 'anexplorer'
+      content: 'Simple All-in-one file manager for phone, tablets, watches, chromebook and TV'
+      imgUrl: '/projects/anexplorer-background.jpg'
+      url: 'https://anexplorer.io?referrer=dworks'
+    - title: 'ALauncher'
+      tag: 'alauncher'
+      content: 'Simple launcher with app lock, google feed, themes for phones, tablets and TV'
+      imgUrl: '/projects/alauncher-background.jpg'
+      url: 'https://play.google.com/store/apps/details?id=dev.dworks.apps.alauncher'
+    - title: 'AWatch'
+      tag: 'awatch'
+      content: 'Elegant watch face for wear os watches and screensaver for phones, tablets and TV'
+      imgUrl: '/projects/awatch-background.jpg'
+      url: 'https://play.google.com/store/apps/details?id=dev.dworks.apps.awatch'

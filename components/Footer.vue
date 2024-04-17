@@ -1,38 +1,16 @@
-<template>
-  <v-footer dark :color="toolbarColor" class="ma-0" height="auto">
-    <v-layout column class="ma-2 mt-6">
-      <v-layout justify-center row wrap>
-        <v-btn v-for="item in $store.state.footerItems" :key="item.title" color="white" pa-0 :title="item.title"
-               :target="item.to.startsWith('https') ? `_blank` : ``" text small rounded :to="item.to">
-          {{ item.title }}
-        </v-btn>
-      </v-layout>
-      <v-layout row justify-center wrap>
-        <div class="mx-5 my-2 justify-center">
-          <div>
-            &copy; {{ new Date().getFullYear() }} -
-            <strong>{{ $store.state.appName }}</strong>
-          </div>
-        </div>
-      </v-layout>
-    </v-layout>
-  </v-footer>
-</template>
-<script>
-export default {
-  props: {
-    colored: {
-      type: Boolean,
-      default: true
-    }
-  },
-  computed: {
-    darkTheme() {
-      return this.$store.state.darkTheme
-    },
-    toolbarColor() {
-      return !this.colored ? (this.darkTheme ? 'secondary' : 'primary') : 'secondary'
-    }
-  }
-}
+<script setup lang="ts">
 </script>
+
+<template>
+  <BaseFooter>
+    <template #left>
+      <p class="text-gray-500 dark:text-gray-400 text-sm">
+        Copyright © 1hakr - {{ new Date().getFullYear() }}
+      </p>
+    </template>
+
+    <template #right>
+      <ThemeSwitcher class="w-[120px]" />
+    </template>
+  </BaseFooter>
+</template>

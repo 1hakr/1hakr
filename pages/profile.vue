@@ -2,66 +2,79 @@
   <v-container pa-2 fluid grid-list-md>
     <v-layout column align-center justify-center>
       <v-flex xs12>
-        <v-card :width="1200" flat color="transparent" class="pa-0">
+        <UCard
+          :ui="{ strategy: 'override', header: { padding: '' }, ring: '', divide: '', shadow: '', body: { padding: 'p-4', } }">
           <div class="container custom-container">
             <div id="profile-basic" class="row pt-4 vpanimation ng-star-inserted">
-              <div class="col-lg-3 col-sm-3 col-md-3 pr-md-0">
-                <v-carousel show-arrows-on-hover height="300" cycle hide-delimiters :interval="5000">
-                  <v-carousel-item v-for="(item, i) in items" :key="i" eager>
-                    <v-card color="primary" flat height="100%" class="rounded-xl">
-                      <v-img :src="item.src" style="margin-left: auto; margin-right: auto;" height="100%" eager />
-                    </v-card>
-                  </v-carousel-item>
-                </v-carousel>
-              </div>
-              <div class="col-lg-8 col-md-8 col-sm-8 xs-mt-20 mt-1 mt-lg-8">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-sm-0">
-                  <div class="row">
-                    <div style="margin-left: 10px;">
-                      <span id="VP_LAB_Name" class="ng-star-inserted text-h3">Hari Krishna Dulipudi</span>
-                    </div>
-                  </div>
+              <div class="grid grid-cols-10 gap-4">
+                <div class="col-span-10 md:col-span-4">
+                  <UCarousel v-slot="{ item }" :items="items" :ui="{
+                    item: 'basis-full',
+                    container: 'rounded-lg'
+                  }" :prev-button="{
+                      color: 'gray',
+                      icon: 'i-heroicons-arrow-left-20-solid',
+                      class: '-left-12'
+                    }" :next-button="{
+                      color: 'gray',
+                      icon: 'i-heroicons-arrow-right-20-solid',
+                      class: '-right-12'
+                    }" arrows class="w-64 mx-auto">
+                    <img :src="item.src" class="w-full" draggable="false" style="margin-left: auto; margin-right: auto;"
+                      height="100%">
+                  </UCarousel>
                 </div>
-                <div class="perofile-personal-infos font-weight-bold mt-1 mt-lg-6">
-                  <div class="col-lg-12 col-md-12 col-sm-12 pr-sm-0">
-                    <div class="row vplist">
-                      <div class="col-lg-12 col-md-12 col-sm-12 pa-0">
-                        <ul class="mb-0">
-                          <li id="Age" class="ng-star-inserted">
-                            {{ currentAge }} years, 5'10"
-                          </li>
-                          <li id="Starraasi" class="ng-star-inserted">
-                            75 kgs, Athletic
-                          </li>
-                          <li class="ng-star-inserted">
-                            Mother Tongue is Telugu
-                          </li>
-                          <li id="Religion" class="ng-star-inserted">
-                            Kapu Naidu
-                          </li>
-                          <li id="Country" class="ng-star-inserted">
-                            Lives in Australia
-                          </li>
-                          <li id="Education" class="ng-star-inserted">
-                            Studied B.Tech.
-                          </li>
-                          <li id="Profession" class="ng-star-inserted">
-                            Entrepreneur
-                          </li>
-                          <li id="AnnualIncome" class="ng-star-inserted">
-                            Earns {{ currentRevenue }}
-                          </li>
-                        </ul>
+                <div class="col-span-10 md:col-span-6">
+                  <div class="col-lg-3 col-sm-3 col-md-3 pr-md-0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12 pr-sm-0">
+                      <div class="row">
+                        <div style="margin-left: 10px;">
+                          <span id="VP_LAB_Name" class="ng-star-inserted text-5xl">Hari Krishna Dulipudi</span>
+                        </div>
                       </div>
                     </div>
+                    <div class="perofile-personal-infos font-weight-bold mt-1 mlt-lg-6">
+                      <div class="col-lg-12 col-md-12 col-sm-12 pr-sm-0">
+                        <div class="row vplist">
+                          <div class="col-lg-12 col-md-12 col-sm-12 pa-0">
+                            <ul class="mb-0">
+                              <li id="Age" class="ng-star-inserted">
+                                {{ currentAge }} years, 5'10"
+                              </li>
+                              <li id="Starraasi" class="ng-star-inserted">
+                                75 kgs, Athletic
+                              </li>
+                              <li class="ng-star-inserted">
+                                Mother Tongue is Telugu
+                              </li>
+                              <li id="Religion" class="ng-star-inserted">
+                                Kapu Naidu
+                              </li>
+                              <li id="Country" class="ng-star-inserted">
+                                Lives in Australia
+                              </li>
+                              <li id="Education" class="ng-star-inserted">
+                                Studied B.Tech.
+                              </li>
+                              <li id="Profession" class="ng-star-inserted">
+                                Entrepreneur
+                              </li>
+                              <li id="AnnualIncome" class="ng-star-inserted">
+                                Earns {{ currentRevenue }}
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="like-profile-section" />
                   </div>
                 </div>
-                <div class="like-profile-section" />
               </div>
             </div>
           </div>
-        </v-card>
-        <v-card :width="1200" :min-height="500" class="pa-2 pa-sm-6 my-6 mt-0 rounded-xl">
+        </UCard>
+        <UCard>
           <div class="container custom-container pt-5">
             <div class="row">
               <div class="col-lg-12 col-md-9 col-sm-9 pr-md-0 pr-sm-0">
@@ -222,7 +235,8 @@
                     </div>
                   </div>
                 </div>
-                <div id="vp-equality-det" class="bx-shdw padd-6 mt-4 pb-4 position-relative clr-black1 ng-star-inserted btm-bdr-line">
+                <div id="vp-equality-det"
+                  class="bx-shdw padd-6 mt-4 pb-4 position-relative clr-black1 ng-star-inserted btm-bdr-line">
                   <span class="ng-star-inserted">
                     <span class="ng-star-inserted">
                       <span class="ng-star-inserted">
@@ -235,7 +249,8 @@
                           <div class="col-lg-12 col-md-12 col-sm-12 d-inline-flex lifestyle-img-2">
                             <div>
                               <div class="small-txt2">Interests</div>
-                              <div class="medium-txt1 ng-star-inserted">Movies, Politics, Travel, Health &amp; Fitness, Learning New Languages</div>
+                              <div class="medium-txt1 ng-star-inserted">Movies, Politics, Travel, Health &amp; Fitness,
+                                Learning New Languages</div>
                             </div>
                           </div>
                         </div>
@@ -248,7 +263,8 @@
                           <div class="col-lg-12 col-md-12 col-sm-12 d-inline-flex lifestyle-img-4">
                             <div>
                               <div class="small-txt2">Sports/Fitness Activities</div>
-                              <div class="medium-txt1 ng-star-inserted">Badminton, Card Games, Football, Swimming / Water Sports, Volleyball</div>
+                              <div class="medium-txt1 ng-star-inserted">Badminton, Card Games, Football, Swimming /
+                                Water Sports, Volleyball</div>
                             </div>
                           </div>
                         </div>
@@ -303,7 +319,7 @@
             </div>
           </div>
           <span id="rightpanelfixed" />
-        </v-card>
+        </UCard>
       </v-flex>
     </v-layout>
   </v-container>
@@ -312,7 +328,7 @@
 <script>
 export default {
   layout: 'plain',
-  data () {
+  data() {
     return {
       items: [
         { src: 'https://t-imgs.matrimonycdn.com/photos/2019/08/30/19/T5442156_OWXDT_2490_TL_VP.jpg' },
@@ -360,7 +376,7 @@ export default {
     }
   },
   methods: {
-    getFullUrl (path) {
+    getFullUrl(path) {
       const host = process.server ? this.$store.state.appDomain : window.location.host
       const barehost = host.replace('www.', '')
       return `https://${barehost}${path}`
@@ -369,4 +385,4 @@ export default {
 }
 
 </script>
-<style src="@/assets/profile.css"></style>
+<style scoped src="@/assets/profile.css"></style>
