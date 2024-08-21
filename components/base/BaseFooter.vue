@@ -14,7 +14,7 @@
 
         <div :class="ui.bottom.center">
           <slot name="center">
-            <FooterLinks :links="links" />
+            <BaseFooterLinks :links="links" />
           </slot>
         </div>
 

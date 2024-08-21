@@ -14,7 +14,8 @@ export default defineNuxtConfig({
     'nuxt-delay-hydration',
     'nuxt-build-cache',
     'nuxt-date-fns',
-    'nuxt-og-image'
+    'nuxt-og-image',
+    'nuxt-gtag',
   ],
   delayHydration: { 
     mode: 'mount'
@@ -26,9 +27,6 @@ export default defineNuxtConfig({
 
       globals.forEach((c) => c.global = true)
     }
-  },
-  ui: {
-    icons: ['heroicons', 'simple-icons']
   },
   i18n: {
     compilation: {
@@ -64,5 +62,9 @@ export default defineNuxtConfig({
   },
   build: {
     transpile: ['nuxt-date-fns']
-  }
+  },
+  gtag: {
+    id: 'G-GZT3TP9CSP'
+  },
+  compatibilityDate: '2024-08-21'
 })

@@ -4,12 +4,12 @@
 
 <template>
   <div>
-    <Header />
+    <PageHeader />
 
     <UMain>
       <slot />
     </UMain>
 
-    <Footer />
+    <PageFooter />
   </div>
 </template>

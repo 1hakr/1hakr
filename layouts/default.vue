@@ -1,29 +1,15 @@
 <script setup lang="ts">
 
-definePageMeta({
-  pageTransition: {
-    name: 'page',
-    mode: 'out-in',
-    onBeforeEnter: async () => {
-      const { finalizePendingLocaleChange } = useNuxtApp().$i18n
-      await finalizePendingLocaleChange()
-    }
-  }
-})
 </script>
 
 <template>
   <div>
-    <Header />
+    <PageHeader />
 
     <UMain>
-      <UPage>
-        <template #left />
-        <slot />
-        <template #right />
-      </UPage>
+      <slot />
     </UMain>
 
-    <Footer />
+    <PageFooter />
   </div>
 </template>

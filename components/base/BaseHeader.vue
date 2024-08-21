@@ -21,14 +21,10 @@
         <slot name="right" />
 
         <slot name="panel-button" :open="isHeaderDialogOpen">
-          <UButton
-            v-if="links.length || $slots.panel"
-            :class="ui.button.base"
-            v-bind="($ui?.button?.secondary as any)"
+          <UButton v-if="links.length || $slots.panel" :class="ui.button.base" v-bind="($ui?.button?.secondary as any)"
             :aria-label="`${isHeaderDialogOpen ? 'Close' : 'Open'} Menu`"
             :icon="isHeaderDialogOpen ? ui.button.icon.close : ui.button.icon.open"
-            @click="isHeaderDialogOpen = !isHeaderDialogOpen"
-          />
+            @click="isHeaderDialogOpen = !isHeaderDialogOpen" />
         </slot>
       </div>
     </UContainer>
@@ -56,13 +52,10 @@
                 <slot name="right" />
 
                 <slot name="panel-button" :open="isHeaderDialogOpen">
-                  <UButton
-                    :class="ui.button.base"
-                    v-bind="($ui?.button?.secondary as any)"
+                  <UButton :class="ui.button.base" v-bind="($ui?.button?.secondary as any)"
                     :aria-label="`${isHeaderDialogOpen ? 'Close' : 'Open'} Menu`"
                     :icon="isHeaderDialogOpen ? ui.button.icon.close : ui.button.icon.open"
-                    @click="isHeaderDialogOpen = !isHeaderDialogOpen"
-                  />
+                    @click="isHeaderDialogOpen = !isHeaderDialogOpen" />
                 </slot>
               </div>
             </div>

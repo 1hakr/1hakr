@@ -23,12 +23,9 @@
 
           <div v-if="links?.length || $slots.links" :class="ui.links">
             <slot name="links">
-              <UButton
-                v-for="(link, index) of links"
-                :key="index"
+              <UButton v-for="(link, index) of links" :key="index"
                 v-bind="{ ...link, target: link.target || '_blank', color: link.color || 'white' }"
-                @click="link.click"
-              />
+                @click="link.click" />
             </slot>
           </div>
         </div>

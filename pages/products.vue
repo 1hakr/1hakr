@@ -15,15 +15,16 @@ const links = page.value.links
 </script>
 
 <template>
-  <Container :links="links">
+  <PageContainer :links="links">
     <template #header>
-      <PageHeader :title="page.title" :description="page.description" />
+      <PageTitle :title="page.title" :description="page.description" />
     </template>
     <div v-for="(startup, index) in page.products" :key="index" class="break-inside-avoid my-4">
       <UCard :ui="{ strategy: 'override', header: { padding: '' }, body: { padding: 'p-4', } }" class="min-h-[500px]">
         <div class="grid grid-cols-10 gap-4">
           <div class="col-span-10 md:col-span-4">
-            <UCard :ui="{ strategy: 'override', header: { padding: '' }, ring: '', divide: '', shadow: '', body: { padding: 'p-4', } }">
+            <UCard
+              :ui="{ strategy: 'override', header: { padding: '' }, ring: '', divide: '', shadow: '', body: { padding: 'p-4', } }">
               <template #header>
                 <img :src="startup.imgUrl" class="w-full rounded-t-lg" draggable="false">
               </template>
@@ -41,21 +42,22 @@ const links = page.value.links
                 </ul>
               </div>
               <div v-for="(action, index2) in startup.actions" :key="index2">
-                <UButton
-                  size="xs" color="primary" variant="outline" class="my-2"
-                  padded :trailing="true" :to="action.url" target="_blank"
-                >
+                <UButton size="xs" color="primary" variant="outline" class="my-2" padded :trailing="true"
+                  :to="action.url" target="_blank">
                   {{ action.caption }}
                 </UButton>
               </div>
             </UCard>
           </div>
           <div class="col-span-10 md:col-span-6">
-            <UCarousel :items="startup.pages" :ui="{ item: 'w-full' }" class="rounded-lg overflow-hidden" arrows indicators>
+            <UCarousel :items="startup.pages" :ui="{ item: 'w-full' }" class="rounded-lg overflow-hidden" arrows
+              indicators>
               <template #default="{ item }">
                 <div class="text-center mx-auto">
-                  <UCard :ui="{ strategy: 'override', header: { padding: '' }, body: { padding: 'p-4', } }" class="bg-primary-50 dark:bg-primary-50">
-                    <div class="min-w-[220px] h-full min-h-[300px] sm:h-[400px]" :class="`${item.device_frame === 'desktop' ? 'sm:min-w-[550px]' : ''}`">
+                  <UCard :ui="{ strategy: 'override', header: { padding: '' }, body: { padding: 'p-4', } }"
+                    class="bg-primary-50 dark:bg-primary-50">
+                    <div class="min-w-[220px] h-full min-h-[300px] sm:h-[400px]"
+                      :class="`${item.device_frame === 'desktop' ? 'sm:min-w-[550px]' : ''}`">
                       <img :src="`/media/${item.image}`" class="h-full sm:h-[400px] rounded-lg" draggable="false">
                     </div>
                   </UCard>
@@ -63,12 +65,14 @@ const links = page.value.links
               </template>
 
               <template #indicator="{ onClick, page, active }">
-                <UButton variant="solid" :class="active ? 'bg-primary-500 dark:bg-primary-400' : 'bg-gray-600 dark:bg-gray-600'" size="xs" class="rounded-full h-3 w-3" @click="onClick(page)" />
+                <UButton variant="solid"
+                  :class="active ? 'bg-primary-500 dark:bg-primary-400' : 'bg-gray-600 dark:bg-gray-600'" size="xs"
+                  class="rounded-full h-3 w-3" @click="onClick(page)" />
               </template>
             </UCarousel>
           </div>
         </div>
       </UCard>
     </div>
-  </Container>
+  </PageContainer>
 </template>
