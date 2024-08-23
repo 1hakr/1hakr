@@ -58,7 +58,7 @@ definePageMeta({
               AnExplorer
             </ActiveLink>
             <br><br>
-            See more of my work
+            See more of my
             <ActiveLink to="/products">
               products
             </ActiveLink> and

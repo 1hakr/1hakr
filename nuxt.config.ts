@@ -42,11 +42,6 @@ export default defineNuxtConfig({
     strategy: 'prefix_except_default',
     baseUrl: 'https://1hakr.com',
     defaultLocale: 'en',
-    experimental: {
-      localeDetector: './localeDetector.ts',
-      switchLocalePathLinkSSR: true,
-      autoImportTranslationFunctions: true
-    },
     debug: false,
     dynamicRouteParams: true,
     skipSettingLocaleOnNavigate: true,
@@ -65,6 +60,11 @@ export default defineNuxtConfig({
   },
   gtag: {
     id: 'G-GZT3TP9CSP'
+  },
+  routeRules: {
+    '/portfolio': { redirect: { to: '/design', statusCode: 301 } },
+    '/apps': { redirect: { to: '/products', statusCode: 301 } },
+    '/libraries': { redirect: { to: '/', statusCode: 301 } },
   },
   compatibilityDate: '2024-08-21'
 })
