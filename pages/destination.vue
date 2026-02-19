@@ -132,8 +132,26 @@ const faqs = [
 const weddingDate = new Date('2026-04-29T12:00:00+08:00').getTime()
 const timeLeft = ref({ days: 0, hours: 0, minutes: 0, seconds: 0 })
 
+const selectedTimezone = ref('Australia/Sydney')
+const timezonesLocal = [
+  { label: 'Sydney (AEST)', value: 'Australia/Sydney' },
+  { label: 'Dubai (GST)', value: 'Asia/Dubai' },
+  { label: 'India (IST)', value: 'Asia/Kolkata' },
+  { label: 'London (BST)', value: 'Europe/London' },
+  { label: 'New York (EDT)', value: 'America/New_York' },
+]
+const currentTimeInBali = ref('')
+const currentTimeInSelected = ref('')
+
 const updateTimer = () => {
-  const now = new Date().getTime()
+  const dateNow = new Date()
+
+  currentTimeInBali.value = new Intl.DateTimeFormat('en-US', { timeZone: 'Asia/Makassar', timeStyle: 'short' }).format(dateNow)
+  try {
+    currentTimeInSelected.value = new Intl.DateTimeFormat('en-US', { timeZone: selectedTimezone.value, timeStyle: 'short' }).format(dateNow)
+  } catch (e) { }
+
+  const now = dateNow.getTime()
   const distance = weddingDate - now
   if (distance < 0) return
 
@@ -150,16 +168,63 @@ onMounted(() => {
 })
 onUnmounted(() => clearInterval(timerInterval))
 
-const story = [
-  { year: '2019', title: 'First Met', description: 'Coffee at 10am turns into dinner at 10pm.' },
-  { year: '2021', title: 'Yes!', description: 'She said yes under the northern lights.' },
-  { year: '2026', title: 'I Do', description: 'The start of forever in Bali.' }
+const downloadIcs = () => {
+  const ics = `BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Hari and Mey Wedding//EN
+BEGIN:VEVENT
+DTSTART:20260429T040000Z
+DTEND:20260501T030000Z
+SUMMARY:Hari & Mey Wedding
+DESCRIPTION:Join us for a two-day destination wedding filled with sunshine, good vibes, happy tears, and unforgettable memories as we say “I do” in paradise!
+LOCATION:Swan Paradise by Pramana Experience, Bali
+END:VEVENT
+END:VCALENDAR`
+  const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+  const link = document.createElement('a')
+  link.href = url
+  link.setAttribute('download', 'Hari-and-Mey-Wedding.ics')
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+}
+
+const calendarOptions = [
+  [{
+    label: 'Google Calendar',
+    icon: 'i-simple-icons-googlecalendar',
+    to: 'https://calendar.google.com/calendar/render?action=TEMPLATE&text=Hari+%26+Mey+Wedding&dates=20260429T040000Z%2F20260501T030000Z&details=Join+us+for+our+wedding+celebration+in+Bali!&location=Swan+Paradise+by+Pramana+Experience,+Bali',
+    target: '_blank'
+  }],
+  [{
+    label: 'Apple / Outlook (.ics)',
+    icon: 'i-heroicons-calendar-days',
+    click: downloadIcs
+  }]
 ]
 
-const party = [
-  { name: 'Groomsmen', role: 'The Wolfpack', image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7' },
-  { name: 'Bridesmaids', role: 'Team Bride', image: 'https://images.unsplash.com/photo-1545315003-c5ad6226c272' }
+const moodboards = [
+  { event: 'Haldi', theme: 'Bright Yellows & Oranges', image: 'https://images.unsplash.com/photo-1621272036047-bf09a5516fc2?auto=format&fit=crop&q=80&w=800', description: 'Embrace the sunshine! Think light, breathable cottons in vibrant yellows and oranges.' },
+  { event: 'Mehendi', theme: 'Colorful Boho Chic', image: 'https://images.unsplash.com/photo-1596484552834-6a5bb17a1ef2?auto=format&fit=crop&q=80&w=800', description: 'A relaxed poolside vibe. Floral prints, flowy maxi dresses, breezy co-ords.' },
+  { event: 'Sangeet', theme: 'Glitzy Western Glam', image: 'https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=800', description: 'Time to shine on the dance floor! Sequins, cocktail dresses, sharp suits.' },
+  { event: 'Akad Nikah', theme: 'Modest Traditional', image: 'https://images.unsplash.com/photo-1616851167907-74070a92a5d2?auto=format&fit=crop&q=80&w=800', description: 'Honoring heritage. Traditional Kebaya, Batik shirts, or modest formal wear.' },
+  { event: 'Pelli', theme: 'Traditional Indian', image: 'https://images.unsplash.com/photo-1583391733959-b148fa73b7d1?auto=format&fit=crop&q=80&w=800', description: 'Regal and elegant. Sarees, Lehengas, Sherwanis, or sharp evening wear.' },
 ]
+
+const convertAmount = ref(1000)
+const convertCurrency = ref('AUD')
+const convertRates: Record<string, number> = {
+  'AUD': 11928,
+  'USD': 16901,
+  'EUR': 19947,
+  'INR': 186,
+  'AED': 4602
+}
+const convertedIDR = computed(() => {
+  return new Intl.NumberFormat('en-US', { style: 'currency', currency: 'IDR', maximumFractionDigits: 0 })
+    .format((convertAmount.value || 0) * (convertRates[convertCurrency.value] || 0))
+})
 
 useSeoMeta({
   title: 'Hari & Mey Wedding',
@@ -168,6 +233,12 @@ useSeoMeta({
   ogImage: '/destination-background.jpg',
   twitterImage: '/destination-background.jpg',
   twitterCard: 'summary_large_image'
+})
+
+useHead({
+  script: [
+    { src: 'https://app3.weatherwidget.org/js/?id=ww_8e782f6216a7e', async: true }
+  ]
 })
 
 definePageMeta({
@@ -317,7 +388,7 @@ definePageMeta({
         <div
           class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-gray-700 h-[400px] relative w-full mx-auto">
           <iframe
-            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDpBKZ2oyPeYEQhFvu9ZMKJY1_epLhNgdQ&q=Swan%20Paradise%20A%20Pramana%20Experience%20-%20Jalan%20Raya%20Bonbiyu%2C%20Banda%2C%20Blahbatuh%2C%20Saba%2C%20Kec.%20Gianyar%2C%20Kabupaten%20Gianyar%2C%20Bali%2080581%2C%20Indonesia"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.0218347441178!2d115.2950629!3d-8.5938986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd2156899036b73%3A0xc0f09edf21f2dd2!2sSwan%20Paradise%20A%20Pramana%20Experience!5e0!3m2!1sen!2sau!4v1771531960816!5m2!1sen!2sau"
             width="100%" height="100%" style="border:0;" allowfullscreen="true" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -337,6 +408,12 @@ definePageMeta({
             Wedding Timeline</h2>
           <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">A celebration of love across two beautiful days.
           </p>
+          <div class="flex justify-center mt-6">
+            <UDropdown :items="calendarOptions" :popper="{ placement: 'bottom-start' }">
+              <UButton color="primary" variant="soft" icon="i-heroicons-calendar-days" label="Add to Calendar"
+                trailing-icon="i-heroicons-chevron-down-20-solid" />
+            </UDropdown>
+          </div>
         </div>
 
         <div class="grid lg:grid-cols-3 gap-8 space-y-12 lg:space-y-0">
@@ -378,14 +455,13 @@ definePageMeta({
       </UContainer>
     </div>
 
-
-
     <!-- Travel Info -->
     <div id="travel-info" class="py-24 bg-gray-50 dark:bg-gray-800/50">
       <UContainer>
         <h2
           class="text-4xl md:text-5xl text-center mb-12 font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-emerald-400 animate-gradient-text">
-          Travel Information</h2>
+          Travel Information
+        </h2>
 
         <!-- Visa Section -->
         <div
@@ -506,12 +582,12 @@ definePageMeta({
 
         <!-- Travel Essentials Separated -->
         <h2 class="text-3xl font-bold text-center my-12 pt-12 border-t border-gray-200 dark:border-gray-800">
-          Travel Essentials & Checklist
+          Travel Essentials
         </h2>
 
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto">
 
-          <!-- 1. Customs ECD (Mandatory) -->
+          <!-- Customs ECD (Mandatory) -->
           <div
             class="p-6 rounded-2xl bg-primary-500/5 shadow-sm flex flex-col items-center text-center relative overflow-hidden">
             <div class="absolute top-0 right-0 bg-primary-500 text-white text-[10px] font-bold px-2 py-1 rounded-bl-lg">
@@ -528,7 +604,7 @@ definePageMeta({
             </UButton>
           </div>
 
-          <!-- 2. Travel Insurance -->
+          <!-- Travel Insurance -->
           <div class="p-6 rounded-2xl bg-teal-500/5 shadow-sm flex flex-col items-center text-center">
             <div
               class="w-14 h-14 rounded-full bg-teal-50 dark:bg-teal-900 flex items-center justify-center mb-4 text-teal-600 dark:text-teal-400">
@@ -543,7 +619,7 @@ definePageMeta({
               target="_blank" color="teal" variant="soft">Get Insurance</UButton>
           </div>
 
-          <!-- 3. Flights -->
+          <!-- Flights -->
           <div class="p-6 rounded-2xl bg-sky-500/5 shadow-sm flex flex-col items-center text-center">
             <div
               class="w-14 h-14 rounded-full bg-sky-50 dark:bg-sky-900 flex items-center justify-center mb-4 text-sky-600 dark:text-sky-400">
@@ -557,47 +633,15 @@ definePageMeta({
               target="_blank" color="sky" variant="soft">Book Flights</UButton>
           </div>
 
-          <!-- 4. Hotels -->
-          <div class="p-6 rounded-2xl bg-fuchsia-500/5 shadow-sm flex flex-col items-center text-center">
-            <div
-              class="w-14 h-14 rounded-full bg-fuchsia-50 dark:bg-fuchsia-900 flex items-center justify-center mb-4 text-fuchsia-600 dark:text-fuchsia-400">
-              <UIcon name="i-heroicons-home" class="w-7 h-7" />
-            </div>
-            <h4 class="font-bold text-xl mb-2">Hotels</h4>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Arriving early and planning a vacation or staying
-              late? Find hotel deals.
-            </p>
-            <UButton size="md"
-              to="https://www.skyscanner.net/g/referrals/v1/hotels/home-view?mediaPartnerId=2989064&skyscanner_node_code=ID&checkin=2026-02-26&checkout=2026-03-05&market=AU&currency=AUD&locale=en-US&rooms=1&filters={%22discount_types%22:%22cug%22}&adults=1"
-              target="_blank" color="fuchsia" variant="soft">Book Accommodation</UButton>
-          </div>
-
-          <!-- 5. eSIM Data -->
-          <div class="p-6 rounded-2xl bg-indigo-500/5 shadow-sm flex flex-col items-center text-center">
-            <div
-              class="w-14 h-14 rounded-full bg-indigo-50 dark:bg-indigo-900 flex items-center justify-center mb-4 text-indigo-600 dark:text-indigo-400">
-              <UIcon name="i-heroicons-wifi" class="w-7 h-7" />
-            </div>
-            <h4 class="font-bold text-xl mb-2">Internet</h4>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Stay connected instantly with eSIM. Avoid airport
-              SIM queues.
-            </p>
-            <UButton size="md"
-              to="https://getnomadapp.go.link/universal-link?page=add_referral&referral_code=HAKR67HW&adj_t=1r3ajgtz_1rqdaxgv_1ryt1wk1&adj_fallback=https%3A%2F%2Fwww.getnomad.app%2Funiversal-link%3Fpage%3Dadd_referral%26referral_code%3DHAKR67HW&adj_redirect_macos=https%3A%2F%2Fwww.getnomad.app%2Funiversal-link%3Fpage%3Dadd_referral%26referral_code%3DHAKR67HW&adj_campaign=HAKR67HW"
-              target="_blank" color="indigo" variant="soft">Get eSIM</UButton>
-          </div>
-
-          <!-- 6. Zero FX Cards -->
+          <!-- Zero FX Cards -->
           <div class="p-6 rounded-2xl bg-amber-500/5 shadow-sm flex flex-col items-center text-center">
             <div
               class="w-14 h-14 rounded-full bg-amber-50 dark:bg-amber-900 flex items-center justify-center mb-4 text-amber-600 dark:text-amber-400">
               <UIcon name="i-heroicons-credit-card" class="w-7 h-7" />
             </div>
             <h4 class="font-bold text-xl mb-2">Money</h4>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Get Zero forex Cards and avoid bank fees. Open
-              account and get card in a week.
-            </p>
-            <div class="grid grid-cols-2 gap-2">
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Get Zero forex Cards and avoid bank fees.</p>
+            <div class="grid grid-cols-2 gap-2 mt-auto">
               <UButton size="md" to="https://hook.up.me/hakr" target="_blank" color="amber" variant="soft">Up Bank (AU)
               </UButton>
               <UButton size="md" to="https://fi.onelink.me/GvZH/n0vhu8np" target="_blank" color="primary"
@@ -605,41 +649,8 @@ definePageMeta({
             </div>
           </div>
 
-          <!-- 7. Transport -->
-          <div class="p-6 rounded-2xl bg-green-500/5 shadow-sm flex flex-col items-center text-center">
-            <div
-              class="w-14 h-14 rounded-full bg-green-50 dark:bg-green-900 flex items-center justify-center mb-4 text-green-600 dark:text-green-400">
-              <UIcon name="i-heroicons-map-pin" class="w-7 h-7" />
-            </div>
-            <h4 class="font-bold text-xl mb-2">Transport</h4>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Safe, affordable rides with <strong>Gojek</strong>
-              & <strong>Grab</strong> (Scooter or Car).</p>
-            <div class="grid grid-cols-2 gap-2 mt-auto">
-              <UButton size="md" to="https://www.gojek.com/en-id/" target="_blank" color="green" variant="soft">Gojek
-              </UButton>
-              <UButton size="md" to="https://www.grab.com/id/en/transport/" target="_blank" color="green"
-                variant="soft">Grab</UButton>
-            </div>
-          </div>
 
-          <!-- 8. Food Delivery -->
-          <div class="p-6 rounded-2xl bg-orange-500/5 shadow-sm flex flex-col items-center text-center">
-            <div
-              class="w-14 h-14 rounded-full bg-orange-50 dark:bg-orange-900 flex items-center justify-center mb-4 text-orange-600 dark:text-orange-400">
-              <UIcon name="i-heroicons-shopping-bag" class="w-7 h-7" />
-            </div>
-            <h4 class="font-bold text-xl mb-2">Food</h4>
-            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Order local eats or late-night snacks directly to
-              your accommodation.</p>
-            <div class="grid grid-cols-2 gap-2 mt-auto">
-              <UButton size="md" to="https://www.gojek.com/en-id/gofood/" target="_blank" color="orange" variant="soft">
-                GoFood</UButton>
-              <UButton size="md" to="https://food.grab.com/id/en/" target="_blank" color="orange" variant="soft">
-                GrabFood</UButton>
-            </div>
-          </div>
-
-          <!-- 9. Packing Tips -->
+          <!-- Packing Tips -->
           <div class="p-6 rounded-2xl bg-rose-500/5 shadow-sm flex flex-col items-center text-center">
             <div
               class="w-14 h-14 rounded-full bg-rose-50 dark:bg-rose-900 flex items-center justify-center mb-4 text-rose-600 dark:text-rose-400">
@@ -672,7 +683,7 @@ definePageMeta({
           </p>
         </div>
 
-        <div class="flex justify-center mb-12">
+        <div class="flex justify-center mb-16">
           <UButton size="xl" to="https://www.saltinourhair.com/bali/bali-itinerary-7-days/" target="_blank"
             color="amber" variant="soft" icon="i-heroicons-map" class="px-8">View 7-Day Itinerary</UButton>
         </div>
@@ -690,6 +701,132 @@ definePageMeta({
                 class="text-xs text-gray-200 opacity-0 group-hover:opacity-100 transition-opacity delay-100 transform translate-y-4 group-hover:translate-y-0 duration-300">
                 {{ spot.description }}
               </p>
+            </div>
+          </div>
+        </div>
+
+        <h3 class="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">Local Guide</h3>
+
+        <!-- Weather Widget -->
+        <div
+          class="w-full mx-auto mb-16 rounded-3xl overflow-hidden bg-white dark:bg-gray-800/50 shadow-sm border border-gray-100 dark:border-gray-800 relative z-10 p-4 md:p-6 backdrop-blur-md">
+          <h3 class="font-bold text-xl mb-6 text-gray-900 dark:text-white flex items-center gap-2">
+            <UIcon name="i-heroicons-cloud" class="w-6 h-6 text-sky-500" /> Live Weather
+          </h3>
+          <div id="ww_8e782f6216a7e" v='1.3' loc='id'
+            a='{"t":"responsive","lang":"en","sl_lpl":1,"ids":["wl2855"],"font":"Arial","sl_ics":"one_a","sl_sot":"celsius","cl_bkg":"#FFFFFF00","cl_font":"rgba(189,189,189,1)","cl_cloud":"#d4d4d4","cl_persp":"#2196F3","cl_sun":"#FFC107","cl_moon":"#FFC107","cl_thund":"#FF5722","cl_odd":"#00000000"}'>
+            <a href="https://weatherwidget.org/" id="ww_8e782f6216a7e_u" target="_blank">Free weather widget for
+              website</a>
+          </div>
+        </div>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto mb-16">
+
+          <!-- Hotels -->
+          <div class="p-6 rounded-2xl bg-fuchsia-500/5 shadow-sm flex flex-col items-center text-center">
+            <div
+              class="w-14 h-14 rounded-full bg-fuchsia-50 dark:bg-fuchsia-900 flex items-center justify-center mb-4 text-fuchsia-600 dark:text-fuchsia-400">
+              <UIcon name="i-heroicons-home" class="w-7 h-7" />
+            </div>
+            <h4 class="font-bold text-xl mb-2">Hotels</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Arriving early or staying late? Find hotel deals.
+            </p>
+            <UButton size="md"
+              to="https://www.skyscanner.net/g/referrals/v1/hotels/home-view?mediaPartnerId=2989064&skyscanner_node_code=ID&checkin=2026-02-26&checkout=2026-03-05&market=AU&currency=AUD&locale=en-US&rooms=1"
+              target="_blank" color="fuchsia" variant="soft">Book Accommodation</UButton>
+          </div>
+
+          <!-- eSIM Data -->
+          <div class="p-6 rounded-2xl bg-indigo-500/5 shadow-sm flex flex-col items-center text-center">
+            <div
+              class="w-14 h-14 rounded-full bg-indigo-50 dark:bg-indigo-900 flex items-center justify-center mb-4 text-indigo-600 dark:text-indigo-400">
+              <UIcon name="i-heroicons-wifi" class="w-7 h-7" />
+            </div>
+            <h4 class="font-bold text-xl mb-2">Internet</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Stay connected instantly with eSIM. Avoid airport
+              SIM queues.</p>
+            <UButton size="md" to="https://getnomadapp.go.link/universal-link?page=add_referral&referral_code=HAKR67HW"
+              target="_blank" color="indigo" variant="soft">Get eSIM</UButton>
+          </div>
+
+          <!-- Transport -->
+          <div class="p-6 rounded-2xl bg-green-500/5 shadow-sm flex flex-col items-center text-center">
+            <div
+              class="w-14 h-14 rounded-full bg-green-50 dark:bg-green-900 flex items-center justify-center mb-4 text-green-600 dark:text-green-400">
+              <UIcon name="i-heroicons-map-pin" class="w-7 h-7" />
+            </div>
+            <h4 class="font-bold text-xl mb-2">Transport</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Safe, affordable rides with <strong>Gojek</strong>
+              & <strong>Grab</strong>.</p>
+            <div class="grid grid-cols-2 gap-2 mt-auto">
+              <UButton size="md" to="https://www.gojek.com/en-id/" target="_blank" color="green" variant="soft">Gojek
+              </UButton>
+              <UButton size="md" to="https://www.grab.com/id/en/transport/" target="_blank" color="green"
+                variant="soft">Grab</UButton>
+            </div>
+          </div>
+
+          <!-- Food Delivery -->
+          <div class="p-6 rounded-2xl bg-orange-500/5 shadow-sm flex flex-col items-center text-center">
+            <div
+              class="w-14 h-14 rounded-full bg-orange-50 dark:bg-orange-900 flex items-center justify-center mb-4 text-orange-600 dark:text-orange-400">
+              <UIcon name="i-heroicons-shopping-bag" class="w-7 h-7" />
+            </div>
+            <h4 class="font-bold text-xl mb-2">Food</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Order local eats or late-night snacks easily.</p>
+            <div class="grid grid-cols-2 gap-2 mt-auto">
+              <UButton size="md" to="https://www.gojek.com/en-id/gofood/" target="_blank" color="orange" variant="soft">
+                GoFood</UButton>
+              <UButton size="md" to="https://food.grab.com/id/en/" target="_blank" color="orange" variant="soft">
+                GrabFood</UButton>
+            </div>
+          </div>
+
+
+          <!-- Currency Converter -->
+          <div class="p-6 rounded-2xl bg-emerald-500/5 shadow-sm flex flex-col items-center text-center">
+            <div
+              class="w-14 h-14 rounded-full bg-emerald-50 dark:bg-emerald-900 flex items-center justify-center mb-4 text-emerald-600 dark:text-emerald-400">
+              <UIcon name="i-heroicons-currency-dollar" class="w-7 h-7" />
+            </div>
+            <h4 class="font-bold text-xl mb-4">Quick Converter</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 hidden md:block">Get a quick estimate of your
+              currency in Indonesian Rupiah (IDR).</p>
+            <div class="w-full space-y-3 mt-auto">
+              <div class="flex gap-2 w-full">
+                <UInput v-model.number="convertAmount" type="number" placeholder="Amt" class="w-2/3" />
+                <USelect v-model="convertCurrency" :options="['AUD', 'USD', 'EUR', 'INR', 'AED']" class="w-1/3" />
+              </div>
+              <div
+                class="p-2 bg-emerald-100/50 dark:bg-emerald-900/30 border border-emerald-200 dark:border-emerald-800 rounded-lg text-emerald-700 dark:text-emerald-400 font-bold">
+                {{ convertedIDR }}
+              </div>
+            </div>
+          </div>
+
+          <!-- Time Checker -->
+          <div class="p-6 rounded-2xl bg-cyan-500/5 shadow-sm flex flex-col items-center text-center">
+            <div
+              class="w-14 h-14 rounded-full bg-cyan-50 dark:bg-cyan-900 flex items-center justify-center mb-4 text-cyan-600 dark:text-cyan-400">
+              <UIcon name="i-heroicons-clock" class="w-7 h-7" />
+            </div>
+            <h4 class="font-bold text-xl mb-4">Time Difference</h4>
+            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 hidden md:block">Compare your local time with Bali
+              time.</p>
+            <div class="w-full space-y-3 mt-auto">
+              <USelect v-model="selectedTimezone" :options="timezonesLocal" option-attribute="label"
+                value-attribute="value" class="w-full" />
+              <div
+                class="flex justify-between items-center p-2 bg-cyan-100/50 dark:bg-cyan-900/30 border border-cyan-200 dark:border-cyan-800 rounded-lg text-cyan-800 dark:text-cyan-300 text-sm font-bold">
+                <div class="text-left flex flex-col items-center">
+                  <span class="text-[10px] uppercase opacity-70">There</span>
+                  <span>{{ currentTimeInSelected }}</span>
+                </div>
+                <UIcon name="i-heroicons-arrow-right" class="w-4 h-4 opacity-50" />
+                <div class="text-right flex flex-col items-center">
+                  <span class="text-[10px] uppercase opacity-70">Bali</span>
+                  <span>{{ currentTimeInBali }}</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
