@@ -1,8 +1,8 @@
 export default defineAppConfig({
   title: '1hakr',
-  primaryColor: '#14b8a6',
+  primaryColor: '#3b82f6',
   ui: {
-    primary: 'dteal',
+    primary: 'blue',
     gray: 'neutral',
     button: {
       rounded: 'rounded-full',

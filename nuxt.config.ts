@@ -13,7 +13,7 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-delay-hydration',
     'nuxt-build-cache',
-    'nuxt-date-fns',
+    //'nuxt-date-fns',
     'nuxt-og-image',
     'nuxt-gtag',
   ],
@@ -56,7 +56,7 @@ export default defineNuxtConfig({
     ],
   },
   build: {
-    transpile: ['nuxt-date-fns']
+    //transpile: ['nuxt-date-fns']
   },
   gtag: {
     id: 'G-GZT3TP9CSP'
