@@ -3,57 +3,34 @@ const schedule = [
   {
     date: 'April 29th',
     events: [
-      { time: '12:00 PM', duration: '1 hour', title: 'Welcome Lunch', venue: 'Main Restaurant', dressCode: 'Resort Casual / Tropical', description: 'Welcome to Wedding! Kick off the celebrations with a delicious spread of local and international favorites as guests arrive. Meet the families and enjoy the tropical vibes', icon: 'i-material-symbols-handshake-rounded', color: 'teal' },
-      { time: '3:00 PM', duration: '30 mins', title: 'Check In', venue: 'Main Lobby', description: 'Head to the lobby for a refreshing welcome drink while you get settled into your rooms', icon: 'i-material-symbols-key-rounded', color: 'emerald' },
-      { time: '3:30 PM', duration: '1 hour', title: 'Purification Ceremony (Haldi)', venue: 'Ocean View Stage', dressCode: 'Bright Yellows & Oranges', dressColors: ['bg-yellow-400', 'bg-orange-500'], description: 'A vibrant start to the festivities! We apply turmeric paste to the bride and groom for a glowing complexion and expect music, laughter, and getting a little messy', icon: 'i-material-symbols-auto-awesome-rounded', color: 'yellow' },
-      { time: '5:00 PM', duration: '1 hour', title: 'Henna Ceremony (Mehendi)', venue: 'Ocean View Stage', dressCode: 'Colorful Boho Chic / Floral', dressColors: ['bg-rose-400', 'bg-teal-400', 'bg-purple-400'], description: 'Relax by the poolside cabanas while professional artists apply intricate henna designs and enjoy coconuts, and a grazing table', icon: 'i-material-symbols-palette', color: 'rose' },
-      { time: '7:00 PM', duration: '2 hours', title: 'Musical Night (Sangeet)', venue: 'Main Restaurant', dressCode: 'Glitzy Western Glam / Cocktail', dressColors: ['bg-slate-800', 'bg-amber-300'], description: 'Put on your dancing shoes! A night of Tollywood / Bollywood beats, family performances, and a grand feast and time to let loose and party!', icon: 'i-material-symbols-music-note-rounded', color: 'purple' },
-      { time: '8:30 PM', duration: '1.5 hours', title: 'Welcome Dinner', venue: 'Main Restaurant', dressCode: 'Smart Casual / Dinner Wear', description: 'After the performances, join us for a lavish buffet featuring the best of Indian and Indonesian cuisine. The night continues with an open dance floor', icon: 'i-material-symbols-meal-dinner-rounded', color: 'indigo' },
-      { time: '10:30 PM', duration: '1.5 hours', title: 'After Party', venue: 'Rooftop Bar', dressCode: 'Casual / Party Wear', description: 'The official events are over, but the night is just beginning! Join us by the bar for late-night drinks and more dancing', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
+      { enabled: true, time: '12:00 PM', duration: '1 hour', title: 'Welcome Lunch', venue: 'Main Restaurant', description: 'Welcome to Wedding! Kick off the celebrations with a delicious spread of local and international favorites as guests arrive. Meet the families and enjoy the tropical vibes', icon: 'i-material-symbols-handshake-rounded', color: 'teal' },
+      { enabled: true, time: '3:00 PM', duration: '30 mins', title: 'Check In', venue: 'Main Lobby', description: 'Head to the lobby for a refreshing welcome drink while you get settled into your rooms', icon: 'i-material-symbols-key-rounded', color: 'emerald' },
+      { enabled: true, time: '3:30 PM', duration: '1 hour', title: 'Purification Ceremony (Haldi)', venue: 'Ocean View Stage', dressCode: 'Floral Bright Orange & Yellow', dressColors: ['bg-yellow-400', 'bg-orange-500'], description: 'A vibrant start to the festivities! We apply turmeric paste to the bride and groom for a glowing complexion and expect music, laughter, and getting a little messy', icon: 'i-material-symbols-auto-awesome-rounded', color: 'yellow' },
+      { enabled: true, time: '5:00 PM', duration: '1 hour', title: 'Henna Ceremony (Mehendi)', venue: 'Ocean View Stage', description: 'Relax by the poolside cabanas while professional artists apply intricate henna designs and enjoy coconuts, and a grazing table', icon: 'i-material-symbols-palette', color: 'rose' },
+      { enabled: true, time: '7:00 PM', duration: '2 hours', title: 'Musical Night (Sangeet)', venue: 'Main Restaurant', dressCode: 'Glitzy Western Glam / Cocktail Party Wear', description: 'Put on your dancing shoes! A night of Tollywood / Bollywood beats, family performances, and a grand feast and time to let loose and party!', icon: 'i-material-symbols-music-note-rounded', color: 'purple' },
+      { enabled: true, time: '8:30 PM', duration: '1.5 hours', title: 'Welcome Dinner', venue: 'Main Restaurant', description: 'After the performances, join us for a lavish buffet featuring the best of Indian and Indonesian cuisine. The night continues with an open dance floor', icon: 'i-material-symbols-meal-dinner-rounded', color: 'indigo' },
+      { enabled: true, time: '10:30 PM', duration: '1.5 hours', title: 'After Party', venue: 'Rooftop Bar', description: 'The official events are over, but the night is just beginning! Join us by the bar for late-night drinks and more dancing', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
     ]
   },
   {
     date: 'April 30th',
     events: [
-      { time: '9:00 AM', duration: '1 hour', title: 'Wedding Breakfast', venue: 'Main Restaurant', dressCode: 'Casual', description: 'Fuel up for the big day with a floating breakfast spread', icon: 'i-material-symbols-breakfast-dining' },
-      { time: '10:00 AM', duration: '2 hours', title: 'Indonesian Ceremony (Akad Nikah)', venue: 'Beachfront Pavilion', dressCode: 'Modest Traditional (Kebaya/Batik)', dressColors: ['bg-emerald-600', 'bg-amber-700'], description: 'We honor Mey’s heritage with a traditional Indonesian Solemnization Ceremony, a sacred, intimate moment where we officially say "I Do"', icon: 'i-material-symbols-favorite-rounded', color: 'emerald' },
-      { time: '12:00 PM', duration: '1 hour', title: 'Wedding Lunch', venue: 'Ocean View Restaurant', dressCode: 'Resort Casual', description: 'Celebrate the newlyweds with a traditional Balinese feast', icon: 'i-material-symbols-cake-rounded' },
-      { time: '5:00 PM', duration: '1 hour', title: 'Wedding procession (Baraat)', venue: 'Entrance to Garden Pavilion', dressCode: 'Traditional Indian', description: 'The Groom’s Grand Entrance! Join Hari’s side for an epic musical procession with drums and dancing leading to the Mandap', icon: 'i-material-symbols-emoji-people-rounded', color: 'orange' },
-      { time: '6:00 PM', duration: '3 hours', title: 'Indian Ceremony (Pelli)', venue: 'Garden Pavilion', dressCode: 'Traditional Indian (Saree/Sherwani)', dressColors: ['bg-red-600', 'bg-amber-500'], description: 'The traditional Indian Wedding under the stars. Witness the sacred fire rituals, the seven steps (Saptapadi), and the union of our families.', icon: 'i-material-symbols-local-fire-department-rounded', color: 'red' },
-      { time: '9:00 PM', duration: '1 hour', title: 'Wedding Reception', venue: 'Garden Pavilion', dressCode: 'Formal / Evening Wear', description: 'A magical seated dinner with speeches, cake cutting, and dancing late into the night', icon: 'i-material-symbols-dine-heart-rounded', color: 'indigo' },
-      { time: '10:30 PM', duration: '1.5 hours', title: 'After Party', venue: 'Rooftop Bar', dressCode: 'Casual / Comfortable', description: 'Keep the celebration going! Change into something comfortable and join us for the ultimate wedding after-party', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
+      { enabled: true, time: '9:00 AM', duration: '1 hour', title: 'Wedding Breakfast', venue: 'Main Restaurant', description: 'Fuel up for the big day with a floating breakfast spread', icon: 'i-material-symbols-breakfast-dining' },
+      { enabled: true, time: '10:00 AM', duration: '2 hours', title: 'Indonesian Ceremony (Akad Nikah)', venue: 'Beachfront Pavilion', dressCode: 'Batik (Kebaya/Beskap)', description: 'We honor Mey’s heritage with a traditional Indonesian Solemnization Ceremony, a sacred, intimate moment where we officially say "I Do"', icon: 'i-material-symbols-favorite-rounded', color: 'emerald' },
+      { enabled: true, time: '12:00 PM', duration: '1 hour', title: 'Wedding Lunch', venue: 'Ocean View Restaurant', description: 'Celebrate the newlyweds with a traditional Balinese feast', icon: 'i-material-symbols-cake-rounded' },
+      { enabled: true, time: '5:00 PM', duration: '1 hour', title: 'Wedding procession (Baraat)', venue: 'Entrance to Garden Pavilion', description: 'The Groom’s Grand Entrance! Join Hari’s side for an epic musical procession with drums and dancing leading to the Mandap', icon: 'i-material-symbols-emoji-people-rounded', color: 'orange' },
+      { enabled: true, time: '6:00 PM', duration: '3 hours', title: 'Indian Ceremony (Pelli)', venue: 'Garden Pavilion', dressCode: 'Traditional Indian (Saree/Sherwani)', description: 'The traditional Indian Wedding under the stars. Witness the sacred fire rituals, the seven steps (Saptapadi), and the union of our families.', icon: 'i-material-symbols-local-fire-department-rounded', color: 'red' },
+      { enabled: true, time: '9:00 PM', duration: '1 hour', title: 'Wedding Reception', venue: 'Garden Pavilion', dressCode: 'Formal Wear', description: 'A magical seated dinner with speeches, cake cutting, and dancing late into the night', icon: 'i-material-symbols-dine-heart-rounded', color: 'indigo' },
+      { enabled: false, time: '10:30 PM', duration: '1.5 hours', title: 'After Party', venue: 'Rooftop Bar', description: 'Keep the celebration going! Change into something comfortable and join us for the ultimate wedding after-party', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
     ]
   },
   {
     date: 'May 1st',
     events: [
-      { time: '8:00 AM', duration: '1 hour', title: 'Blessings Ceremony (Satyanarayana Puja)', venue: 'Temple Pavilion', dressCode: 'Modest Traditional / Smart Casual', description: 'A sacred ritual seeking divine blessings for our new journey together', icon: 'i-material-symbols-sunny-rounded', color: 'amber' },
-      { time: '9:00 AM', duration: '1 hour', title: 'Farewell Breakfast', venue: 'Main Restaurant', dressCode: 'Casual', description: 'One last gathering to hug, laugh, and relive the memories before we part ways', icon: 'i-material-symbols-waving-hand-rounded', color: 'primary' },
-      { time: '12:00 PM', duration: 'Flexible', title: 'Check Out', venue: 'Main Lobby', description: 'Thank you for celebrating with us! Safe travels home', icon: 'i-material-symbols-logout-rounded', color: 'gray' }
+      { enabled: true, time: '8:00 AM', duration: '1 hour', title: 'Blessings Ceremony (Satyanarayana Puja)', venue: 'Temple Pavilion', description: 'A sacred ritual seeking divine blessings for our new journey together', icon: 'i-material-symbols-sunny-rounded', color: 'amber' },
+      { enabled: true, time: '9:00 AM', duration: '1 hour', title: 'Farewell Breakfast', venue: 'Main Restaurant', description: 'One last gathering to hug, laugh, and relive the memories before we part ways', icon: 'i-material-symbols-waving-hand-rounded', color: 'primary' },
+      { enabled: true, time: '12:00 PM', duration: 'Flexible', title: 'Check Out', venue: 'Main Lobby', description: 'Thank you for celebrating with us! Safe travels home', icon: 'i-material-symbols-logout-rounded', color: 'gray' }
     ]
-  }
-]
-
-const travelInfo = [
-  {
-    country: 'India',
-    icon: 'i-flag-in',
-    flights: 'Fly to Denpasar (DPS). Direct flights from major hubs or via Singapore/KL.'
-  },
-  {
-    country: 'UAE',
-    icon: 'i-flag-ae',
-    flights: 'Direct flights from Dubai (DXB) to Denpasar (DPS) via Emirates are convenient.'
-  },
-  {
-    country: 'Australia',
-    icon: 'i-flag-au',
-    flights: 'Short direct hops from Perth, Melbourne, Sydney, Brisbane to DPS.'
-  },
-  {
-    country: 'United States',
-    icon: 'i-flag-us',
-    flights: 'Connect via Singapore, Hong Kong, or Taipei. Prepare for a long but rewarding journey!'
   }
 ]
 
@@ -210,12 +187,10 @@ const calendarOptions = [
   }]
 ]
 
-const moodboards = [
-  { event: 'Haldi', theme: 'Bright Yellows & Oranges', image: 'https://images.unsplash.com/photo-1621272036047-bf09a5516fc2?auto=format&fit=crop&q=80&w=800', description: 'Embrace the sunshine! Think light, breathable cottons in vibrant yellows and oranges.' },
-  { event: 'Mehendi', theme: 'Colorful Boho Chic', image: 'https://images.unsplash.com/photo-1596484552834-6a5bb17a1ef2?auto=format&fit=crop&q=80&w=800', description: 'A relaxed poolside vibe. Floral prints, flowy maxi dresses, breezy co-ords.' },
-  { event: 'Sangeet', theme: 'Glitzy Western Glam', image: 'https://images.unsplash.com/photo-1566737236500-c8ac43014a67?auto=format&fit=crop&q=80&w=800', description: 'Time to shine on the dance floor! Sequins, cocktail dresses, sharp suits.' },
-  { event: 'Akad Nikah', theme: 'Modest Traditional', image: 'https://images.unsplash.com/photo-1616851167907-74070a92a5d2?auto=format&fit=crop&q=80&w=800', description: 'Honoring heritage. Traditional Kebaya, Batik shirts, or modest formal wear.' },
-  { event: 'Pelli', theme: 'Traditional Indian', image: 'https://images.unsplash.com/photo-1583391733959-b148fa73b7d1?auto=format&fit=crop&q=80&w=800', description: 'Regal and elegant. Sarees, Lehengas, Sherwanis, or sharp evening wear.' },
+const dressCodes = [
+  { event: 'Haldi', label: 'Haldi', theme: 'Bright Orange & Yellow', link: 'https://in.pinterest.com/search/pins/?q=haldi%20outfit', images: ['https://valintaformens.com/cdn/shop/files/photo_2023-05-16_22-58-57.jpg?v=1684384660', 'https://www.houseofchikankari.in/cdn/shop/files/DSC00032.jpg?v=1768295459&width=1080'], description: 'Embrace the sunshine! Think light, breathable cottons in vibrant yellows and oranges.' },
+  { event: 'Akad Nikah', label: 'Akad Nikah', theme: 'Kebaya & Beskap', link: 'https://in.pinterest.com/search/pins/?q=kebaya%20beskap%20wedding', images: ['https://www.sukkhacitta.com/cdn/shop/files/SukkhaCitta_KAPAS_M3006_BeskapJacket_SEMESTADune_ResizedBintang_3.jpg?v=1733896134&width=2536', 'https://cdn0-production-images-kly.akamaized.net/ssfFjjE_IJWH174BpG4v_get6kQ=/500x500/smart/filters:quality(75):strip_icc()/kly-media-production/medias/5279056/original/012628800_1752127166-4__2_.jpg'], description: 'Honoring heritage. Traditional Kebaya, Batik shirts, or modest formal wear.' },
+  { event: 'Pelli', label: 'Pelli', theme: 'Sherwani & Saree', link: 'https://in.pinterest.com/search/pins/?q=sherwani%20saree%20wedding', images: ['https://images.cbazaar.com/images/light-teal-silk-thread-hand-work-classic-sherwani-for-men-shmsc2809-u.jpg', 'https://stilento.com/cdn/shop/products/designer-dark-blue-pure-cotton-printed-indian-women-sarees-stilento.jpg?v=1662794314'], description: 'Regal and elegant. Sarees, Lehengas, Sherwanis, or sharp evening wear.' },
 ]
 
 const convertAmount = ref(1000)
@@ -375,7 +350,7 @@ definePageMeta({
           <div class="space-y-6 lg:space-y-10">
             <div>
               <h2 class="text-4xl md:text-5xl font-bold text-gradient-primary mb-6">
-                Venue
+                The Venue
               </h2>
               <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                 We are hosting all our events and your accommodation at the stunning
@@ -507,16 +482,19 @@ definePageMeta({
 
     <!-- Schedule Section -->
     <div id="schedule" class="py-24 bg-white dark:bg-gray-900">
+      <div class="flex items-center justify-center gap-4 mb-16">
+        <h2 class="text-4xl md:text-5xl mx-auto font-bold text-gradient-primary">
+          The Wedding
+        </h2>
+      </div>
       <UContainer>
         <div class="text-center mb-16 space-y-4">
           <div class="flex items-center justify-center gap-4">
-            <h2 class="text-4xl md:text-5xl font-bold text-gradient-primary">
-              Wedding Timeline
-            </h2>
+            <h3 class="text-3xl font-bold text-center mb-2">Event Schedule</h3>
             <UBadge color="amber" variant="subtle" size="md" class="font-bold tracking-widest animate-pulse"
               :ui="{ rounded: 'rounded-full' }">WIP</UBadge>
           </div>
-          <p class="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">A celebration of love across two beautiful days.
+          <p class="text-lg text-gray-600 dark:text-gray-300">A celebration of love across two beautiful days.
           </p>
           <div class="flex justify-center mt-6">
             <UDropdown :items="calendarOptions" :popper="{ placement: 'bottom-start' }">
@@ -537,7 +515,7 @@ definePageMeta({
             </div>
 
             <div class="grid gap-6">
-              <div v-for="(event, eIndex) in day.events" :key="eIndex"
+              <div v-for="(event, eIndex) in day.events" :key="eIndex" v-show="event.enabled !== false"
                 class="group relative bg-gray-50 dark:bg-gray-800 rounded-3xl p-6 transition-all hover:bg-white dark:hover:bg-gray-700 hover:shadow-xl hover:ring-2 hover:ring-primary-500/20">
 
                 <div class="flex flex-col md:flex-row lg:flex-col gap-6 items-start">
@@ -564,15 +542,16 @@ definePageMeta({
                           class="w-4 h-4 text-gray-500 dark:text-gray-400" />
                         {{ event.venue }}
                       </div>
-                      <div v-if="event.dressCode || event.dressColors" class="flex flex-wrap items-center gap-2">
-                        <div v-if="event.dressCode"
+                      <div v-if="(event as any).dressCode || (event as any).dressColors"
+                        class="flex flex-wrap items-center gap-2">
+                        <div v-if="(event as any).dressCode"
                           class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-gray-100 dark:bg-gray-700 text-xs font-bold text-gray-700 dark:text-gray-200 shadow-sm border border-gray-100 dark:border-gray-800/50">
                           <UIcon name="i-material-symbols-auto-awesome-rounded"
                             class="w-4 h-4 text-gray-500 dark:text-gray-400" />
-                          {{ event.dressCode }}
+                          {{ (event as any).dressCode }}
                         </div>
-                        <div v-if="event.dressColors" class="flex items-center gap-0.5 ml-1">
-                          <span v-for="color in event.dressColors" :key="color" :class="color"
+                        <div v-if="(event as any).dressColors" class="flex items-center gap-0.5 ml-1">
+                          <span v-for="color in (event as any).dressColors" :key="color" :class="color"
                             class="w-3 h-3 rounded-full border border-white/80 auto-shadow dark:border-gray-800/80"></span>
                         </div>
                       </div>
@@ -586,6 +565,58 @@ definePageMeta({
             </div>
           </div>
         </div>
+      </UContainer>
+    </div>
+
+    <!-- Dress Code Section -->
+    <div id="dress-code" class="py-24 bg-white dark:bg-gray-900 border-t border-gray-100 dark:border-gray-800">
+      <UContainer>
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <h3 class="text-3xl font-bold text-center mb-2">Style Guide</h3>
+          <p class="text-lg text-gray-600 dark:text-gray-300">
+            Need some inspiration on what to pack? We've put together a visual guide and suggested dress codes for our
+            main events!
+          </p>
+        </div>
+
+        <UTabs :items="dressCodes">
+          <template #item="{ item }">
+            <div
+              class="mt-8 bg-gray-50 dark:bg-gray-800/50 rounded-3xl p-6 md:p-10 shadow-sm border border-gray-100 dark:border-gray-700">
+              <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+
+                <!-- Left: Text -->
+                <div class="space-y-6 text-center md:text-left">
+                  <div>
+                    <div
+                      class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary-100 dark:bg-primary-900/30 text-xs font-bold text-primary-600 dark:text-primary-400 mb-4">
+                      <UIcon name="i-material-symbols-styler-outline-rounded" class="w-4 h-4" />
+                      {{ item.theme }}
+                    </div>
+                    <h3 class="text-3xl font-bold text-gray-900 dark:text-white mb-4">{{ item.event }} Style</h3>
+                    <p class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                      {{ item.description }}
+                    </p>
+                    <UButton v-if="(item as any).link" :to="(item as any).link" target="_blank" color="primary"
+                      variant="soft" icon="i-material-symbols-open-in-new-rounded">
+                      View Inspiration
+                    </UButton>
+                  </div>
+                </div>
+
+                <!-- Right: Carousel -->
+                <div
+                  class="w-full max-w-[350px] mx-auto relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900">
+                  <UCarousel v-slot="{ item: image }" :items="item.images" :ui="{ item: 'w-full basis-full' }"
+                    indicators arrows class="h-[400px] sm:h-[480px]">
+                    <img :src="image" :alt="item.event" class="w-full h-full object-cover object-top" />
+                  </UCarousel>
+                </div>
+
+              </div>
+            </div>
+          </template>
+        </UTabs>
       </UContainer>
     </div>
 
@@ -613,7 +644,7 @@ definePageMeta({
               </div>
               <div class="hidden md:block">
                 <UButton size="xl" to="https://evisa.imigrasi.go.id/" target="_blank" color="primary"
-                  icon="i-material-symbols-arrow-circle-right-rounded">Apply for E-Visa</UButton>
+                  icon="i-material-symbols-open-in-new-rounded">Apply for E-Visa</UButton>
               </div>
             </div>
 
