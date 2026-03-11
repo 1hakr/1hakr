@@ -5,11 +5,11 @@ const schedule = [
     events: [
       { enabled: true, time: '12:00 PM', duration: '1 hour', title: 'Welcome Lunch', venue: 'Main Restaurant', description: 'Welcome to Wedding! Kick off the celebrations with a delicious spread of local and international favorites as guests arrive. Meet the families and enjoy the tropical vibes', icon: 'i-material-symbols-handshake-rounded', color: 'teal' },
       { enabled: true, time: '3:00 PM', duration: '30 mins', title: 'Check In', venue: 'Main Lobby', description: 'Head to the lobby for a refreshing welcome drink while you get settled into your rooms', icon: 'i-material-symbols-key-rounded', color: 'emerald' },
-      { enabled: true, time: '3:30 PM', duration: '1 hour', title: 'Purification Ceremony (Haldi)', venue: 'Ocean View Stage', dressCode: 'Floral Bright Orange & Yellow', dressColors: ['bg-yellow-400', 'bg-orange-500'], description: 'A vibrant start to the festivities! We apply turmeric paste to the bride and groom for a glowing complexion and expect music, laughter, and getting a little messy', icon: 'i-material-symbols-auto-awesome-rounded', color: 'yellow' },
-      { enabled: true, time: '5:00 PM', duration: '1 hour', title: 'Henna Ceremony (Mehendi)', venue: 'Ocean View Stage', description: 'Relax by the poolside cabanas while professional artists apply intricate henna designs and enjoy coconuts, and a grazing table', icon: 'i-material-symbols-palette', color: 'rose' },
+      { enabled: true, time: '3:00 PM', duration: '1 hour', title: 'Purification Ceremony (Haldi)', venue: 'Ocean View Stage', dressCode: 'Floral Bright Orange & Yellow', dressColors: ['bg-yellow-400', 'bg-orange-500'], description: 'A vibrant start to the festivities! We apply turmeric paste to the bride and groom for a glowing complexion and expect music, laughter, and getting a little messy', icon: 'i-material-symbols-auto-awesome-rounded', color: 'yellow' },
+      { enabled: true, time: '4:00 PM', duration: '1 hour', title: 'Henna Ceremony (Mehendi)', venue: 'Ocean View Stage', description: 'Relax by the poolside cabanas while professional artists apply intricate henna designs and enjoy coconuts, and a grazing table', icon: 'i-material-symbols-palette', color: 'rose' },
       { enabled: true, time: '7:00 PM', duration: '2 hours', title: 'Musical Night (Sangeet)', venue: 'Main Restaurant', dressCode: 'Glitzy Western Glam / Cocktail Party Wear', description: 'Put on your dancing shoes! A night of Tollywood / Bollywood beats, family performances, and a grand feast and time to let loose and party!', icon: 'i-material-symbols-music-note-rounded', color: 'purple' },
-      { enabled: true, time: '8:30 PM', duration: '1.5 hours', title: 'Welcome Dinner', venue: 'Main Restaurant', description: 'After the performances, join us for a lavish buffet featuring the best of Indian and Indonesian cuisine. The night continues with an open dance floor', icon: 'i-material-symbols-meal-dinner-rounded', color: 'indigo' },
-      { enabled: true, time: '10:30 PM', duration: '1.5 hours', title: 'After Party', venue: 'Rooftop Bar', description: 'The official events are over, but the night is just beginning! Join us by the bar for late-night drinks and more dancing', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
+      { enabled: true, time: '8:00 PM', duration: '1.5 hours', title: 'Welcome Dinner', venue: 'Main Restaurant', description: 'After the performances, join us for a lavish buffet featuring the best of Indian and Indonesian cuisine. The night continues with an open dance floor', icon: 'i-material-symbols-meal-dinner-rounded', color: 'indigo' },
+      { enabled: true, time: '10:30 PM', duration: '1 hours', title: 'After Party', venue: 'Rooftop Bar', description: 'The official events are over, but the night is just beginning! Join us by the bar for late-night drinks and more dancing', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
     ]
   },
   {
@@ -20,14 +20,14 @@ const schedule = [
       { enabled: true, time: '12:00 PM', duration: '1 hour', title: 'Wedding Lunch', venue: 'Ocean View Restaurant', description: 'Celebrate the newlyweds with a traditional Balinese feast', icon: 'i-material-symbols-cake-rounded' },
       { enabled: true, time: '5:00 PM', duration: '1 hour', title: 'Wedding procession (Baraat)', venue: 'Entrance to Garden Pavilion', description: 'The Groom’s Grand Entrance! Join Hari’s side for an epic musical procession with drums and dancing leading to the Mandap', icon: 'i-material-symbols-emoji-people-rounded', color: 'orange' },
       { enabled: true, time: '6:00 PM', duration: '3 hours', title: 'Indian Ceremony (Pelli)', venue: 'Garden Pavilion', dressCode: 'Traditional Indian (Saree/Sherwani)', description: 'The traditional Indian Wedding under the stars. Witness the sacred fire rituals, the seven steps (Saptapadi), and the union of our families.', icon: 'i-material-symbols-local-fire-department-rounded', color: 'red' },
-      { enabled: true, time: '9:00 PM', duration: '1 hour', title: 'Wedding Reception', venue: 'Garden Pavilion', dressCode: 'Formal Wear', description: 'A magical seated dinner with speeches, cake cutting, and dancing late into the night', icon: 'i-material-symbols-dine-heart-rounded', color: 'indigo' },
-      { enabled: false, time: '10:30 PM', duration: '1.5 hours', title: 'After Party', venue: 'Rooftop Bar', description: 'Keep the celebration going! Change into something comfortable and join us for the ultimate wedding after-party', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
+      { enabled: true, time: '8:00 PM', duration: '1.5 hour', title: 'Wedding Reception', venue: 'Garden Pavilion', dressCode: 'Formal Wear', description: 'A magical seated dinner with speeches, cake cutting, and dancing late into the night', icon: 'i-material-symbols-dine-heart-rounded', color: 'indigo' },
+      { enabled: false, time: '10:30 PM', duration: '1 hours', title: 'After Party', venue: 'Rooftop Bar', description: 'Keep the celebration going! Change into something comfortable and join us for the ultimate wedding after-party', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
     ]
   },
   {
     date: 'May 1st',
     events: [
-      { enabled: true, time: '8:00 AM', duration: '1 hour', title: 'Blessings Ceremony (Satyanarayana Puja)', venue: 'Temple Pavilion', description: 'A sacred ritual seeking divine blessings for our new journey together', icon: 'i-material-symbols-sunny-rounded', color: 'amber' },
+      { enabled: true, time: '7:00 AM', duration: '2 hour', title: 'Blessings Ceremony (Satyanarayana Puja)', venue: 'Temple Pavilion', description: 'A sacred ritual seeking divine blessings for our new journey together', icon: 'i-material-symbols-sunny-rounded', color: 'amber' },
       { enabled: true, time: '9:00 AM', duration: '1 hour', title: 'Farewell Breakfast', venue: 'Main Restaurant', description: 'One last gathering to hug, laugh, and relive the memories before we part ways', icon: 'i-material-symbols-waving-hand-rounded', color: 'primary' },
       { enabled: true, time: '12:00 PM', duration: 'Flexible', title: 'Check Out', venue: 'Main Lobby', description: 'Thank you for celebrating with us! Safe travels home', icon: 'i-material-symbols-logout-rounded', color: 'gray' }
     ]
@@ -256,7 +256,7 @@ definePageMeta({
 <template>
   <div class="overflow-hidden">
     <!-- Announcement Banner -->
-    <div class="bg-pink-700 text-white px-4 py-3 text-center sm:px-6 lg:px-8 relative z-50 shadow-md">
+    <div v-if="false" class="bg-pink-700 text-white px-4 py-3 text-center sm:px-6 lg:px-8 relative z-50 shadow-md">
       <p class="text-sm font-bold tracking-wide flex flex-col sm:flex-row items-center justify-center gap-2">
         <span class="flex items-center gap-2">
           <UIcon name="i-material-symbols-error-outline-rounded" class="w-6 h-6 shrink-0" />
@@ -299,24 +299,48 @@ definePageMeta({
             April 29 — May 1, 2026
           </div>
 
-          <div class="grid grid-cols-4 gap-4 max-w-md mx-auto py-2 text-white">
-            <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
-              <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.days"></div>
-              <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Days</div>
+          <ClientOnly fallback-tag="div" fallback-class="grid grid-cols-4 gap-4 max-w-md mx-auto py-2 text-white">
+            <div class="grid grid-cols-4 gap-4 max-w-md mx-auto py-2 text-white">
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
+                <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.days"></div>
+                <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Days</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
+                <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.hours"></div>
+                <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Hrs</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
+                <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.minutes"></div>
+                <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Mins</div>
+              </div>
+              <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
+                <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.seconds"></div>
+                <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Secs</div>
+              </div>
             </div>
-            <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
-              <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.hours"></div>
-              <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Hrs</div>
-            </div>
-            <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
-              <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.minutes"></div>
-              <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Mins</div>
-            </div>
-            <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
-              <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.seconds"></div>
-              <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Secs</div>
-            </div>
-          </div>
+            <template #fallback>
+              <div class="grid grid-cols-4 gap-4 max-w-md mx-auto py-2 text-white">
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
+                  <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.days"></div>
+                  <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Days</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
+                  <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.hours"></div>
+                  <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Hrs</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
+                  <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.minutes">
+                  </div>
+                  <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Mins</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-md rounded-xl p-2 md:p-4 border border-white/20 shadow-lg">
+                  <div class="text-2xl md:text-4xl font-bold notranslate" translate="no" v-text="timeLeft.seconds">
+                  </div>
+                  <div class="text-[10px] md:text-xs uppercase tracking-widest opacity-80 font-medium">Secs</div>
+                </div>
+              </div>
+            </template>
+          </ClientOnly>
           <div
             class="flex flex-col sm:flex-row gap-3 justify-center items-center text-sm font-bold text-gray-200 tracking-wider">
             <div class="bg-white/10 px-6 py-2 rounded-full backdrop-blur-sm shadow-sm border border-white/10">
@@ -1049,12 +1073,18 @@ definePageMeta({
                 class="flex justify-between items-center p-2 bg-cyan-100/50 dark:bg-cyan-900/30 border border-cyan-200 dark:border-cyan-800 rounded-lg text-cyan-800 dark:text-cyan-300 text-sm font-bold">
                 <div class="text-left flex flex-col items-center">
                   <span class="text-[10px] uppercase opacity-70">There</span>
-                  <span class="notranslate" translate="no" v-text="currentTimeInSelected"></span>
+                  <ClientOnly>
+                    <span class="notranslate" translate="no" v-text="currentTimeInSelected"></span>
+                    <template #fallback><span class="notranslate" translate="no">...</span></template>
+                  </ClientOnly>
                 </div>
                 <UIcon name="i-material-symbols-arrow-forward-rounded" class="w-4 h-4 opacity-50" />
                 <div class="text-right flex flex-col items-center">
                   <span class="text-[10px] uppercase opacity-70">Bali</span>
-                  <span class="notranslate" translate="no" v-text="currentTimeInBali"></span>
+                  <ClientOnly>
+                    <span class="notranslate" translate="no" v-text="currentTimeInBali"></span>
+                    <template #fallback><span class="notranslate" translate="no">...</span></template>
+                  </ClientOnly>
                 </div>
               </div>
             </div>
@@ -1102,7 +1132,7 @@ definePageMeta({
           <h2 class="text-4xl md:text-5xl font-bold text-gradient-primary">
             We Can't Wait!</h2>
           <p class="text-xl text-gray-300">
-            Please let us know if you can make it by <span class="text-white font-bold">Feb 28th</span>.
+            Please let us know if you can make it by <span class="text-white font-bold">March 15th</span>.
             Accommodation is waiting for you!
           </p>
           <UButton size="xl" to="https://hakrmey.rsvpify.com/" target="_blank" color="primary" variant="solid"
