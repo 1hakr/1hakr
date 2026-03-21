@@ -22,19 +22,15 @@ useHead({
 </script>
 
 <template>
-  <div>
+  <UApp>
     <Header />
 
     <UMain>
       <UContainer>
-        <UPage>
-          <Error :error="error" message="You have travalled here through our secret time machine. Go back!" />
-        </UPage>
+        <Error :error="error" message="You have travalled here through our secret time machine. Go back!" />
       </UContainer>
     </UMain>
 
     <Footer />
-
-    <UNotifications />
-  </div>
+  </UApp>
 </template>

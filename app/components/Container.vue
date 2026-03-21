@@ -13,7 +13,6 @@
 
 <script lang="ts" setup>
 import type { PropType } from 'vue'
-import type { Button } from '#ui/types'
 
 defineOptions({
   inheritAttrs: false

@@ -1,70 +1,45 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  extends: ['@nuxt/ui-pro'],
+  compatibilityDate: '2026-03-12',
   modules: [
     '@nuxt/content',
     '@nuxt/image',
     '@nuxt/ui',
     '@nuxt/fonts',
-    '@nuxthq/studio',
     '@nuxtjs/i18n',
-    '@nuxtjs/device',
-    '@nuxtjs/fontaine',
     '@vueuse/nuxt',
-    'nuxt-delay-hydration',
-    'nuxt-build-cache',
-    //'nuxt-date-fns',
     'nuxt-og-image',
     'nuxt-gtag',
   ],
-  delayHydration: { 
-    mode: 'mount'
-  },
-  hooks: {
-    // Define `@nuxt/ui` components as global to use them in `.md` (feel free to add those you need)
-    'components:extend': (components) => {
-      const globals = components.filter((c) => ['UButton'].includes(c.pascalName))
-
-      globals.forEach((c) => c.global = true)
-    }
-  },
+  css: ['~/assets/main.css'],
   i18n: {
     compilation: {
-      // jit: false,
       strictMessage: false,
       escapeHtml: true
     },
-    bundle: {
-      // dropMessageCompiler: true
-    },
     langDir: 'locales',
-    lazy: true,
     strategy: 'prefix_except_default',
     baseUrl: 'https://1hakr.com',
     defaultLocale: 'en',
     debug: false,
-    dynamicRouteParams: true,
     skipSettingLocaleOnNavigate: true,
     detectBrowserLanguage: false,
     locales: [
       {
         code: 'en',
-        iso: 'en',
+        language: 'en',
         name: 'English',
         file: 'en.json'
       }
     ],
   },
-  build: {
-    //transpile: ['nuxt-date-fns']
-  },
   gtag: {
-    id: 'G-GZT3TP9CSP'
+    id: 'G-GZT3TP9CSP',
+    loadingStrategy: 'defer',
   },
   routeRules: {
     '/portfolio': { redirect: { to: '/design', statusCode: 301 } },
     '/apps': { redirect: { to: '/products', statusCode: 301 } },
     '/libraries': { redirect: { to: '/', statusCode: 301 } },
+    '/profile': { redirect: { to: '/', statusCode: 301 } },
   },
-  compatibilityDate: '2024-08-21'
 })

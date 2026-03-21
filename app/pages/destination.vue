@@ -1,35 +1,40 @@
 <script setup lang="ts">
+import type { ButtonProps } from '@nuxt/ui'
+import type { TabsItem } from '@nuxt/ui'
+
+const rsvpUrl = 'https://forms.gle/e74zL2ESYgGYGpdo7'
+
 const schedule = [
   {
     date: 'April 29th',
     events: [
-      { enabled: true, time: '12:00 PM', duration: '1 hour', title: 'Welcome Lunch', venue: 'Main Restaurant', description: 'Welcome to Wedding! Kick off the celebrations with a delicious spread of local and international favorites as guests arrive. Meet the families and enjoy the tropical vibes', icon: 'i-material-symbols-handshake-rounded', color: 'teal' },
-      { enabled: true, time: '3:00 PM', duration: '30 mins', title: 'Check In', venue: 'Main Lobby', description: 'Head to the lobby for a refreshing welcome drink while you get settled into your rooms', icon: 'i-material-symbols-key-rounded', color: 'emerald' },
-      { enabled: true, time: '3:00 PM', duration: '1 hour', title: 'Purification Ceremony (Haldi)', venue: 'Ocean View Stage', dressCode: 'Floral Bright Orange & Yellow', dressColors: ['bg-yellow-400', 'bg-orange-500'], description: 'A vibrant start to the festivities! We apply turmeric paste to the bride and groom for a glowing complexion and expect music, laughter, and getting a little messy', icon: 'i-material-symbols-auto-awesome-rounded', color: 'yellow' },
-      { enabled: true, time: '4:00 PM', duration: '1 hour', title: 'Henna Ceremony (Mehendi)', venue: 'Ocean View Stage', description: 'Relax by the poolside cabanas while professional artists apply intricate henna designs and enjoy coconuts, and a grazing table', icon: 'i-material-symbols-palette', color: 'rose' },
-      { enabled: true, time: '7:00 PM', duration: '2 hours', title: 'Musical Night (Sangeet)', venue: 'Main Restaurant', dressCode: 'Glitzy Western Glam / Cocktail Party Wear', description: 'Put on your dancing shoes! A night of Tollywood / Bollywood beats, family performances, and a grand feast and time to let loose and party!', icon: 'i-material-symbols-music-note-rounded', color: 'purple' },
-      { enabled: true, time: '8:00 PM', duration: '1.5 hours', title: 'Welcome Dinner', venue: 'Main Restaurant', description: 'After the performances, join us for a lavish buffet featuring the best of Indian and Indonesian cuisine. The night continues with an open dance floor', icon: 'i-material-symbols-meal-dinner-rounded', color: 'indigo' },
+      { enabled: true, time: '12:00 PM', duration: '1 hour', title: 'Welcome Lunch', venue: 'Soka Restaurant', description: 'Welcome to Wedding! Kick off the celebrations with a delicious spread of local and international favorites as guests arrive. Meet the families and enjoy the tropical vibes', icon: 'i-material-symbols-handshake-rounded', color: 'teal' },
+      { enabled: true, time: '3:00 PM', duration: '30 mins', title: 'Check In', venue: 'Resort Lobby', description: 'Head to the lobby for a refreshing welcome drink while you get settled into your rooms', icon: 'i-material-symbols-key-rounded', color: 'emerald' },
+      { enabled: true, time: '3:00 PM', duration: '1 hour', title: 'Purification Ceremony (Haldi)', venue: 'Ocean View Deck', dressCode: 'Floral Bright Orange & Yellow', dressColors: ['bg-yellow-400', 'bg-orange-500'], description: 'A vibrant start to the festivities! We apply turmeric paste to the bride and groom for a glowing complexion and expect music, laughter, and getting a little messy', icon: 'i-material-symbols-auto-awesome-rounded', color: 'yellow' },
+      { enabled: true, time: '4:00 PM', duration: '1 hour', title: 'Henna Ceremony (Mehendi)', venue: 'Ocean View Deck', description: 'Relax by the poolside cabanas while professional artists apply intricate henna designs and enjoy coconuts, and a grazing table', icon: 'i-material-symbols-palette', color: 'rose' },
+      { enabled: true, time: '7:00 PM', duration: '2 hours', title: 'Musical Night (Sangeet)', venue: 'Soka Restaurant', dressCode: 'Glitzy Western Glam / Cocktail Party Wear', description: 'Put on your dancing shoes! A night of Tollywood / Bollywood beats, family performances, and a grand feast and time to let loose and party!', icon: 'i-material-symbols-music-note-rounded', color: 'purple' },
+      { enabled: true, time: '8:00 PM', duration: '1.5 hours', title: 'Welcome Dinner', venue: 'Soka Restaurant', description: 'After the performances, join us for a lavish buffet featuring the best of Indian and Indonesian cuisine. The night continues with an open dance floor', icon: 'i-material-symbols-meal-dinner-rounded', color: 'indigo' },
       { enabled: true, time: '10:30 PM', duration: '1 hours', title: 'After Party', venue: 'Rooftop Bar', description: 'The official events are over, but the night is just beginning! Join us by the bar for late-night drinks and more dancing', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
     ]
   },
   {
     date: 'April 30th',
     events: [
-      { enabled: true, time: '9:00 AM', duration: '1 hour', title: 'Wedding Breakfast', venue: 'Main Restaurant', description: 'Fuel up for the big day with a floating breakfast spread', icon: 'i-material-symbols-breakfast-dining' },
-      { enabled: true, time: '10:00 AM', duration: '2 hours', title: 'Indonesian Ceremony (Akad Nikah)', venue: 'Beachfront Pavilion', dressCode: 'Batik (Kebaya/Beskap)', description: 'We honor Mey’s heritage with a traditional Indonesian Solemnization Ceremony, a sacred, intimate moment where we officially say "I Do"', icon: 'i-material-symbols-favorite-rounded', color: 'emerald' },
-      { enabled: true, time: '12:00 PM', duration: '1 hour', title: 'Wedding Lunch', venue: 'Ocean View Restaurant', description: 'Celebrate the newlyweds with a traditional Balinese feast', icon: 'i-material-symbols-cake-rounded' },
-      { enabled: true, time: '5:00 PM', duration: '1 hour', title: 'Wedding procession (Baraat)', venue: 'Entrance to Garden Pavilion', description: 'The Groom’s Grand Entrance! Join Hari’s side for an epic musical procession with drums and dancing leading to the Mandap', icon: 'i-material-symbols-emoji-people-rounded', color: 'orange' },
-      { enabled: true, time: '6:00 PM', duration: '3 hours', title: 'Indian Ceremony (Pelli)', venue: 'Garden Pavilion', dressCode: 'Traditional Indian (Saree/Sherwani)', description: 'The traditional Indian Wedding under the stars. Witness the sacred fire rituals, the seven steps (Saptapadi), and the union of our families.', icon: 'i-material-symbols-local-fire-department-rounded', color: 'red' },
-      { enabled: true, time: '8:00 PM', duration: '1.5 hour', title: 'Wedding Reception', venue: 'Garden Pavilion', dressCode: 'Formal Wear', description: 'A magical seated dinner with speeches, cake cutting, and dancing late into the night', icon: 'i-material-symbols-dine-heart-rounded', color: 'indigo' },
+      { enabled: true, time: '9:00 AM', duration: '1 hour', title: 'Wedding Breakfast', venue: 'Soka Restaurant', description: 'Fuel up for the big day with a floating breakfast spread', icon: 'i-material-symbols-breakfast-dining' },
+      { enabled: true, time: '10:00 AM', duration: '2 hours', title: 'Indonesian Ceremony (Akad Nikah)', venue: 'Ocean View Gazebo', dressCode: 'Batik (Kebaya/Beskap)', description: 'We honor Mey’s heritage with a traditional Indonesian Solemnization Ceremony, a sacred, intimate moment where we officially say "I Do"', icon: 'i-material-symbols-favorite-rounded', color: 'emerald' },
+      { enabled: true, time: '12:00 PM', duration: '1 hour', title: 'Wedding Lunch', venue: 'Ratna Restaurant', description: 'Celebrate the newlyweds with a traditional Balinese feast', icon: 'i-material-symbols-cake-rounded' },
+      { enabled: true, time: '5:00 PM', duration: '1 hour', title: 'Wedding procession (Baraat)', venue: 'Entrance to Temple Garden', description: 'The Groom’s Grand Entrance! Join Hari’s side for an epic musical procession with drums and dancing leading to the Mandap', icon: 'i-material-symbols-emoji-people-rounded', color: 'orange' },
+      { enabled: true, time: '6:00 PM', duration: '3 hours', title: 'Indian Ceremony (Pelli)', venue: 'Temple Garden', dressCode: 'Traditional Indian (Saree/Sherwani)', description: 'The traditional Indian Wedding under the stars. Witness the sacred fire rituals, the seven steps (Saptapadi), and the union of our families.', icon: 'i-material-symbols-local-fire-department-rounded', color: 'red' },
+      { enabled: true, time: '8:00 PM', duration: '1.5 hour', title: 'Wedding Reception', venue: 'Temple Garden', dressCode: 'Formal Wear', description: 'A magical seated dinner with speeches, cake cutting, and dancing late into the night', icon: 'i-material-symbols-dine-heart-rounded', color: 'indigo' },
       { enabled: false, time: '10:30 PM', duration: '1 hours', title: 'After Party', venue: 'Rooftop Bar', description: 'Keep the celebration going! Change into something comfortable and join us for the ultimate wedding after-party', icon: 'i-material-symbols-nightlife-rounded', color: 'slate' }
     ]
   },
   {
     date: 'May 1st',
     events: [
-      { enabled: true, time: '7:00 AM', duration: '2 hour', title: 'Blessings Ceremony (Satyanarayana Puja)', venue: 'Temple Pavilion', description: 'A sacred ritual seeking divine blessings for our new journey together', icon: 'i-material-symbols-sunny-rounded', color: 'amber' },
-      { enabled: true, time: '9:00 AM', duration: '1 hour', title: 'Farewell Breakfast', venue: 'Main Restaurant', description: 'One last gathering to hug, laugh, and relive the memories before we part ways', icon: 'i-material-symbols-waving-hand-rounded', color: 'primary' },
-      { enabled: true, time: '12:00 PM', duration: 'Flexible', title: 'Check Out', venue: 'Main Lobby', description: 'Thank you for celebrating with us! Safe travels home', icon: 'i-material-symbols-logout-rounded', color: 'gray' }
+      { enabled: true, time: '7:00 AM', duration: '2 hour', title: 'Blessings Ceremony (Satyanarayana Puja)', venue: 'Temple Garden', description: 'A sacred ritual seeking divine blessings for our new journey together', icon: 'i-material-symbols-sunny-rounded', color: 'amber' },
+      { enabled: true, time: '9:00 AM', duration: '1 hour', title: 'Farewell Breakfast', venue: 'Soka Restaurant', description: 'One last gathering to hug, laugh, and relive the memories before we part ways', icon: 'i-material-symbols-waving-hand-rounded', color: 'primary' },
+      { enabled: true, time: '12:00 PM', duration: 'Flexible', title: 'Check Out', venue: 'Resort Lobby', description: 'Thank you for celebrating with us! Safe travels home', icon: 'i-material-symbols-logout-rounded', color: 'gray' }
     ]
   }
 ]
@@ -57,7 +62,7 @@ const vacationSpots = [
     title: 'Ubud',
     subtitle: 'The Cultural Heart',
     description: 'Perfect for art, rice terraces (Tegalalang), and the Monkey Forest.',
-    image: 'https://excursionmania.com/cdn-cgi/image/quality=75,format=webp,w=auto,h=auto,fit=scale-down,trim=border/https://excursionmania.com/supplier/uploads/excursions/excursions/ex-1067/ubud-all-inclusive-tour-with-optional-lunch-e10671735289318.jpg'
+    image: 'https://www.virginaustralia.com/content/dam/vaa/images/destinations/bali/guide-to-ubud/vaa-1440x620-bali-guide-to-ubud.jpg/jcr:content/renditions/vaacore.web.1920.0.jpg'
   },
   {
     title: 'Sidemen',
@@ -188,10 +193,25 @@ const calendarOptions = [
 ]
 
 const dressCodes = [
-  { event: 'Haldi', label: 'Haldi', theme: 'Bright Orange & Yellow', link: 'https://in.pinterest.com/search/pins/?q=haldi%20outfit', images: ['https://valintaformens.com/cdn/shop/files/photo_2023-05-16_22-58-57.jpg?v=1684384660', 'https://www.houseofchikankari.in/cdn/shop/files/DSC00032.jpg?v=1768295459&width=1080'], description: 'Embrace the sunshine! Think light, breathable cottons in vibrant yellows and oranges.' },
-  { event: 'Akad Nikah', label: 'Akad Nikah', theme: 'Kebaya & Beskap', link: 'https://in.pinterest.com/search/pins/?q=kebaya%20beskap%20wedding', images: ['https://www.sukkhacitta.com/cdn/shop/files/SukkhaCitta_KAPAS_M3006_BeskapJacket_SEMESTADune_ResizedBintang_3.jpg?v=1733896134&width=2536', 'https://cdn0-production-images-kly.akamaized.net/ssfFjjE_IJWH174BpG4v_get6kQ=/500x500/smart/filters:quality(75):strip_icc()/kly-media-production/medias/5279056/original/012628800_1752127166-4__2_.jpg'], description: 'Honoring heritage. Traditional Kebaya, Batik shirts, or modest formal wear.' },
-  { event: 'Pelli', label: 'Pelli', theme: 'Sherwani & Saree', link: 'https://in.pinterest.com/search/pins/?q=sherwani%20saree%20wedding', images: ['https://images.cbazaar.com/images/light-teal-silk-thread-hand-work-classic-sherwani-for-men-shmsc2809-u.jpg', 'https://stilento.com/cdn/shop/products/designer-dark-blue-pure-cotton-printed-indian-women-sarees-stilento.jpg?v=1662794314'], description: 'Regal and elegant. Sarees, Lehengas, Sherwanis, or sharp evening wear.' },
-]
+  {
+    event: 'Haldi', label: 'Haldi', theme: 'Bright Orange & Yellow', link: 'https://in.pinterest.com/search/pins/?q=haldi%20outfit',
+    images: ['https://valintaformens.com/cdn/shop/files/photo_2023-05-16_22-58-57.jpg?v=1684384660',
+      'https://www.houseofchikankari.in/cdn/shop/files/DSC00032.jpg?v=1768295459&width=1080'],
+    description: 'Embrace the sunshine! Think light, breathable cottons in vibrant yellows and oranges.'
+  },
+  {
+    event: 'Akad Nikah', label: 'Akad Nikah', theme: 'Kebaya & Beskap', link: 'https://in.pinterest.com/search/pins/?q=kebaya%20beskap%20wedding',
+    images: ['https://www.sukkhacitta.com/cdn/shop/files/MKHO9830-2.jpg?v=1736152852',
+      'https://cdn0-production-images-kly.akamaized.net/ssfFjjE_IJWH174BpG4v_get6kQ=/500x500/smart/filters:quality(75):strip_icc()/kly-media-production/medias/5279056/original/012628800_1752127166-4__2_.jpg'],
+    description: 'Honoring heritage. Traditional Kebaya, Batik shirts, or modest formal wear.'
+  },
+  {
+    event: 'Pelli', label: 'Pelli', theme: 'Sherwani & Saree', link: 'https://in.pinterest.com/search/pins/?q=sherwani%20saree%20wedding',
+    images: ['https://images.cbazaar.com/images/light-teal-silk-thread-hand-work-classic-sherwani-for-men-shmsc2809-u.jpg',
+      'https://stilento.com/cdn/shop/products/designer-dark-blue-pure-cotton-printed-indian-women-sarees-stilento.jpg?v=1662794314'],
+    description: 'Regal and elegant. Sarees, Lehengas, Sherwanis, or sharp evening wear.'
+  },
+] satisfies TabsItem[]
 
 const convertAmount = ref(1000)
 const convertCurrency = ref('AUD')
@@ -244,19 +264,30 @@ useSeoMeta({
 
 useHead({
   script: [
-    { src: 'https://app3.weatherwidget.org/js/?id=ww_8e782f6216a7e', async: true }
+    { src: 'https://app3.weatherwidget.org/js/?id=ww_8e782f6216a7e', async: true, defer: true }
   ]
 })
 
 definePageMeta({
-  layout: 'plain'
+  layout: 'plain',
+  ssr: true,
 })
+
+const actions = ref<ButtonProps[]>([
+  {
+    label: 'See details',
+    variant: 'link',
+    color: 'neutral',
+    to: '#venue',
+  }
+])
 </script>
 
 <template>
   <div class="overflow-hidden">
     <!-- Announcement Banner -->
-    <div v-if="false" class="bg-pink-700 text-white px-4 py-3 text-center sm:px-6 lg:px-8 relative z-50 shadow-md">
+    <UBanner v-if="false" icon="i-material-symbols-error-outline-rounded" color="error" :actions="actions"
+      title="Important Update: Our wedding venue has changed to Bali Tropic Resort & Spa!">
       <p class="text-sm font-bold tracking-wide flex flex-col sm:flex-row items-center justify-center gap-2">
         <span class="flex items-center gap-2">
           <UIcon name="i-material-symbols-error-outline-rounded" class="w-6 h-6 shrink-0" />
@@ -264,13 +295,14 @@ definePageMeta({
           <a href="#venue" class="underline hover:text-primary-100 transition-colors mt-1 sm:mt-0">See details</a>
         </span>
       </p>
-    </div>
+    </UBanner>
 
     <!-- Hero Section -->
     <div class="relative min-h-[90vh] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
-      <!-- Background Image -->
+      <!-- Background Image: LCP element — load eagerly with high fetch priority -->
       <img src="https://images.unsplash.com/photo-1604999333679-b86d54738315?auto=format&fit=crop&w=1920&q=80"
-        alt="Bali Wedding" class="absolute inset-0 w-full h-full object-cover opacity-60" />
+        alt="Bali Wedding" class="absolute inset-0 w-full h-full object-cover opacity-60" loading="eager"
+        fetchpriority="high" decoding="sync" />
 
       <!-- Gradient Overlay -->
       <div class="absolute inset-0 bg-gradient-to-b from-black/20 via-black/60 to-black/80"></div>
@@ -353,14 +385,14 @@ definePageMeta({
         </div>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center py-8 w-full max-w-lg mx-auto">
-          <UButton size="xl" to="https://hakrmey.rsvpify.com/" target="_blank" color="primary" variant="solid"
+          <UButton size="xl" :to="rsvpUrl" target="_blank" color="primary" variant="solid"
             icon="i-material-symbols-mail-rounded" translate="no"
             class="notranslate font-bold justify-center whitespace-normal text-center h-auto py-3 px-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1">
             RSVP Now
           </UButton>
-          <UButton size="xl" to="#schedule" color="white" icon="i-material-symbols-arrow-circle-down-rounded"
-            variant="solid"
-            class="font-bold justify-center whitespace-normal text-center h-auto py-3 px-6 shadow-xl hover:shadow-2xl transition-all hover:-translate-y-1 text-gray-900">
+          <UButton icon="i-material-symbols-arrow-circle-down-rounded" size="xl" color="neutral" variant="soft"
+            to="#schedule"
+            class="font-bold justify-center whitespace-normal text-center h-auto py-3 px-6 shadow-xl hover:shadow-2xl">
             Schedule
           </UButton>
         </div>
@@ -427,7 +459,7 @@ definePageMeta({
 
               <div class="flex justify-between items-center mb-3">
                 <span class="text-xs font-bold text-gray-500 uppercase tracking-wider">Per Night</span>
-                <USelect v-model="convertToCurrency" :options="currencyOptions" size="sm" class="w-20" />
+                <USelect v-model="convertToCurrency" :items="currencyOptions" size="sm" class="w-20" />
               </div>
 
               <div class="space-y-3 text-sm mb-6">
@@ -454,7 +486,7 @@ definePageMeta({
               <div class="flex flex-col xl:flex-row gap-4">
                 <div class="flex-1 flex flex-col gap-1.5 items-center">
                   <UButton to="https://www.booking.com/hotel/id/bali-tropic-resort-spa.html" target="_blank"
-                    color="primary" variant="solid" class="w-full justify-center"
+                    color="primary" variant="soft" class="w-full justify-center"
                     icon="i-material-symbols-open-in-new-rounded">
                     Booking.com
                   </UButton>
@@ -462,7 +494,7 @@ definePageMeta({
                     Adults Only)</span>
                 </div>
                 <div class="flex-1 flex flex-col gap-1.5 items-center">
-                  <UButton to="https://wa.me/6281333352893" target="_blank" color="green" variant="soft"
+                  <UButton to="https://wa.me/6281333352893" target="_blank" color="secondary" variant="soft"
                     class="w-full justify-center whitespace-nowrap" icon="i-simple-icons-whatsapp">
                     Wedding Planner
                   </UButton>
@@ -480,9 +512,11 @@ definePageMeta({
               </div>
               <!-- Fixed Height & Position for Venue Image -->
               <div class="w-full h-96 relative rounded-2xl overflow-hidden shadow-2xl">
+                <!-- Below the fold — defer loading until scroll -->
                 <img src="https://photos.hotelbeds.com/giata/original/02/024225/024225a_hb_p_001.jpg"
                   alt="Bali Tropic Resort"
-                  class="absolute inset-0 w-full h-full object-cover transform transition duration-500 hover:scale-105" />
+                  class="absolute inset-0 w-full h-full object-cover transform transition duration-500 hover:scale-105"
+                  loading="lazy" decoding="async" />
               </div>
             </div>
 
@@ -515,16 +549,17 @@ definePageMeta({
         <div class="text-center mb-16 space-y-4">
           <div class="flex items-center justify-center gap-4">
             <h3 class="text-3xl font-bold text-center mb-2">Event Schedule</h3>
-            <UBadge color="amber" variant="subtle" size="md" class="font-bold tracking-widest animate-pulse"
-              :ui="{ rounded: 'rounded-full' }">WIP</UBadge>
+            <UBadge color="warning" variant="subtle" size="md" class="font-bold tracking-widest animate-pulse">
+              WIP
+            </UBadge>
           </div>
           <p class="text-lg text-gray-600 dark:text-gray-300">A celebration of love across two beautiful days.
           </p>
           <div class="flex justify-center mt-6">
-            <UDropdown :items="calendarOptions" :popper="{ placement: 'bottom-start' }">
+            <UDropdownMenu :items="calendarOptions" :popper="{ placement: 'bottom-start' }">
               <UButton color="primary" variant="soft" icon="i-material-symbols-calendar-month-rounded"
                 label="Add to Calendar" trailing-icon="i-material-symbols-keyboard-arrow-down-rounded" />
-            </UDropdown>
+            </UDropdownMenu>
           </div>
         </div>
 
@@ -603,8 +638,8 @@ definePageMeta({
           </p>
         </div>
 
-        <UTabs :items="dressCodes">
-          <template #item="{ item }">
+        <UTabs :items="dressCodes" class="w-full">
+          <template #content="{ item }">
             <div
               class="mt-8 bg-gray-50 dark:bg-gray-800/50 rounded-3xl p-6 md:p-10 shadow-sm border border-gray-100 dark:border-gray-700">
               <div class="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
@@ -630,10 +665,10 @@ definePageMeta({
 
                 <!-- Right: Carousel -->
                 <div
-                  class="w-full max-w-[350px] mx-auto relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900">
-                  <UCarousel v-slot="{ item: image }" :items="item.images" :ui="{ item: 'w-full basis-full' }"
-                    indicators arrows class="h-[400px] sm:h-[480px]">
-                    <img :src="image" :alt="item.event" class="w-full h-full object-cover object-top" />
+                  class="w-full max-w-[350px] mx-auto relative rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 bg-white dark:bg-gray-900">
+                  <UCarousel v-slot="{ item: image }" :items="item.images" :ui="{ item: 'w-full basis-full' }" dots
+                    arrows class="h-[400px] sm:h-[480px]">
+                    <img :src="image" :alt="item.event" class="w-full h-full rounded-2xl object-cover object-top" />
                   </UCarousel>
                 </div>
 
@@ -718,7 +753,7 @@ definePageMeta({
                   </template>
                 </UInput>
                 <span class="text-sm font-medium text-gray-500">to</span>
-                <USelect v-model="convertToCurrency" :options="currencyOptions" size="sm" class="w-[100px]" />
+                <USelect v-model="convertToCurrency" :items="currencyOptions" size="sm" class="w-[100px]" />
                 <UIcon name="i-material-symbols-arrow-forward-rounded"
                   class="w-4 h-4 text-gray-400 shrink-0 hidden sm:block" />
                 <div
@@ -800,7 +835,7 @@ definePageMeta({
                   <li><strong>Via Singapore (Rec):</strong> Singapore Airlines offers seamless bags-through connections
                   </li>
                   <li><strong>Via Vietnam/Thailand:</strong> VietJet/Thai Airways often have competitive rates</li>
-                  <li><strong>Direct:</strong> Vistara flies direct from Delhi (DEL) to Bali (DPS)</li>
+                  <li><strong>Direct:</strong> Indigo flies direct from Bengaluru (BLR) to Bali (DPS)</li>
                 </ul>
               </div>
               <div>
@@ -850,7 +885,7 @@ definePageMeta({
               & travel delays</p>
             <UButton size="md"
               to="https://safetywing.com/nomad-insurance/?referenceID=24736645&utm_source=24736645&utm_medium=Ambassador"
-              target="_blank" color="teal" variant="soft">Get Insurance</UButton>
+              target="_blank" color="secondary" variant="soft">Get Insurance</UButton>
           </div>
 
           <!-- Flights -->
@@ -864,7 +899,7 @@ definePageMeta({
               early to get best price</p>
             <UButton size="md"
               to="https://www.skyscanner.net/g/referrals/v1/flights/cheap-flights-to?mediaPartnerId=2989064&origin=AU&destination=ID&outboundDate=2026-02-26&inboundDate=2026-03-05&market=AU&currency=AUD&locale=en-US&adults=1&cabinclass=economy&children=0&infants=0&preferdirects=false&rtn=1&showDirectDays=true"
-              target="_blank" color="sky" variant="soft">Book Flights</UButton>
+              target="_blank" color="primary" variant="soft">Book Flights</UButton>
           </div>
 
           <!-- Zero FX Cards -->
@@ -876,11 +911,11 @@ definePageMeta({
             <h4 class="font-bold text-xl mb-2">Money</h4>
             <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Get Zero forex Cards and avoid bank fees</p>
             <div class="grid grid-cols-2 gap-2 mt-auto">
-              <UButton size="md" to="https://hook.up.me/hakr" target="_blank" color="amber" variant="soft">Up Bank (AU)
+              <UButton size="md" to="https://hook.up.me/hakr" target="_blank" color="warning" variant="soft">Up Bank
+                (AU)
               </UButton>
-              <UButton size="md" to="https://fi.onelink.me/GvZH/n0vhu8np" target="_blank" color="primary"
-                variant="soft">
-                Fi Money (IN)
+              <UButton size="md" to="https://goniyo.com/" target="_blank" color="warning" variant="soft">
+                Niyo (IN)
               </UButton>
             </div>
           </div>
@@ -896,7 +931,7 @@ definePageMeta({
               across
               Asia</p>
             <div class="mt-auto">
-              <UButton size="md" to="https://moretapay.com/" target="_blank" color="emerald" variant="soft">
+              <UButton size="md" to="https://moretapay.com/" target="_blank" color="secondary" variant="soft">
                 Get Moreta Pay
               </UButton>
             </div>
@@ -935,7 +970,7 @@ definePageMeta({
 
         <div class="flex justify-center mb-16">
           <UButton size="xl" to="https://www.saltinourhair.com/bali/bali-itinerary-7-days/" target="_blank"
-            color="amber" variant="soft" icon="i-material-symbols-map-rounded" class="px-8">View 7-Day Itinerary
+            color="warning" variant="soft" icon="i-material-symbols-map-rounded" class="px-8">View 7-Day Itinerary
           </UButton>
         </div>
 
@@ -983,7 +1018,7 @@ definePageMeta({
             </p>
             <UButton size="md"
               to="https://www.skyscanner.net/g/referrals/v1/hotels/home-view?mediaPartnerId=2989064&skyscanner_node_code=ID&checkin=2026-02-26&checkout=2026-03-05&market=AU&currency=AUD&locale=en-US&rooms=1"
-              target="_blank" color="fuchsia" variant="soft">Book Accommodation</UButton>
+              target="_blank" color="info" variant="soft">Book Accommodation</UButton>
           </div>
 
           <!-- eSIM Data -->
@@ -996,7 +1031,7 @@ definePageMeta({
             <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Stay connected instantly with eSIM. Avoid airport
               SIM queues.</p>
             <UButton size="md" to="https://getnomadapp.go.link/universal-link?page=add_referral&referral_code=HAKR67HW"
-              target="_blank" color="indigo" variant="soft">Get eSIM</UButton>
+              target="_blank" color="info" variant="soft">Get eSIM</UButton>
           </div>
 
           <!-- Transport -->
@@ -1009,9 +1044,10 @@ definePageMeta({
             <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Safe, affordable rides with <strong>Gojek</strong>
               & <strong>Grab</strong>.</p>
             <div class="grid grid-cols-2 gap-2 mt-auto">
-              <UButton size="md" to="https://www.gojek.com/en-id/" target="_blank" color="green" variant="soft">Gojek
+              <UButton size="md" to="https://www.gojek.com/en-id/" target="_blank" color="secondary" variant="soft">
+                Gojek
               </UButton>
-              <UButton size="md" to="https://www.grab.com/id/en/transport/" target="_blank" color="green"
+              <UButton size="md" to="https://www.grab.com/id/en/transport/" target="_blank" color="secondary"
                 variant="soft">
                 Grab</UButton>
             </div>
@@ -1026,9 +1062,10 @@ definePageMeta({
             <h4 class="font-bold text-xl mb-2">Food</h4>
             <p class="text-sm text-gray-600 dark:text-gray-400 mb-6">Order local eats or late-night snacks easily.</p>
             <div class="grid grid-cols-2 gap-2 mt-auto">
-              <UButton size="md" to="https://www.gojek.com/en-id/gofood/" target="_blank" color="orange" variant="soft">
+              <UButton size="md" to="https://www.gojek.com/en-id/gofood/" target="_blank" color="warning"
+                variant="soft">
                 GoFood</UButton>
-              <UButton size="md" to="https://food.grab.com/id/en/" target="_blank" color="orange" variant="soft">
+              <UButton size="md" to="https://food.grab.com/id/en/" target="_blank" color="warning" variant="soft">
                 GrabFood</UButton>
             </div>
           </div>
@@ -1047,7 +1084,7 @@ definePageMeta({
               <div
                 class="flex items-center gap-2 w-full p-2 sm:p-3 bg-emerald-50/50 dark:bg-emerald-900/20 rounded-xl shadow-inner border border-emerald-100 dark:border-emerald-800">
                 <UInput v-model.number="convertAmount" type="number" class="w-[100px]" placeholder="Amt" />
-                <USelect v-model="convertCurrency" :options="currencyOptions" class="w-20 shrink-0" />
+                <USelect v-model="convertCurrency" :items="currencyOptions" class="w-20 shrink-0" />
                 <div
                   class="text-base sm:text-lg font-black text-emerald-700 dark:text-emerald-300 whitespace-nowrap w-[100px] flex items-center gap-1">
                   <span>=</span>
@@ -1067,7 +1104,7 @@ definePageMeta({
             <p class="text-sm text-gray-600 dark:text-gray-400 mb-4 hidden md:block">Compare your local time with Bali
               time.</p>
             <div class="w-full space-y-3 mt-auto">
-              <USelect v-model="selectedTimezone" :options="timezonesLocal" option-attribute="label"
+              <USelect v-model="selectedTimezone" :items="timezonesLocal" option-attribute="label"
                 value-attribute="value" class="w-full" />
               <div
                 class="flex justify-between items-center p-2 bg-cyan-100/50 dark:bg-cyan-900/30 border border-cyan-200 dark:border-cyan-800 rounded-lg text-cyan-800 dark:text-cyan-300 text-sm font-bold">
@@ -1135,7 +1172,7 @@ definePageMeta({
             Please let us know if you can make it by <span class="text-white font-bold">March 15th</span>.
             Accommodation is waiting for you!
           </p>
-          <UButton size="xl" to="https://hakrmey.rsvpify.com/" target="_blank" color="primary" variant="solid"
+          <UButton size="xl" :to="rsvpUrl" target="_blank" color="primary" variant="solid"
             icon="i-material-symbols-mail-rounded" class="font-bold">RSVP Now
           </UButton>
         </div>

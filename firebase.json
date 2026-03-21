@@ -4,6 +4,8 @@
   },
   "hosting": {
     "public": ".output/public",
+    "cleanUrls": true,
+    "trailingSlash": false,
     "headers": [{
         "source": "**/*.@(js|html)",
         "headers": [{

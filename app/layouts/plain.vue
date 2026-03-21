@@ -3,11 +3,11 @@
 </script>
 
 <template>
-  <div>
-    <UMain>
+  <UApp>
+    <UMain class="min-h-[90vh]">
       <slot />
     </UMain>
 
-    <PageFooter />
-  </div>
+    <Footer />
+  </UApp>
 </template>

@@ -3,13 +3,13 @@
 </script>
 
 <template>
-  <div>
-    <PageHeader />
+  <UApp>
+    <Header />
 
-    <UMain>
+    <UMain class="min-h-[90vh]">
       <slot />
     </UMain>
 
-    <PageFooter />
-  </div>
+    <Footer />
+  </UApp>
 </template>

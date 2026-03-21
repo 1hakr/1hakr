@@ -21,7 +21,6 @@
 <script setup lang="ts">
 import type { PropType } from 'vue'
 import type { NuxtError } from '#app'
-import type { Button } from '#ui/types'
 
 const config = {
   wrapper: 'min-h-[calc(100vh-var(--header-height))] flex flex-col items-center justify-center',
@@ -60,7 +59,7 @@ const props = defineProps({
     default: 'This is not the page you\'re looking for.'
   },
   clearButton: {
-    type: Object as PropType<Button & { click?: Function }>,
+    type: Object as PropType<any & { click?: Function }>,
     default: () => ({})
   },
   class: {
@@ -73,7 +72,9 @@ const props = defineProps({
   }
 })
 
-const { ui, attrs } = useUI('page.error', toRef(props, 'ui'), config, toRef(props, 'class'), true)
+import { defu } from 'defu'
+const attrs = useAttrs()
+const ui = computed(() => defu(props.ui || {}, config.value || config))
 
 const handleError = () => clearError({ redirect: '/' })
 </script>

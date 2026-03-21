@@ -6,44 +6,48 @@ description:
     The gallery showcases a sampling of the icons I’ve worked on.
 designs:
   - color: '#FFFFFF'
+    image: material_icon_smartnotebook.png
+    caption: Logo for 
+    link_text: SmartNotebook
+
+  - color: '#FFFFFF'
     image: material_icon_beansnbites.png
     caption: Logo for 
-    link_text: Beans n Bites
+    link_text: BeansnBites
     link: https://beansnbites.com.au/?referrer=1hakr
 
   - color: '#C6DAFC'
-    image: material_icon_visalist.png
+    image: material_icon_nocodeapi.png
     caption: Icon for 
-    link_text: Visa List
-    link: https://visalist.io?referrer=1hakr
+    link_text: NoCodeAPI
+    link: https://nocodeapi.com?referrer=1hakr
 
   - color: '#C6DAFC'
     image: material_icon_simpleops.png
     caption: Icon for 
-    link_text: Simple Ops
+    link_text: SimpleOps
     link: https://simpleops.io?referrer=1hakr
+
+  - color: '#C6DAFC'
+    image: material_icon_visalist.png
+    caption: Icon for 
+    link_text: VisaList
+    link: https://visalist.io?referrer=1hakr
 
   - color: '#C6DAFC'
     image: material_icon_anexplorer.png
     caption: App icon for
     link_text: AnExplorer
-    link: https://play.google.com/store/apps/details?id=dev.dworks.apps.anexplorer
+    link: https://anexplorer.io?referrer=1hakr
 
   - color: '#C6DAFC'
     image: material_icon_acrypto.png
     caption: App icon for 
     link_text: ACrypto
-    link: https://play.google.com/store/apps/details?id=dev.dworks.apps.acrypto
+    link: https://acrypto.io?referrer=1hakr
 
   - color: '#C6DAFC'
     image: material_icon_shifoo.png
     caption: App icon for
     link_text: Shifoo
-    link: /
     extra_classes: no-fullscreen
-
-  - color: '#C6DAFC'
-    image: material_icon_nocodeapi.png
-    caption: Icon for 
-    link_text: NoCode API
-    link: https://nocodeapi.com?referrer=1hakr
