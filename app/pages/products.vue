@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
+const { data: page } = await useAsyncData(route.path, () => queryCollection('content').path(route.path).first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
@@ -33,7 +33,7 @@ const links = page.value.links
             </div>
           </div>
         </div>
-        <div v-for="(startup, index) in page.products" :key="index" class="break-inside-avoid my-4">
+        <div v-for="(startup, index) in page.meta?.products" :key="index" class="break-inside-avoid my-4">
           <UCard variant="subtle" :ui="{ strategy: 'override', header: { padding: '' }, body: { padding: 'p-4', } }"
             class="min-h-fit">
             <div class="grid grid-cols-1 md:grid-cols-10 gap-6">

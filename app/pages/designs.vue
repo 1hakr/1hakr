@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const route = useRoute()
-const { data: page } = await useAsyncData(route.path, () => queryContent(route.path).findOne())
+const { data: page } = await useAsyncData(route.path, () => queryCollection('content').path(route.path).first())
 if (!page.value) {
   throw createError({ statusCode: 404, statusMessage: 'Page not found', fatal: true })
 }
@@ -34,7 +34,7 @@ const links = page.value.links
           </div>
         </div>
         <section>
-          <UCarousel :items="page.designs" dots class="rounded-lg w-full max-w-full sm:max-w-md mx-auto" arrows>
+          <UCarousel :items="page.meta?.designs" dots class="rounded-lg w-full max-w-full sm:max-w-md mx-auto" arrows>
             <template #default="{ item }">
               <UCard class="bg-primary-50 dark:bg-primary-50 mb-12 min-w-[280px] sm:min-w-[400px]">
                 <div class="h-full min-h-[300px] sm:h-[400px]">

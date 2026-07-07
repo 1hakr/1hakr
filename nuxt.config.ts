@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  compatibilityDate: '2026-03-12',
+  compatibilityDate: '2026-07-07',
   modules: [
     '@nuxt/content',
     '@nuxt/image',
@@ -41,5 +41,14 @@ export default defineNuxtConfig({
     '/apps': { redirect: { to: '/products', statusCode: 301 } },
     '/libraries': { redirect: { to: '/', statusCode: 301 } },
     '/profile': { redirect: { to: '/', statusCode: 301 } },
+    '/destination': { redirect: { to: '/', statusCode: 301 } },
   },
+  vite: {
+    optimizeDeps: {
+      include: [
+        '@vue/devtools-core',
+        '@vue/devtools-kit',
+      ]
+    }
+  }
 })

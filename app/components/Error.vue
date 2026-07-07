@@ -23,7 +23,7 @@ import type { PropType } from 'vue'
 import type { NuxtError } from '#app'
 
 const config = {
-  wrapper: 'min-h-[calc(100vh-var(--header-height))] flex flex-col items-center justify-center',
+  wrapper: 'min-h-[calc(100vh-var(--ui-header-height))] flex flex-col items-center justify-center',
   status: 'text-base font-semibold text-primary',
   name: 'text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl',
   message: 'mt-6 text-base/7 text-gray-500 dark:text-gray-400 text-center',
@@ -74,7 +74,7 @@ const props = defineProps({
 
 import { defu } from 'defu'
 const attrs = useAttrs()
-const ui = computed(() => defu(props.ui || {}, config.value || config))
+const ui = computed(() => defu(props.ui || {}, config))
 
 const handleError = () => clearError({ redirect: '/' })
 </script>

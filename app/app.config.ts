@@ -3,14 +3,14 @@ export default defineAppConfig({
   primaryColor: '#3b82f6',
   ui: {
     colors: {
-      primary: 'blue',
-      secondary: 'green',
-      neutral: 'neutral'
+      primary: 'teal',
+      secondary: 'blue',
+      neutral: 'neutral',
     },
     button: {
       slots: {
         base: [
-          'rounded-full px-5'
+          'rounded-full px-5 base: cursor-pointer'
         ]
       },
       variants: {
@@ -37,6 +37,14 @@ export default defineAppConfig({
         variant: 'solid',
         size: 'md'
       }
+    },
+    breadcrumb: {
+      slots: {
+        list: 'flex items-center gap-1.5 flex-wrap',
+      }
+    },
+    pageBody: {
+      base: 'mt-4 pb-4 space-y-6'
     },
     card: {
       slots: {
@@ -89,6 +97,24 @@ export default defineAppConfig({
           'relative px-5 group rounded-full inline-flex items-center focus:outline-none disabled:cursor-not-allowed disabled:opacity-75',
         ]
       }
+    },
+    header: {
+      slots: {
+        container: 'bg-default/75 backdrop-blur border-b border-default h-(--ui-header-height) sticky top-0 z-50 rounded-b-2xl',
+        root: 'flex items-center justify-between gap-3 h-full border-0 bg-transparent',
+      }
+    },
+    footer: {
+      slots: {
+        root: 'px-0 py-0', 
+        container: 'rounded-t-2xl dark bg-[#0f1919]',
+        left: 'justify-start flex-1 gap-x-1.5 mt-3 mt-0 order-1'
+      }
+    },
+    footerColumns: {
+      slots: {
+        center: 'grid lg:grid grid-flow-col auto-cols-fr gap-8 xl:col-span-2',
+      },
     }
   }
 })
