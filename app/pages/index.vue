@@ -29,7 +29,7 @@ definePageMeta({
 
 <template>
   <div v-if="page">
-    <UPageHero class="max-h-fit py-10">
+    <UContainer class="py-10">
       <div class="text-center flex flex-col items-center">
         <UAvatar size="3xl" src="/icon.png" alt="logo" class="rounded-full h-40 w-40 text-3xl mb-10" />
         <div v-once class="text-2xl font-medium tracking-tight text-neutral-500 dark:text-neutral-400 max-w-[500px]">
@@ -92,7 +92,7 @@ definePageMeta({
             icon="i-simple-icons-devdotto" aria-label="GitHub" variant="soft" class="mx-2" />
         </div>
       </div>
-    </UPageHero>
+    </UContainer>
   </div>
 </template>
 

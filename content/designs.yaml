@@ -5,10 +5,17 @@ description:
     I’ve created a number of product icons following the material design guidelines, for a number of purposes, including AnExplorer and Shifoo.
     The gallery showcases a sampling of the icons I’ve worked on.
 designs:
-  - color: '#FFFFFF'
-    image: material_icon_smartnotebook.png
+  - color: '#2196F3'
+    image: material_icon_buildingworks.png
     caption: Logo for 
-    link_text: SmartNotebook
+    link_text: BuildingWorks
+    link: https://buildingworks.io?referrer=1hakr
+
+  - color: '#6b6dd2'
+    image: material_icon_notebookflo.png
+    caption: Logo for 
+    link_text: NotebookFlo
+    link: https://notebookflo.com/?referrer=1hakr
 
   - color: '#FFFFFF'
     image: material_icon_beansnbites.png

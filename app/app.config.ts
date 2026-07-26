@@ -107,8 +107,8 @@ export default defineAppConfig({
     footer: {
       slots: {
         root: 'px-0 py-0', 
-        container: 'rounded-t-2xl dark bg-[#0f1919]',
-        left: 'justify-start flex-1 gap-x-1.5 mt-3 mt-0 order-1'
+        container: 'rounded-t-2xl',
+        left: 'justify-center sm:justify-start flex-1 gap-x-1.5 mt-3 mt-0 order-1'
       }
     },
     footerColumns: {

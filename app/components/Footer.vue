@@ -12,7 +12,6 @@ const props = defineProps({
 <template>
   <UFooter>
     <template #left>
-      <!-- Year is fixed at SSG build time; v-once skips re-evaluation on hydration -->
       <p v-once class="text-gray-500 dark:text-gray-400 text-sm">
         Copyright © 1hakr - {{ new Date().getFullYear() }}
       </p>
@@ -23,7 +22,7 @@ const props = defineProps({
     </template>
 
     <template #right>
-      <UColorModeSelect class="w-[120px]" />
+      <UColorModeSelect class="w-30" />
     </template>
   </UFooter>
 </template>

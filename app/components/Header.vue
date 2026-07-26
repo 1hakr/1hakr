@@ -10,7 +10,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <UHeader>
+  <UHeader :ui="{ toggle: 'hidden' }">
     <template #left>
       <ULink to="/" aria-label="logo"
         class="shrink-0 font-bold text-xl text-gray-900 dark:text-white flex items-end gap-1.5">

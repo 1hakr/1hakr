@@ -36,10 +36,10 @@ const links = page.value.links
         <section>
           <UCarousel :items="page.meta?.designs" dots class="rounded-lg w-full max-w-full sm:max-w-md mx-auto" arrows>
             <template #default="{ item }">
-              <UCard class="bg-primary-50 dark:bg-primary-50 mb-12 min-w-[280px] sm:min-w-[400px]">
-                <div class="h-full min-h-[300px] sm:h-[400px]">
-                  <NuxtImg :src="`/media/${item.image}`" class="h-full sm:h-[400px] rounded-lg" draggable="false"
-                    format="webp" loading="lazy" sizes="280px sm:400px" />
+              <UCard class="bg-primary-50 dark:bg-primary-50 mb-12 min-w-87.5 sm:min-w-100">
+                <div class="flex flex-col h-full md:h-100">
+                  <NuxtImg :src="`/design/${item.image}`" class="min-h-87.5 sm:min-h-100 rounded-lg" draggable="false"
+                    format="webp" loading="lazy" sizes="400px" density="1" />
                 </div>
                 <template #footer>
                   <div class="text-center mx-auto">
